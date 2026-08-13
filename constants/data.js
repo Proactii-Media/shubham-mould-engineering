@@ -261,14 +261,14 @@ const products = [
 
   {
     id: 2,
-    title: "Pen Assembly Machine 2UP (SME-P-09)",
-    slug: "pen-assembly-machine-2up-sme-p-09",
+    title: "Automatic Pen Assembly Machine 2UP (SME-P-09)",
+    slug: "automatic-pen-assembly-machine-2up-sme-p-09",
     category: "pen-assembly-machine",
     type: "Pen Assembly Machine",
     image: "/shubhamimages/products/auto1.png",
     bannerImage: "/shubhamimages/banner/product_banner/9.png",
     video: "/shubhamimages/video/auto2up.mp4",
-    link: "/products/pen-assembly-machine-2up-sme-p-09",
+    link: "/products/automatic-pen-assembly-machine-2up-sme-p-09",
 
     keyFeatures: [
   {
@@ -831,7 +831,7 @@ keyFeatures: [
     type: "Filling Machine",
     image: "/shubhamimages/products/marker.png",
 bannerImage: "/shubhamimages/banner/product_banner/14.png",
-    video: "https://www.youtube.com/watch?v=UXiPtVOQVv0",
+    // video: "https://www.youtube.com/watch?v=UXiPtVOQVv0",
     link: "/products/marker-ink-bottle-filling-machine",
 
     keyFeatures: [
