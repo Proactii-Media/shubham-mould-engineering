@@ -1909,8 +1909,8 @@ ol.commentlist li .meta span {
     border-radius: 4px;
 }
 .download-file ul li a {
-    background: #000;
-    color: #fff;
+    background: #fff;
+    color: #E80028;
     display: block;
     margin-bottom: 10px;
     border-radius: 4px;
