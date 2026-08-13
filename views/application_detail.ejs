@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('include/head') %>
+
+    <style>
+        strong {
+            font-weight: 700 !important;
+        }
+
+        .about-box {
+            padding: 10px;
+            border: 2px dashed #E80028;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .about-box img {
+            display: block;
+            border-radius: 10px;
+        }
+
+        .application-banner {
+    position: relative;
+}
+
+.application-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1); /* medium */
+}
+
+.application-banner .container {
+    position: relative;
+    z-index: 2;
+}
+    </style>
+
+    <%- include('include/header') %>
+        <!-- Content -->
+        <div class="page-content bg-white">
+            <!-- inner page banner -->
+       <div class="dlab-bnr-inr text-center bg-pt application-banner"
+    style="background-image:url(/shubhamimages/banner/productbanner.png);">
+    <div class="container">
+        <div class="dlab-bnr-inr-entry overlay-black-middle align-m text-center">
+            <h1 class="text-white">Applications</h1>
+
+            <div class="breadcrumb-row" style="color: #0000">
+                <ul class="list-inline ">
+                    <li ><a href="/">Home</a></li>
+                    <li>Applications</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- inner page banner END -->
+            <!-- contact area -->
+            <div class="content-block">
+                <!-- About Services info -->
+
+                <!-- About Services info END -->
+                <!-- Counter -->
+
+                <!-- Counter END -->
+
+
+                <div class="page-content">
+                    <div class="section-full bg-white content-inner-2 wow fadeIn" data-wow-duration="2s"
+                        data-wow-delay="0.6s">
+                        <div class="container">
+                            <div class="section-head style2 text-center">
+                                <h2 class="title m-b10">Applications</h2>
+                                <p>Our automatic machines are widely used across various industries including Pen &
+                                    Stationery, Pharmaceutical, Packaging, and Engineering sectors. We provide advanced
+                                    automation solutions designed to improve production efficiency, accuracy, and
+                                    product quality with reliable performance.</p>
+                            </div>
+                            <div class="row">
+<div class="site-filters m-b20 filters2">
+    <ul class="filters row" data-bs-toggle="buttons">
+
+        <!-- ALL -->
+        <li data-filter="" class="btn active col-lg-3 col-md-4 col-sm-6">
+            <input type="radio">
+            <a href="javascript:void(0)">
+                <span>All</span>
+            </a>
+        </li>
+
+        <!-- DYNAMIC APPLICATION FILTERS -->
+        <% applications.forEach(application => { %>
+
+            <li
+                data-filter="<%= application.slug %>"
+                class="btn col-lg-3 col-md-4 col-sm-6"
+            >
+                <input type="radio">
+
+                <a href="javascript:void(0)">
+                    <span>
+                        <%= application.shortTitle || application.title %>
+                    </span>
+                </a>
+            </li>
+
+        <% }) %>
+
+    </ul>
+</div>
+                            </div>
+                            <div class="row p-l0 sp10">
+
+                                <div class="col-lg-12">
+
+                                    <ul id="masonry" class="dlab-gallery-listing gallery mfp-gallery text-center">
+
+
+                                        <% applications.forEach(application=>{ %>
+
+
+                                            <li
+                                                class="card-container col-lg-4 col-md-6 col-sm-6 <%= application.slug %>">
+
+
+                                                <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox3">
+
+
+                                                    <img src="<%= application.image %>" alt="<%= application.title %>">
+
+
+                                                    <div class="overlay-bx">
+
+                                                        <div class="portinner">
+
+
+                                                            <div class="port-up">
+
+
+                                                                <span class="text-primary">
+                                                                    APPLICATION
+                                                                </span>
+
+
+                                                                <h3 class="port-title">
+
+                                                                    <a href="/applications/<%= application.slug %>">
+
+                                                                        <%= application.title %>
+
+                                                                    </a>
+
+                                                                </h3>
+
+
+                                                            </div>
+
+
+
+                                                            <div class="port-down">
+
+
+                                                                <a href="/applications/<%= application.slug %>"
+                                                                    class="btn-link">
+
+                                                                    View Detail
+                                                                    <i class="la la-arrow-right"></i>
+
+                                                                </a>
+
+
+                                                            </div>
+
+
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </div>
+
+
+                                            </li>
+
+
+
+                                            <% }) %>
+
+
+
+                                    </ul>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- contact area END -->
+        </div>
+        <!-- Content END -->
+
+
+
+
+
+        <%- include('include/footer') %>
+            </div>
+            <!-- JAVASCRIPT FILES ========================================= -->
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+
+                    function equalImageHeight() {
+
+                        let images = document.querySelectorAll(".portbox3 img");
+
+                        let maxHeight = 0;
+
+                        // reset height
+                        images.forEach(img => {
+                            img.style.height = "auto";
+                        });
+
+
+                        // find max height
+                        images.forEach(img => {
+                            if (img.clientHeight > maxHeight) {
+                                maxHeight = img.clientHeight;
+                            }
+                        });
+
+
+                        // apply same height
+                        images.forEach(img => {
+                            img.style.height = maxHeight + "px";
+                            img.style.objectFit = "cover";
+                            img.style.width = "100%";
+                        });
+
+                    }
+
+
+                    // run after images loaded
+                    window.addEventListener("load", equalImageHeight);
+
+
+                    // responsive
+                    window.addEventListener("resize", equalImageHeight);
+
+                });
+            </script>
+
+            <script data-cfasync="false"
+                src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+            <script src="js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
+            <script src="/plugins/wow/wow.js"></script><!-- WOW JS -->
+
+            <script src="/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+            <script src="/plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
+            <script src="/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+            <script src="/plugins/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
+            <script src="/plugins/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
+            <script src="/plugins/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
+            <script src="/plugins/imagesloaded/imagesloaded.js"></script><!-- IMAGESLOADED -->
+            <script src="/plugins/masonry/masonry-3.1.4.js"></script><!-- MASONRY -->
+            <script src="/plugins/masonry/masonry.filter.js"></script><!-- MASONRY -->
+            <script src="/plugins/owl-carousel/owl.carousel.js"></script><!-- OWL SLIDER -->
+            <script src="/js/lightgallery-all.min.js"></script><!-- Lightgallery -->
+            <script src="/plugins/scroll/scrollbar.min.js"></script><!-- scroll -->
+            <script src="/js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+            <script src="/js/dz.carousel.min.js"></script><!-- SORTCODE FUCTIONS  -->
+            <script src="/plugins/countdown/jquery.countdown.js"></script><!-- COUNTDOWN FUCTIONS  -->
+            <script src="/js/dz.ajax.js"></script><!-- CONTACT JS  -->
+            <script src="/plugins/rangeslider/rangeslider.js"></script><!-- Rangeslider -->
+            <script src="/plugins/switcher/switcher.js"></script><!-- Switcher -->
+            <script src="js/jquery.lazy.min.js"></script>
+            <!-- REVOLUTION JS FILES -->
+            <script src="/js/jquery.themepunch.tools.min.js"></script>
+            <script src="/js/jquery.themepunch.revolution.min.js"></script>
+            <!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+            <script src="/js/extensions/revolution.extension.actions.min.js"></script>
+            <script src="/js/extensions/revolution.extension.carousel.min.js"></script>
+            <script src="/js/extensions/revolution.extension.kenburn.min.js"></script>
+            <script src="/js/extensions/revolution.extension.layeranimation.min.js"></script>
+            <script src="/js/extensions/revolution.extension.navigation.min.js"></script>
+            <script src="/js/extensions/revolution.extension.parallax.min.js"></script>
+            <script src="/js/extensions/revolution.extension.slideanims.min.js"></script>
+            <script src="/js/extensions/revolution.extension.video.min.js"></script>
+            <script src="/js/rev.slider.js"></script>
+
+
+
+            <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+            <script>
+                $(document).ready(function () {
+                    new WOW().init();
+                });
+            </script>
+            </body>
+
+</html>

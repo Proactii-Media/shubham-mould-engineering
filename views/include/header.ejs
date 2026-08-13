@@ -1,0 +1,184 @@
+<style>
+    @media (max-width: 991px) {
+
+        #navbarNavDropdown .mobile-home-link,
+        #navbarNavDropdown .mobile-contact-link {
+            position: relative !important;
+            z-index: 99999 !important;
+            pointer-events: auto !important;
+            cursor: pointer !important;
+        }
+
+    }
+
+
+
+    .extra-nav {
+        padding: 15px 0 8px 0px;
+    }
+
+    header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background: #fff;
+    }
+
+    .logo-header img,
+    .logo-footer img {
+        width: 62px !important;
+        height: auto;
+    }
+
+    @media (max-width: 426px) {
+
+        .logo-header img,
+        .logo-footer img {
+            margin-top: 2px;
+            width: 52px !important;
+            height: auto;
+        }
+
+
+        .site-header {
+            min-height: 51px !important;
+        }
+
+    }
+</style>
+
+<header class="site-header mo-left header navstyle1">
+    <div class="sticky-header main-bar-wraper header-curve navbar-expand-lg">
+        <div class="main-bar clearfix bg-primary">
+            <div class="container clearfix">
+
+                <!-- Logo -->
+                <div class="logo-header mostion logo-dark" style="text-align: center;">
+                    <a href="/"><img src="/shubhamimages/logo.jpg" alt=""></a>
+                </div>
+
+                <!-- Nav Toggle -->
+                <button class="navbar-toggler collapsed navicon justify-content-end" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+
+
+
+                <!-- Extra Nav (desktop only) -->
+                <div class="extra-nav d-none d-lg-block">
+                    <div class="extra-cell">
+                        <a href="/shubhamimages/subham.pdf" target="_blank" class="site-button white"
+                            style="color: red;">
+                            <i class="fas fa-book-open"></i> View Catalogue
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Search (optional) -->
+                <div class="dlab-quik-search">
+                    <form action="#">
+                        <input name="search" value="" type="text" class="form-control" placeholder="Type to search">
+                        <span id="quik-search-remove"><i class="ti-close"></i></span>
+                    </form>
+                </div>
+
+                <!-- Main Navigation -->
+                <div class="header-nav navbar-collapse collapse justify-content-center" id="navbarNavDropdown">
+                    <div class="logo-header d-md-block d-lg-none" style="text-align: -webkit-center;">
+                        <a href="/"><img src="/shubhamimages/logo.jpg" alt=""></a>
+                    </div>
+
+                    <ul class="nav navbar-nav">
+
+                        <!-- Home -->
+                        <li class="<%= currentRoute === '/' ? 'active' : '' %>">
+                            <a href="/" class="mobile-home-menu">Home</a>
+                        </li>
+
+                        <!-- About (with dropdown) -->
+                        <li
+                            class="<%= ['/about', '/timeline', '/quality_policy'].includes(currentRoute) ? 'active' : '' %>">
+                            <a href="javascript:;">
+                                About <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="sub-menu tab-content">
+                                <li class="<%= currentRoute === '/about' ? 'active' : '' %>">
+                                    <a href="/about">About Us</a>
+                                </li>
+                                <li class="<%= currentRoute === '/quality_policy' ? 'active' : '' %>">
+                                    <a href="/quality_policy">Quality Policy</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Products -->
+                        <li class="<%= currentRoute === '/products' ? 'active' : '' %>">
+                            <a href="/products">Products</a>
+                        </li>
+
+                        <!-- Applications -->
+                        <li class="<%= currentRoute === '/applications' ? 'active' : '' %>">
+                            <a href="/applications">Applications</a>
+                        </li>
+
+                        <!-- Applications -->
+                        <!-- Contact -->
+                        <li class="<%= currentRoute === '/contact' ? 'active' : '' %>">
+                            <a href="/contact">Contact</a>
+                        </li>
+
+                        <!-- ★ NEW: View Catalogue (mobile only) ★ -->
+                        <li class="d-lg-none" >
+                            <a href="/shubhamimages/subham.pdf" target="_blank">
+                                <i class="fas fa-book-open"></i> View Catalogue
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Social Icons -->
+                    <div class="dlab-social-icon">
+                        <ul>
+                            <li><a class="site-button facebook circle-sm outline fab fa-facebook-f"
+                                    href="javascript:void(0);"></a></li>
+                            <li><a class="site-button twitter circle-sm outline fab fa-twitter"
+                                    href="javascript:void(0);"></a></li>
+                            <li><a class="site-button instagram circle-sm outline fab fa-instagram"
+                                    href="javascript:void(0);"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        if (window.innerWidth <= 991) {
+
+            const home = document.querySelector(".mobile-home-menu");
+            const contact = document.querySelector(".mobile-contact-menu");
+
+            if (home) {
+                home.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    window.location.href = "/";
+                });
+            }
+
+            if (contact) {
+                contact.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    window.location.href = "/contact";
+                });
+            }
+
+        }
+
+    });
+</script>
