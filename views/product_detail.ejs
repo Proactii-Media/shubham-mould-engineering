@@ -154,17 +154,22 @@
 
     <h3>Key Features and Functionality</h3>
 
-<ul>
+<ul style="padding-left: 0; margin-left: 0; list-style-position: outside;">
     <% product.keyFeatures.forEach((feature) => { %>
 
-    <li style="padding-bottom: 12px; line-height: 1.6;">
+    <li style="
+        padding-bottom: 12px;
+        line-height: 1.6;
+        padding-left: 5px;
+        margin-left: 20px;
+    ">
         <strong style="color: #232323;">
             <%= feature.title %>:
         </strong>
         <%= feature.description %>
     </li>
 
-<% }) %>
+    <% }) %>
 </ul>
 
 
