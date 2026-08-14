@@ -1,545 +1,721 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('include/head') %>
+<%- include('include/head') %>
 
-	<style>
-		strong {
-    font-weight: 700 !important;
-}
+    <style>
+        strong {
+            font-weight: 700 !important;
+        }
 
-.about-box {
-    padding: 10px;
-    border: 2px dashed #E80028;
-    border-radius: 20px;
-    display: inline-block;
-}
+        .about-box {
+            padding: 10px;
+            border: 2px dashed #E80028;
+            border-radius: 20px;
+            display: inline-block;
+        }
 
-.about-box img {
-    display: block;
-    border-radius: 10px;
-}
+        .about-box img {
+            display: block;
+            border-radius: 10px;
+        }
 
-.main-timeline5{overflow:hidden;position:relative}
-.main-timeline5 .timeline{position:relative;margin-top:-116px}
-.main-timeline5 .timeline:first-child{margin-top:0}
-.main-timeline5 .timeline-icon,.main-timeline5 .year{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}
-.main-timeline5 .timeline:after,.main-timeline5 .timeline:before{content:"";display:block;width:100%;clear:both}
-.main-timeline5 .timeline:before{content:"";width:100%;height:100%;box-shadow:-8px 0 5px -5px rgba(0,0,0,.5) inset;position:absolute;top:0;right:0;z-index:2}
-.main-timeline5 .timeline-icon{width:210px;height:210px;border-radius:50%;border:25px solid transparent;border-top-color:#E80028;border-right-color:#E80028;z-index:1;transform:rotate(45deg)}
-.main-timeline5 .year{display:block;width:110px;height:110px;line-height:110px;border-radius:50%;background:#fff;box-shadow:0 0 20px rgba(0,0,0,.4);font-size:30px;font-weight:700;color:#E80028;text-align:center;transform:rotate(-45deg)}
-.main-timeline5 .timeline-content{width:35%;float:right;background:#E80028;padding:30px 20px;margin:50px 0;z-index:1;position:relative}
-.main-timeline5 .timeline-content:before{content:"";width:20%;height:15px;background:#E80028;position:absolute;top:50%;left:-20%;z-index:-1;transform:translateY(-50%)}
-.main-timeline5 .title{font-size:20px;font-weight:700;color:#fff;margin:0 0 10px}
-.main-timeline5 .description{font-size:16px;color:#fff;line-height:24px;margin:0}
-.main-timeline5 .timeline:nth-child(2n):before{box-shadow:8px 0 5px -5px rgba(0,0,0,.5) inset}
-.main-timeline5 .timeline:nth-child(2n) .timeline-icon{transform:rotate(-135deg);border-top-color:#e97e2e;border-right-color:#e97e2e}
-.main-timeline5 .timeline:nth-child(2n) .year{transform:rotate(135deg);color:#e97e2e}
-.main-timeline5 .timeline:nth-child(2n) .timeline-content{float:left}
-.main-timeline5 .timeline:nth-child(2n) .timeline-content:before{left:auto;right:-20%}
-.main-timeline5 .timeline:nth-child(2n) .timeline-content,.main-timeline5 .timeline:nth-child(2n) .timeline-content:before{background:#e97e2e}
-.main-timeline5 .timeline:nth-child(3n) .timeline-icon{border-top-color:#13afae;border-right-color:#13afae}
-.main-timeline5 .timeline:nth-child(3n) .year{color:#13afae}
-.main-timeline5 .timeline:nth-child(3n) .timeline-content,.main-timeline5 .timeline:nth-child(3n) .timeline-content:before{background:#13afae}
-.main-timeline5 .timeline:nth-child(4n) .timeline-icon{border-top-color:#105572;border-right-color:#105572}
-.main-timeline5 .timeline:nth-child(4n) .year{color:#105572}
-.main-timeline5 .timeline:nth-child(4n) .timeline-content,.main-timeline5 .timeline:nth-child(4n) .timeline-content:before{background:#105572}
-@media only screen and (max-width:1199px){.main-timeline5 .timeline{margin-top:-139px}
-.main-timeline5 .timeline-content:before{left:-18%}
-.main-timeline5 .timeline:nth-child(2n) .timeline-content:before{right:-18%}
-}
-@media only screen and (max-width:990px){.main-timeline5 .timeline{margin-top:-127px}
-.main-timeline5 .timeline-content:before{left:-2%}
-.main-timeline5 .timeline:nth-child(2n) .timeline-content:before{right:-2%}
-}
-@media only screen and (max-width:1023px){.main-timeline5 .timeline{margin-top:0;overflow:hidden}
-.main-timeline5 .timeline:before,.main-timeline5 .timeline:nth-child(2n):before{box-shadow:none}
-.main-timeline5 .timeline-icon,.main-timeline5 .timeline:nth-child(2n) .timeline-icon{margin-top:-30px;margin-bottom:20px;position:relative;transform:rotate(135deg)}
-.main-timeline5 .timeline:nth-child(2n) .year,.main-timeline5 .year{transform:rotate(-135deg)}
-.main-timeline5 .timeline-content,.main-timeline5 .timeline:nth-child(2n) .timeline-content{width:100%;float:none;border-radius:0 0 20px 20px;text-align:center;padding:25px 20px;margin:0 auto}
-.main-timeline5 .timeline-content:before,.main-timeline5 .timeline:nth-child(2n) .timeline-content:before{width:15px;height:25px;position:absolute;top:-22px;left:50%;z-index:-1;transform:translate(-50%,0)}
-}
+        .main-timeline5 {
+            overflow: hidden;
+            position: relative
+        }
+
+        .main-timeline5 .timeline {
+            position: relative;
+            margin-top: -116px
+        }
+
+        .main-timeline5 .timeline:first-child {
+            margin-top: 0
+        }
+
+        .main-timeline5 .timeline-icon,
+        .main-timeline5 .year {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0
+        }
+
+        .main-timeline5 .timeline:after,
+        .main-timeline5 .timeline:before {
+            content: "";
+            display: block;
+            width: 100%;
+            clear: both
+        }
+
+        .main-timeline5 .timeline:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            box-shadow: -8px 0 5px -5px rgba(0, 0, 0, .5) inset;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2
+        }
+
+        .main-timeline5 .timeline-icon {
+            width: 210px;
+            height: 210px;
+            border-radius: 50%;
+            border: 25px solid transparent;
+            border-top-color: #E80028;
+            border-right-color: #E80028;
+            z-index: 1;
+            transform: rotate(45deg)
+        }
+
+        .main-timeline5 .year {
+            display: block;
+            width: 110px;
+            height: 110px;
+            line-height: 110px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+            font-size: 30px;
+            font-weight: 700;
+            color: #E80028;
+            text-align: center;
+            transform: rotate(-45deg)
+        }
+
+        .main-timeline5 .timeline-content {
+            width: 35%;
+            float: right;
+            background: #E80028;
+            padding: 30px 20px;
+            margin: 50px 0;
+            z-index: 1;
+            position: relative
+        }
+
+        .main-timeline5 .timeline-content:before {
+            content: "";
+            width: 20%;
+            height: 15px;
+            background: #E80028;
+            position: absolute;
+            top: 50%;
+            left: -20%;
+            z-index: -1;
+            transform: translateY(-50%)
+        }
+
+        .main-timeline5 .title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 10px
+        }
+
+        .main-timeline5 .description {
+            font-size: 16px;
+            color: #fff;
+            line-height: 24px;
+            margin: 0
+        }
+
+        .main-timeline5 .timeline:nth-child(2n):before {
+            box-shadow: 8px 0 5px -5px rgba(0, 0, 0, .5) inset
+        }
+
+        .main-timeline5 .timeline:nth-child(2n) .timeline-icon {
+            transform: rotate(-135deg);
+            border-top-color: #e97e2e;
+            border-right-color: #e97e2e
+        }
+
+        .main-timeline5 .timeline:nth-child(2n) .year {
+            transform: rotate(135deg);
+            color: #e97e2e
+        }
+
+        .main-timeline5 .timeline:nth-child(2n) .timeline-content {
+            float: left
+        }
+
+        .main-timeline5 .timeline:nth-child(2n) .timeline-content:before {
+            left: auto;
+            right: -20%
+        }
+
+        .main-timeline5 .timeline:nth-child(2n) .timeline-content,
+        .main-timeline5 .timeline:nth-child(2n) .timeline-content:before {
+            background: #e97e2e
+        }
+
+        .main-timeline5 .timeline:nth-child(3n) .timeline-icon {
+            border-top-color: #13afae;
+            border-right-color: #13afae
+        }
+
+        .main-timeline5 .timeline:nth-child(3n) .year {
+            color: #13afae
+        }
+
+        .main-timeline5 .timeline:nth-child(3n) .timeline-content,
+        .main-timeline5 .timeline:nth-child(3n) .timeline-content:before {
+            background: #13afae
+        }
+
+        .main-timeline5 .timeline:nth-child(4n) .timeline-icon {
+            border-top-color: #105572;
+            border-right-color: #105572
+        }
+
+        .main-timeline5 .timeline:nth-child(4n) .year {
+            color: #105572
+        }
+
+        .main-timeline5 .timeline:nth-child(4n) .timeline-content,
+        .main-timeline5 .timeline:nth-child(4n) .timeline-content:before {
+            background: #105572
+        }
+
+        @media only screen and (max-width:1199px) {
+            .main-timeline5 .timeline {
+                margin-top: -139px
+            }
+
+            .main-timeline5 .timeline-content:before {
+                left: -18%
+            }
+
+            .main-timeline5 .timeline:nth-child(2n) .timeline-content:before {
+                right: -18%
+            }
+        }
+
+        @media only screen and (max-width:990px) {
+            .main-timeline5 .timeline {
+                margin-top: -127px
+            }
+
+            .main-timeline5 .timeline-content:before {
+                left: -2%
+            }
+
+            .main-timeline5 .timeline:nth-child(2n) .timeline-content:before {
+                right: -2%
+            }
+        }
+
+        @media only screen and (max-width:1023px) {
+            .main-timeline5 .timeline {
+                margin-top: 0;
+                overflow: hidden
+            }
+
+            .main-timeline5 .timeline:before,
+            .main-timeline5 .timeline:nth-child(2n):before {
+                box-shadow: none
+            }
+
+            .main-timeline5 .timeline-icon,
+            .main-timeline5 .timeline:nth-child(2n) .timeline-icon {
+                margin-top: -30px;
+                margin-bottom: 20px;
+                position: relative;
+                transform: rotate(135deg)
+            }
+
+            .main-timeline5 .timeline:nth-child(2n) .year,
+            .main-timeline5 .year {
+                transform: rotate(-135deg)
+            }
+
+            .main-timeline5 .timeline-content,
+            .main-timeline5 .timeline:nth-child(2n) .timeline-content {
+                width: 100%;
+                float: none;
+                border-radius: 0 0 20px 20px;
+                text-align: center;
+                padding: 25px 20px;
+                margin: 0 auto
+            }
+
+            .main-timeline5 .timeline-content:before,
+            .main-timeline5 .timeline:nth-child(2n) .timeline-content:before {
+                width: 15px;
+                height: 25px;
+                position: absolute;
+                top: -22px;
+                left: 50%;
+                z-index: -1;
+                transform: translate(-50%, 0)
+            }
+        }
 
 
 
-.main-timeline5 .timeline {
-    position: relative;
-}
+        .main-timeline5 .timeline {
+            position: relative;
+        }
 
-/* =========================
+        /* =========================
    DESKTOP
    ========================= */
 
-/* 2012 */
-.main-timeline5 .timeline:nth-child(1) {
-    margin-top: 0;
-}
+        /* 2012 */
+        .main-timeline5 .timeline:nth-child(1) {
+            margin-top: 0;
+        }
 
-/* 2015 */
-.main-timeline5 .timeline:nth-child(2) {
-    margin-top: -115px;
-}
+        /* 2015 */
+        .main-timeline5 .timeline:nth-child(2) {
+            margin-top: -115px;
+        }
 
-/* 2022 */
-.main-timeline5 .timeline:nth-child(3) {
-    margin-top: -139px;
-}
+        /* 2022 */
+        .main-timeline5 .timeline:nth-child(3) {
+            margin-top: -139px;
+        }
 
-/* 4th Timeline */
-.main-timeline5 .timeline:nth-child(4) {
-    margin-top: -152px;
-}
+        /* 4th Timeline */
+        .main-timeline5 .timeline:nth-child(4) {
+            margin-top: -152px;
+        }
 
 
-/* =========================
+        /* =========================
    BELOW 1199px
    ========================= */
 
-@media only screen and (max-width:1199px) {
+        @media only screen and (max-width:1199px) {
 
-    .main-timeline5 .timeline:nth-child(1) {
-        margin-top: 0;
-    }
+            .main-timeline5 .timeline:nth-child(1) {
+                margin-top: 0;
+            }
 
-    .main-timeline5 .timeline:nth-child(2) {
-        margin-top: -164px;
-    }
+            .main-timeline5 .timeline:nth-child(2) {
+                margin-top: -164px;
+            }
 
-    .main-timeline5 .timeline:nth-child(3) {
-        margin-top: -205px;
-    }
+            .main-timeline5 .timeline:nth-child(3) {
+                margin-top: -205px;
+            }
 
-    .main-timeline5 .timeline:nth-child(4) {
-        margin-top: -231px;
-    }
+            .main-timeline5 .timeline:nth-child(4) {
+                margin-top: -231px;
+            }
 
-    .main-timeline5 .timeline-content:before {
-        left: -18%;
-    }
+            .main-timeline5 .timeline-content:before {
+                left: -18%;
+            }
 
-    .main-timeline5 .timeline:nth-child(2n) .timeline-content:before {
-        right: -18%;
-    }
-}
+            .main-timeline5 .timeline:nth-child(2n) .timeline-content:before {
+                right: -18%;
+            }
+        }
 
 
-/* =========================
+        /* =========================
    BELOW 990px
    ========================= */
 
-@media only screen and (max-width:990px) {
+        @media only screen and (max-width:990px) {
 
-    .main-timeline5 .timeline:nth-child(1) {
-        margin-top: 0;
-    }
+            .main-timeline5 .timeline:nth-child(1) {
+                margin-top: 0;
+            }
 
-    .main-timeline5 .timeline:nth-child(2) {
-        margin-top: -80px;
-    }
+            .main-timeline5 .timeline:nth-child(2) {
+                margin-top: -80px;
+            }
 
-    .main-timeline5 .timeline:nth-child(3) {
-        margin-top: -100px;
-    }
+            .main-timeline5 .timeline:nth-child(3) {
+                margin-top: -100px;
+            }
 
-    .main-timeline5 .timeline:nth-child(4) {
-        margin-top: -90px;
-    }
+            .main-timeline5 .timeline:nth-child(4) {
+                margin-top: -90px;
+            }
 
-    .main-timeline5 .timeline-content:before {
-        left: -2%;
-    }
+            .main-timeline5 .timeline-content:before {
+                left: -2%;
+            }
 
-    .main-timeline5 .timeline:nth-child(2n) .timeline-content:before {
-        right: -2%;
-    }
-}
+            .main-timeline5 .timeline:nth-child(2n) .timeline-content:before {
+                right: -2%;
+            }
+        }
 
 
-/* =========================
+        /* =========================
    BELOW 1023px / MOBILE
    ========================= */
 
-@media only screen and (max-width:1023px) {
+        @media only screen and (max-width:1023px) {
 
-    /* IMPORTANT:
+            /* IMPORTANT:
        On mobile don't use negative margins */
-    .main-timeline5 .timeline,
-    .main-timeline5 .timeline:nth-child(1),
-    .main-timeline5 .timeline:nth-child(2),
-    .main-timeline5 .timeline:nth-child(3),
-    .main-timeline5 .timeline:nth-child(4) {
-        margin-top: 0;
-        overflow: hidden;
-    }
+            .main-timeline5 .timeline,
+            .main-timeline5 .timeline:nth-child(1),
+            .main-timeline5 .timeline:nth-child(2),
+            .main-timeline5 .timeline:nth-child(3),
+            .main-timeline5 .timeline:nth-child(4) {
+                margin-top: 0;
+                overflow: hidden;
+            }
 
-    .main-timeline5 .timeline:before,
-    .main-timeline5 .timeline:nth-child(2n):before {
-        box-shadow: none;
-    }
+            .main-timeline5 .timeline:before,
+            .main-timeline5 .timeline:nth-child(2n):before {
+                box-shadow: none;
+            }
 
-    .main-timeline5 .timeline-icon,
-    .main-timeline5 .timeline:nth-child(2n) .timeline-icon {
-        margin-top: -30px;
-        margin-bottom: 20px;
-        position: relative;
-        transform: rotate(135deg);
-    }
+            .main-timeline5 .timeline-icon,
+            .main-timeline5 .timeline:nth-child(2n) .timeline-icon {
+                margin-top: -30px;
+                margin-bottom: 20px;
+                position: relative;
+                transform: rotate(135deg);
+            }
 
-    .main-timeline5 .timeline:nth-child(2n) .year,
-    .main-timeline5 .year {
-        transform: rotate(-135deg);
-    }
+            .main-timeline5 .timeline:nth-child(2n) .year,
+            .main-timeline5 .year {
+                transform: rotate(-135deg);
+            }
 
-    .main-timeline5 .timeline-content,
-    .main-timeline5 .timeline:nth-child(2n) .timeline-content {
-        width: 100%;
-        float: none;
-        border-radius: 0 0 20px 20px;
-        text-align: center;
-        padding: 25px 20px;
-        margin: 0 auto;
-    }
+            .main-timeline5 .timeline-content,
+            .main-timeline5 .timeline:nth-child(2n) .timeline-content {
+                width: 100%;
+                float: none;
+                border-radius: 0 0 20px 20px;
+                text-align: center;
+                padding: 25px 20px;
+                margin: 0 auto;
+            }
 
-    .main-timeline5 .timeline-content:before,
-    .main-timeline5 .timeline:nth-child(2n) .timeline-content:before {
-        width: 15px;
-        height: 25px;
-        position: absolute;
-        top: -22px;
-        left: 50%;
-        z-index: -1;
-        transform: translate(-50%, 0);
-    }
-}
+            .main-timeline5 .timeline-content:before,
+            .main-timeline5 .timeline:nth-child(2n) .timeline-content:before {
+                width: 15px;
+                height: 25px;
+                position: absolute;
+                top: -22px;
+                left: 50%;
+                z-index: -1;
+                transform: translate(-50%, 0);
+            }
+        }
+    </style>
 
-	</style>
-
-	    <%- include('include/header') %>
-    <!-- Content -->
-    <div class="page-content bg-white">
-		<!-- inner page banner -->
-        <div class="dlab-bnr-inr overlay-black-middle text-center bg-pt" style="background-image:url(/shubhamimages/banner/aboutbanner.png);">
-            <div class="container">
-                <div class="dlab-bnr-inr-entry align-m text-center">
-                    <h1 class="text-white">About us</h1>
-					<!-- Breadcrumb row -->
-					<div class="breadcrumb-row">
-						<ul class="list-inline">
-							<li><a href="/">Home</a></li>
-							<li>About us</li>
-						</ul>
-					</div>
-					<!-- Breadcrumb row END -->
-                </div>
-            </div>
-        </div>
-        <!-- inner page banner END -->
-        <!-- contact area -->
-        <div class="content-block">
-			<!-- About Services info -->
-			<div class="section-full content-inner bg-white video-section">
-				<div class="container">
-					<div class="section-content">
-						<div class="row d-flex">
-							<div class="col-lg-6 col-md-12 m-b30">
-								<div class="video-bx">
-									<img src="/shubhamimages/about/aboutus.png" alt="Signature">
-									<div class="video-play-icon">
-										<a href="https://www.youtube.com/watch?v=UXiPtVOQVv0" class="popup-youtube video bg-primary"><i class="fas fa-play"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-12 m-b30 align-self-center video-infobx">
-								<div class="content-bx1">
-								<h2 class="title" style="font-weight: 600;">About Our Company</h2>
-									<h2 class="m-b15 title">Advanced Automatic Assembly Machines<span class="text-primary"> Manufacturer & Exporter</span></h2>
-<p>
- The foundation of<strong> SUBHAM MOULDS & ENGINEERING – DAMAN, INDIA </strong> was laid in 2012 in a modest 150-square-foot workspace. Our journey, which began with labor jobs and small-scale tasks, stands as a unique testament to patience, dedication, and hard work. We closely understood the fundamental challenges of the market and prioritized quality in every task, no matter how small.
-</p>
-
-<p>
-Over the years, our commitment to engineering excellence and customer satisfaction has enabled us to grow into a trusted manufacturer and exporter of automatic assembly machines, special purpose machines, automation systems, testing machines, filling machines, and packaging solutions. Today, we continue to develop reliable, precision-engineered machinery designed to meet the evolving requirements of industries in India and global markets.
-</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- About Services info END -->
-			<!-- Counter -->
-<div class="section-full content-inner overlay-black-dark bg-img-fix" style="background-image:url(/shubhamimages/bg1.jpg);">
-    <div class="container">
-        <div class="section-content text-center text-white">
-            <div class="row">
-
-                <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
-                    <div class="counter-style-5">
-                        <div>
-                            <span class="counter">25</span><span>+</span>
+    <%- include('include/header') %>
+        <!-- Content -->
+        <div class="page-content bg-white">
+            <!-- inner page banner -->
+            <div class="dlab-bnr-inr overlay-black-middle text-center bg-pt"
+                style="background-image:url(/shubhamimages/banner/aboutbanner.png);">
+                <div class="container">
+                    <div class="dlab-bnr-inr-entry align-m text-center">
+                        <h1 class="text-white">About us</h1>
+                        <!-- Breadcrumb row -->
+                        <div class="breadcrumb-row">
+                            <ul class="list-inline">
+                                <li><a href="/">Home</a></li>
+                                <li>About us</li>
+                            </ul>
                         </div>
-                        <span class="counter-text">Years Of Experience</span>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
-                    <div class="counter-style-5">
-                        <div>
-                            <span class="counter">500</span><span>+</span>
-                        </div>
-                        <span class="counter-text">Machines Installed</span>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
-                    <div class="counter-style-5">
-                        <div>
-                            <span class="counter">20</span><span>+</span>
-                        </div>
-                        <span class="counter-text">Countries Exported</span>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
-                    <div class="counter-style-5">
-                        <div>
-                            <span class="counter">100</span><span>+</span>
-                        </div>
-                        <span class="counter-text">Automation Solutions</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-			<!-- Counter END -->
-
-
-			    <div class="page-content" >
-       <div class="content-block area-frame" style="margin-bottom: 0 !important;">
-			<div class="container">
-
-					<!-- Slider Banner -->
-				<div class="section-full content-inner-1 about-bx">
-					<div class="row">
-						<div class="col-lg-6 m-b30 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.3s">
-							<div class="about-box">
-								<div class="dlab-img-effect zoom">
-									<img src="/shubhamimages/about/mision.png" alt="" style="width: 100%; height: 325px; object-fit: cover;">
-								</div> 
-							</div> 
-						</div>
-						<div class="col-lg-6 m-b30 align-self-center wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.3s">
-							<div class="m-b15">
-								<h2 class="m-b0"> <span class="text-primary">Our Mission</span></h2>
-								<div class="dlab-separator bg-primary m-b0"></div>
-							</div>
-							<p>To manufacture and export high-quality Automatic Assembly Machines and precision engineering solutions that deliver superior performance, reliability, and value to industries worldwide.</p>
-						</div>
-					</div>
-				</div>
-				<!-- Slider Banner -->
-
-
-
-					<!-- Slider Banner -->
-				<div class="section-full content-inner-1 about-bx">
-					<div class="row">
-						<div class="col-lg-6 m-b30 align-self-center wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.3s">
-							<div class="m-b15">
-								<h2 class="m-b0"> <span class="text-primary">Our Vision</span></h2>
-								<div class="dlab-separator bg-primary m-b0"></div>
-							</div>
-							<p> To deliver innovative Automatic Assembly Machines and precision automation solutions that improve productivity, efficiency, and manufacturing quality while ensuring customer satisfaction</p>
-						</div>
-						<div class="col-lg-6 m-b30 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.3s">
-							<div class="about-box">
-								<div class="dlab-img-effect zoom">
-									<img src="/shubhamimages/about/vision.png" alt="" style="width: 100%; height: 325px; object-fit: cover;">
-								</div> 
-							</div> 
-						</div>
-						
-					</div>
-				</div>
-				<!-- Slider Banner -->
-
-                			 <div class="container content-inner-1 about-bx">
-					    <div class="section-head text-center">
-            <h2 class="title">Our Journey Towards Engineering Excellence</h2>
-            <p>
-               Our journey is driven by innovation, precision engineering, and excellence in manufacturing. As a trusted manufacturer and exporter, Subham Mould & Engineering delivers advanced Automatic Assembly Machines and customized automation solutions to industries worldwide.
-            </p>
-        </div>
-          
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="main-timeline5">
-                        <div class="timeline">
-                            <div class="timeline-icon"><span class="year">2012</span></div>
-                            <div class="timeline-content">
-                                <h3 class="title">The Beginning</h3>
-                                <p class="description">
-                                    A humble start in a 50-square-foot setup. Those early years provided us with the vision to understand the intricacies of our craft.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="timeline">
-                            <div class="timeline-icon"><span class="year">2015</span></div>
-                            <div class="timeline-content">
-                                <h3 class="title">Technological Revolution</h3>
-                                <p class="description">
-                                   A significant turning point in our journey. We moved beyond labor jobs and stepped into the manufacturing of machine parts. This was our first major stride toward technological advancement.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="timeline">
-                            <div class="timeline-icon"><span class="year">2018</span></div>
-                            <div class="timeline-content">
-                                <h3 class="title">Expansion and Modernization</h3>
-                                <p class="description">
-                                     Recognizing our growing capabilities, we established our company in a modern, 5,000-square-foot facility. Here, we shifted our focus entirely to 'Machine Designing' and 'Research and Development (R&D).'
-                                </p>
-                            </div>
-                        </div>
-                        <div class="timeline">
-                            <div class="timeline-icon"><span class="year">2022</span></div>
-                            <div class="timeline-content">
-                                <h3 class="title">The Rise of Innovation</h3>
-                                <p class="description">
-                                    After years of research, we launched our in-house designed Pen Auto Assembly Machine and Ink Filling Machine. We started in the local market, and today, we are exporting our technology internationally, catering to the needs of global clients.  
-                                </p>
-                            </div>
-                        </div>
+                        <!-- Breadcrumb row END -->
                     </div>
                 </div>
             </div>
+            <!-- inner page banner END -->
+            <!-- contact area -->
+            <div class="content-block">
+                <!-- About Services info -->
+                <div class="section-full content-inner bg-white video-section">
+                    <div class="container">
+                        <div class="section-content">
+                            <div class="row d-flex">
+                                <div class="col-lg-6 col-md-12 m-b30">
+                                    <div class="video-bx">
+                                        <img src="/shubhamimages/about/aboutus.png" alt="Signature">
+                                        <div class="video-play-icon">
+                                            <a href="https://www.youtube.com/watch?v=UXiPtVOQVv0"
+                                                class="popup-youtube video bg-primary"><i class="fas fa-play"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12 m-b30 align-self-center video-infobx">
+                                    <div class="content-bx1">
+                                        <h2 class="title" style="font-weight: 600;">About Our Company</h2>
+                                        <h2 class="m-b15 title">Advanced Automatic Assembly Machines<span
+                                                class="text-primary"> Manufacturer & Exporter</span></h2>
+                                        <p>
+                                            The foundation of<strong> SUBHAM MOULDS & ENGINEERING – DAMAN, INDIA
+                                            </strong> was laid in 2012 in a modest 150-square-foot workspace. Our
+                                            journey, which began with labor jobs and small-scale tasks, stands as a
+                                            unique testament to patience, dedication, and hard work. We closely
+                                            understood the fundamental challenges of the market and prioritized quality
+                                            in every task, no matter how small.
+                                        </p>
+
+                                        <p>
+                                            Over the years, our commitment to engineering excellence and customer
+                                            satisfaction has enabled us to grow into a trusted manufacturer and exporter
+                                            of automatic assembly machines, special purpose machines, automation
+                                            systems, testing machines, filling machines, and packaging solutions. Today,
+                                            we continue to develop reliable, precision-engineered machinery designed to
+                                            meet the evolving requirements of industries in India and global markets.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- About Services info END -->
+                <!-- Counter -->
+                <div class="section-full content-inner overlay-black-dark bg-img-fix"
+                    style="background-image:url(/shubhamimages/bg1.jpg);">
+                    <div class="container">
+                        <div class="section-content text-center text-white">
+                            <div class="row">
+
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
+                                    <div class="counter-style-5">
+                                        <div>
+                                            <span class="counter">25</span><span>+</span>
+                                        </div>
+                                        <span class="counter-text">Years Of Experience</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
+                                    <div class="counter-style-5">
+                                        <div>
+                                            <span class="counter">500</span><span>+</span>
+                                        </div>
+                                        <span class="counter-text">Machines Installed</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
+                                    <div class="counter-style-5">
+                                        <div>
+                                            <span class="counter">20</span><span>+</span>
+                                        </div>
+                                        <span class="counter-text">Countries Exported</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
+                                    <div class="counter-style-5">
+                                        <div>
+                                            <span class="counter">100</span><span>+</span>
+                                        </div>
+                                        <span class="counter-text">Automation Solutions</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Counter END -->
+
+
+                <div class="page-content">
+                    <div class="content-block area-frame" style="margin-bottom: 0 !important;">
+                        <div class="container">
+
+                            <!-- Slider Banner -->
+                            <div class="section-full content-inner-1 about-bx">
+                                <div class="row">
+                                    <div class="col-lg-6 m-b30 wow fadeInLeft" data-wow-duration="2s"
+                                        data-wow-delay="0.3s">
+                                        <div class="about-box">
+                                            <div class="dlab-img-effect zoom">
+                                                <img src="/shubhamimages/about/mision.png" alt=""
+                                                    style="width: 100%; height: 325px; object-fit: cover;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 m-b30 align-self-center wow fadeInRight" data-wow-duration="2s"
+                                        data-wow-delay="0.3s">
+                                        <div class="m-b15">
+                                            <h2 class="m-b0"> <span class="text-primary">Our Mission</span></h2>
+                                            <div class="dlab-separator bg-primary m-b0"></div>
+                                        </div>
+                                        <p>To manufacture and export high-quality Automatic Assembly Machines and
+                                            precision engineering solutions that deliver superior performance,
+                                            reliability, and value to industries worldwide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slider Banner -->
+
+
+
+                            <!-- Slider Banner -->
+                            <div class="section-full content-inner-1 about-bx">
+                                <div class="row">
+                                    <div class="col-lg-6 m-b30 align-self-center wow fadeInRight" data-wow-duration="2s"
+                                        data-wow-delay="0.3s">
+                                        <div class="m-b15">
+                                            <h2 class="m-b0"> <span class="text-primary">Our Vision</span></h2>
+                                            <div class="dlab-separator bg-primary m-b0"></div>
+                                        </div>
+                                        <p> To deliver innovative Automatic Assembly Machines and precision automation
+                                            solutions that improve productivity, efficiency, and manufacturing quality
+                                            while ensuring customer satisfaction</p>
+                                    </div>
+                                    <div class="col-lg-6 m-b30 wow fadeInLeft" data-wow-duration="2s"
+                                        data-wow-delay="0.3s">
+                                        <div class="about-box">
+                                            <div class="dlab-img-effect zoom">
+                                                <img src="/shubhamimages/about/vision.png" alt=""
+                                                    style="width: 100%; height: 325px; object-fit: cover;">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Slider Banner -->
+
+                            <div class="container content-inner-1 about-bx">
+                                <div class="section-head text-center">
+                                    <h2 class="title">Our Journey Towards Engineering Excellence</h2>
+                                    <p>
+                                        Our journey is driven by innovation, precision engineering, and excellence in
+                                        manufacturing. As a trusted manufacturer and exporter, Subham Mould &
+                                        Engineering delivers advanced Automatic Assembly Machines and customized
+                                        automation solutions to industries worldwide.
+                                    </p>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="main-timeline5">
+                                            <div class="timeline">
+                                                <div class="timeline-icon"><span class="year">2012</span></div>
+                                                <div class="timeline-content">
+                                                    <h3 class="title">The Beginning</h3>
+                                                    <p class="description">
+                                                        A humble start in a 50-square-foot setup. Those early years
+                                                        provided us with the vision to understand the intricacies of our
+                                                        craft.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline">
+                                                <div class="timeline-icon"><span class="year">2015</span></div>
+                                                <div class="timeline-content">
+                                                    <h3 class="title">Technological Revolution</h3>
+                                                    <p class="description">
+                                                        A significant turning point in our journey. We moved beyond
+                                                        labor jobs and stepped into the manufacturing of machine parts.
+                                                        This was our first major stride toward technological
+                                                        advancement.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline">
+                                                <div class="timeline-icon"><span class="year">2018</span></div>
+                                                <div class="timeline-content">
+                                                    <h3 class="title">Expansion and Modernization</h3>
+                                                    <p class="description">
+                                                        Recognizing our growing capabilities, we established our company
+                                                        in a modern, 5,000-square-foot facility. Here, we shifted our
+                                                        focus entirely to 'Machine Designing' and 'Research and
+                                                        Development (R&D).'
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="timeline">
+                                                <div class="timeline-icon"><span class="year">2022</span>                                      
+                                                    </div>
+                                                <div class="timeline-content">
+                                                    <h3 class="title">The Rise of Innovation</h3>
+                                                    <p class="description">
+                                                        After years of research, we launched our in-house designed Pen
+                                                        Auto Assembly Machine and Ink Filling Machine. We started in the
+                                                        local market, and today, we are exporting our technology
+                                                        internationally, catering to the needs of global clients.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- contact area END -->
         </div>
+        <!-- Content END -->
 
 
-
-
-
-	
-
-
-
-
-					</div>
-        </div>
-    </div>
-
-
-
-			
-
-
-
-
-
-			
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			
-		</div>
-		<!-- contact area END -->
-    </div>
-    <!-- Content END -->
-
-	
 
 
 
         <%- include('include/footer') %>
-</div>
-<!-- JAVASCRIPT FILES ========================================= -->
+            </div>
+            <!-- JAVASCRIPT FILES ========================================= -->
 
-<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
-<script src="/plugins/wow/wow.js"></script><!-- WOW JS -->
+            <script data-cfasync="false"
+                src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+            <script src="js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
+            <script src="/plugins/wow/wow.js"></script><!-- WOW JS -->
 
-<script src="/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP.MIN JS -->
-<script src="/plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
-<script src="/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
-<script src="/plugins/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
-<script src="/plugins/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
-<script src="/plugins/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
-<script src="/plugins/imagesloaded/imagesloaded.js"></script><!-- IMAGESLOADED -->
-<script src="/plugins/masonry/masonry-3.1.4.js"></script><!-- MASONRY -->
-<script src="/plugins/masonry/masonry.filter.js"></script><!-- MASONRY -->
-<script src="/plugins/owl-carousel/owl.carousel.js"></script><!-- OWL SLIDER -->
-<script src="/js/lightgallery-all.min.js"></script><!-- Lightgallery -->
-<script src="/plugins/scroll/scrollbar.min.js"></script><!-- scroll -->
-<script src="/js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
-<script src="/js/dz.carousel.min.js"></script><!-- SORTCODE FUCTIONS  -->
-<script src="/plugins/countdown/jquery.countdown.js"></script><!-- COUNTDOWN FUCTIONS  -->
-<script src="/js/dz.ajax.js"></script><!-- CONTACT JS  -->
-<script src="/plugins/rangeslider/rangeslider.js" ></script><!-- Rangeslider -->
-<script src="/plugins/switcher/switcher.js" ></script><!-- Switcher -->
-<script src="js/jquery.lazy.min.js"></script>
-<!-- REVOLUTION JS FILES -->
-<script src="/js/jquery.themepunch.tools.min.js"></script>
-<script src="/js/jquery.themepunch.revolution.min.js"></script>
-<!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-<script src="/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="/js/extensions/revolution.extension.video.min.js"></script>
-<script  src="/js/rev.slider.js"></script>
-
-
-
-<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+            <script src="/plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
+            <script src="/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+            <script src="/plugins/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
+            <script src="/plugins/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
+            <script src="/plugins/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
+            <script src="/plugins/imagesloaded/imagesloaded.js"></script><!-- IMAGESLOADED -->
+            <script src="/plugins/masonry/masonry-3.1.4.js"></script><!-- MASONRY -->
+            <script src="/plugins/masonry/masonry.filter.js"></script><!-- MASONRY -->
+            <script src="/plugins/owl-carousel/owl.carousel.js"></script><!-- OWL SLIDER -->
+            <script src="/js/lightgallery-all.min.js"></script><!-- Lightgallery -->
+            <script src="/plugins/scroll/scrollbar.min.js"></script><!-- scroll -->
+            <script src="/js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+            <script src="/js/dz.carousel.min.js"></script><!-- SORTCODE FUCTIONS  -->
+            <script src="/plugins/countdown/jquery.countdown.js"></script><!-- COUNTDOWN FUCTIONS  -->
+            <script src="/js/dz.ajax.js"></script><!-- CONTACT JS  -->
+            <script src="/plugins/rangeslider/rangeslider.js"></script><!-- Rangeslider -->
+            <script src="/plugins/switcher/switcher.js"></script><!-- Switcher -->
+            <script src="js/jquery.lazy.min.js"></script>
+            <!-- REVOLUTION JS FILES -->
+            <script src="/js/jquery.themepunch.tools.min.js"></script>
+            <script src="/js/jquery.themepunch.revolution.min.js"></script>
+            <!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+            <script src="/js/extensions/revolution.extension.actions.min.js"></script>
+            <script src="/js/extensions/revolution.extension.carousel.min.js"></script>
+            <script src="/js/extensions/revolution.extension.kenburn.min.js"></script>
+            <script src="/js/extensions/revolution.extension.layeranimation.min.js"></script>
+            <script src="/js/extensions/revolution.extension.navigation.min.js"></script>
+            <script src="/js/extensions/revolution.extension.parallax.min.js"></script>
+            <script src="/js/extensions/revolution.extension.slideanims.min.js"></script>
+            <script src="/js/extensions/revolution.extension.video.min.js"></script>
+            <script src="/js/rev.slider.js"></script>
 
 
 
-<script>
-$(document).ready(function(){
-    new WOW().init();
-});
-</script>
-</body>
+            <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+            <script>
+                $(document).ready(function () {
+                    new WOW().init();
+                });
+            </script>
+            </body>
+
 </html>
