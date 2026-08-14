@@ -1,72 +1,51 @@
 <%- include('include/head') %>
 
-    <style>
-        .service-box:hover .icon-content .dlab-tilte a {
-            color: #fff !important;
-        }
 
-        .rev-slidebg {
-            background-size: contain !important;
-            background-color: #000;
-            /* fills the bars with black */
-        }
-
-        .form-success-message {
-            display: none;
-            padding: 12px 18px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            font-size: 15px;
-            font-weight: 500;
-            background: #e8f7ee;
-            color: #198754;
-            border: 1px solid #b7e4c7;
-        }
-
-        .form-success-message.show {
-            display: block !important;
-        }
-
-        .form-success-message.error {
-            background: #fff0f0;
-            color: #dc3545;
-            border-color: #f1b5b5;
-        }
-
-        #submitBtn {
-            position: relative;
-            min-width: 120px;
-        }
-
-        #submitBtn.loading .button-text {
-            visibility: hidden;
-        }
-
-        .button-spinner {
-            display: none;
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            border: 2px solid rgba(255, 255, 255, .4);
-            border-top-color: #fff;
-            border-radius: 50%;
-            animation: buttonSpin .7s linear infinite;
-            left: 50%;
-            top: 50%;
-            margin-left: -9px;
-            margin-top: -9px;
-        }
-
-        #submitBtn.loading .button-spinner {
-            display: block;
-        }
-
-        @keyframes buttonSpin {
-            to {
-                transform: rotate(360deg);
+ <style>
+            .service-media-bx .dlab-info p,
+            .service-media-bx .dlab-info .site-button {
+                opacity: 0;
+                visibility: hidden;
+                height: 0;
+                transform: translateY(40px);
+                transition: all 1.5s ease;
             }
-        }
-    </style>
+
+
+            /* Hover only content */
+            .service-media-bx:hover .dlab-info p {
+                opacity: 1;
+                visibility: visible;
+                height: auto;
+                transform: translateY(0);
+                margin-bottom: 15px;
+            }
+
+
+            .service-media-bx:hover .dlab-info .site-button {
+                opacity: 1;
+                visibility: visible;
+                height: auto;
+                transform: translateY(0);
+            }
+
+
+            /* Title fixed rahe */
+            .service-media-bx .dlab-title {
+                margin-bottom: 0;
+            }
+
+.la-angle-right {
+    display: none !important;
+}
+.ti-angle-left {
+    display: none !important;
+}
+
+.la-angle-left {
+    display: none !important;
+}
+        </style>
 
 
 
@@ -449,40 +428,7 @@
 
 
 
-        <style>
-            .service-media-bx .dlab-info p,
-            .service-media-bx .dlab-info .site-button {
-                opacity: 0;
-                visibility: hidden;
-                height: 0;
-                transform: translateY(40px);
-                transition: all 1.5s ease;
-            }
-
-
-            /* Hover only content */
-            .service-media-bx:hover .dlab-info p {
-                opacity: 1;
-                visibility: visible;
-                height: auto;
-                transform: translateY(0);
-                margin-bottom: 15px;
-            }
-
-
-            .service-media-bx:hover .dlab-info .site-button {
-                opacity: 1;
-                visibility: visible;
-                height: auto;
-                transform: translateY(0);
-            }
-
-
-            /* Title fixed rahe */
-            .service-media-bx .dlab-title {
-                margin-bottom: 0;
-            }
-        </style>
+       
 
 
 

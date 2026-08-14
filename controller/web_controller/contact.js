@@ -35,12 +35,7 @@ const sendContactMail = async (req, res) => {
 
     try {
 
-        console.log("=================================");
-        console.log("CONTACT FORM REQUEST");
-        console.log("=================================");
-
-        console.log("CONTENT TYPE:", req.headers["content-type"]);
-        console.log("FORM DATA:", req.body);
+;
 
         // Get form values
         const name = req.body.dzName;

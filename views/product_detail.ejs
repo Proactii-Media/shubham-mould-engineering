@@ -6,15 +6,12 @@
     .specification-header {
       background-color: #E80028 !important;
     }
-
     .specification-header th {
       color: #fff !important;
       background-color: #E80028 !important;
     }
 
-
-
-    strong {
+    .strong {
       font-weight: 700 !important;
     }
 
@@ -35,72 +32,71 @@
       height: 350px;
       object-fit: cover;
     }
-.product-banner-title {
-    font-size: 40px;
-    line-height: 1.2;
-    max-width: 400px;
-}
 
-.product-banner {
-    background-image: url('<%= product.bannerImage %>');
-    background-position: right center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+    .product-banner-title {
+      font-size: 40px;
+      line-height: 1.2;
+      max-width: 400px;
+    }
 
-@media (max-width: 1024px) {
-    /* Make the text container full width (fix for the left box) */
-    .product-banner .your-text-container-class {
+    .product-banner {
+      background-image: url('<%= product.bannerImage %>');
+      background-position: right center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    @media (max-width: 1024px) {
+
+
+      .product-banner .your-text-container-class {
         width: 100% !important;
         max-width: 100% !important;
         padding: 30px 20px !important;
-        /* optional overlay for readability over the image */
+
         background: rgba(0, 0, 0, 0.4) !important;
+      }
+
+      .break-mobile {
+        display: block !important;
+      }
+
+      .dlab-bnr-inr {
+        height: 280px;
+
+      }
     }
 
-    /* Force the line breaks exactly where you want them */
-    .break-mobile {
-        display: block !important; /* pushes each span to its own new line */
-    }
 
-    .dlab-bnr-inr {
-    height: 280px;
- 
-}
-}
-
-/* Tablet + Mobile */
-@media (max-width: 768px) {
-    .product-banner {
-        background-image: url('/shubhamimages/banner/2.png') ;
-        /* background-position: center center; */
-        /* background-size: cover; */
+    @media (max-width: 768px) {
+      .product-banner {
+        background-image: url('/shubhamimages/banner/2.png');
+      }
     }
-}
   </style>
 
   <%- include('include/header') %>
     <!-- Content -->
     <div class="page-content bg-white">
       <!-- inner page banner -->
-<div class="dlab-bnr-inr bg-pt product-banner">
-    <div class="container">
-        <div class="dlab-bnr-inr-entry">
+      <div class="dlab-bnr-inr bg-pt product-banner">
+        <div class="container">
+          <div class="dlab-bnr-inr-entry">
 
             <h1 class="text-white product-banner-title">
-                <%= product.title.replace(/\s*\([^)]*\)/, '') %>
+              <%= product.title.replace(/\s*\([^)]*\)/, '' ) %>
             </h1>
 
             <div class="breadcrumb-row">
-                <ul class="list-inline">
-                    <li><a href="/">Home</a></li>
-                    <li>Products</li>
-                </ul>
+              <ul class="list-inline">
+                <li><a href="/">Home</a></li>
+                <li>Products</li>
+              </ul>
             </div>
 
+          </div>
         </div>
-    </div>
-</div>
+      </div>
       <!-- inner page banner END -->
       <!-- contact area -->
       <!-- Product Portfolio Area -->
@@ -111,17 +107,17 @@
             <div class="row">
               <div class="col-xl-3 col-lg-4 col-md-5">
                 <div class="widget sidebar-widget ext-sidebar-menu widget_nav_menu">
-                 <ul class="menu">
-    <% products.forEach(item => { %>
+                  <ul class="menu">
+                    <% products.forEach(item=> { %>
 
-        <li class="<%= product.slug === item.slug ? 'active' : '' %>">
-            <a href="/products/<%= item.slug %>">
-                <%= item.title %>
-            </a>
-        </li>
+                      <li class="<%= product.slug === item.slug ? 'active' : '' %>">
+                        <a href="/products/<%= item.slug %>">
+                          <%= item.title %>
+                        </a>
+                      </li>
 
-    <% }) %>
-</ul>
+                      <% }) %>
+                  </ul>
                 </div>
                 <div class="widget">
                   <div class="download-file">
@@ -140,145 +136,159 @@
               </div>
               <div class="col-xl-9 col-lg-8 col-md-7 m-b30">
                 <div class="dz-media rounded-sm">
-                  <img src="<%= product.image %>" class="rounded" alt="" style="width: 100%; height: 450px; object-fit: contain;">
+                  <img src="<%= product.image %>" class="rounded" alt=""
+                    style="width: 100%; height: 450px; object-fit: contain;">
                 </div>
- <div class="dz-content m-t30">
+                <div class="dz-content m-t30">
 
-    <div class="m-b40">
-        <h4 class="title"><%= product.title %></h4>
+                  <div class="m-b40">
+                    <h4 class="title">
+                      <%= product.title %>
+                    </h4>
 
-        <p class="font-18">
-            <%= product.description %>
-        </p>
-    </div>
+                    <p class="font-18">
+                      <%= product.description %>
+                    </p>
+                  </div>
 
-    <h3>Key Features and Functionality</h3>
+               <div class="sort-title clearfix text-center">
+                    <h4>Key Features and Functionality</h4>
+                  </div>
 
-<ul style="padding-left: 0; margin-left: 0; list-style-position: outside;">
-    <% product.keyFeatures.forEach((feature) => { %>
+                  <ul style="padding-left: 0; margin-left: 0; list-style-position: outside;">
+                    <% product.keyFeatures.forEach((feature)=> { %>
 
-    <li style="
+                      <li style="
         padding-bottom: 12px;
         line-height: 1.6;
         padding-left: 5px;
         margin-left: 20px;
     ">
-        <strong style="color: #232323;">
-            <%= feature.title %>:
-        </strong>
-        <%= feature.description %>
-    </li>
+                        <strong style="color: #232323;">
+                          <%= feature.title %>:
+                        </strong>
+                        <%= feature.description %>
+                      </li>
 
-    <% }) %>
-</ul>
-
-
-    <!-- TECHNICAL SPECIFICATIONS -->
-    <div class="sort-title clearfix text-center">
-        <h4>Technical Specifications</h4>
-    </div>
-
-    <table class="table table-striped mb-5">
-        <thead>
-            <tr class="specification-header">
-                <th>Mode Of Production</th>
-                <th>Details</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <% Object.entries(product.specifications || {}).forEach(([key, value]) => { %>
-                <tr>
-                    <th><%= key %></th>
-                    <td><%= value %></td>
-                </tr>
-            <% }) %>
-        </tbody>
-    </table>
+                      <% }) %>
+                  </ul>
 
 
-    <!-- KEY FEATURES -->
-    <div class="row d-flex align-items-center m-b40">
+                  <!-- TECHNICAL SPECIFICATIONS -->
+                  <div class="sort-title clearfix text-center">
+                    <h4>Technical Specifications</h4>
+                  </div>
 
-        <div class="col-xl-6 col-lg-12 col-md-6 col-sm-6">
+                  <table class="table table-striped mb-5">
+                    <thead>
+                      <tr class="specification-header">
+                        <th>Mode Of Production</th>
+                        <th>Details</th>
+                      </tr>
+                    </thead>
 
-            <div class="sort-title clearfix">
-                <h4>Key Features & Benefits</h4>
-            </div>
+                    <tbody>
+                      <% Object.entries(product.specifications || {}).forEach(([key, value])=> { %>
+                        <tr>
+                          <th>
+                            <%= key %>
+                          </th>
+                          <td>
+                            <%= value %>
+                          </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                  </table>
 
-            <ul class="list-checked black">
 
-                <% (product.features || []).forEach(feature => { %>
-                    <li><%= feature %></li>
-                <% }) %>
+                  <!-- KEY FEATURES -->
+                  <div class="row d-flex align-items-center m-b40">
 
-            </ul>
+                    <div class="col-xl-6 col-lg-12 col-md-6 col-sm-6">
 
-        </div>
+                      <div >
+                        <h4>Key Features & Benefits</h4>
+                      </div>
+
+                      <ul class="list-checked black">
+
+                        <% (product.features || []).forEach(feature=> { %>
+                          <li>
+                            <%= feature %>
+                          </li>
+                          <% }) %>
+
+                      </ul>
+
+                    </div>
 
 
-        <div class="col-xl-6 col-lg-12 col-md-6 col-sm-6 m-b30">
+                    <div class="col-xl-6 col-lg-12 col-md-6 col-sm-6 m-b30">
 
-            <!-- <img
+                      <!-- <img
                 src="<%= product.image %>"
                 class="img-cover rounded"
                 alt="<%= product.title %>"
             > -->
 
-            <div class="video-bx">
-									<img src="<%= product.image %>" alt="Signature" >
-									<div class="video-play-icon">
-										<a href="<%= product.video %>" class="popup-youtube video bg-primary"><i class="fas fa-play"></i></a>
-									</div>
-								</div>
+                      <div class="video-bx">
+                        <img src="<%= product.image %>" alt="Signature">
+                        <div class="video-play-icon">
+                          <a href="<%= product.video %>" class="popup-youtube video bg-primary"><i
+                              class="fas fa-play"></i></a>
+                        </div>
+                      </div>
 
-        </div>
-
-    </div>
-
-
-    <!-- APPLICATIONS -->
-    <div class="section-full bg-white mt-3 bg-img-fix">
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-md-12">
-
-                    <div class="sort-title clearfix text-center">
-                        <h4>Applications</h4>
                     </div>
 
-                    <div class="section-content box-sort-in m-b10 p-b0 button-example m-b30">
+                  </div>
 
-                        <div class="row">
 
-                            <div class="col-md-12">
+                  <!-- APPLICATIONS -->
+                  <div class="section-full bg-white mt-3 bg-img-fix">
+
+                    <div class="container">
+
+                      <div class="row">
+
+                        <div class="col-md-12">
+
+                          <div class="sort-title clearfix text-center">
+                            <h4>Applications</h4>
+                          </div>
+
+                          <div class="section-content box-sort-in m-b10 p-b0 button-example m-b30">
+
+                            <div class="row">
+
+                              <div class="col-md-12">
 
                                 <ul class="list-star red list-box">
 
-                                    <% (product.applications || []).forEach(application => { %>
-                                        <li><%= application %></li>
+                                  <% (product.applications || []).forEach(application=> { %>
+                                    <li>
+                                      <%= application %>
+                                    </li>
                                     <% }) %>
 
                                 </ul>
 
+                              </div>
+
                             </div>
+
+                          </div>
 
                         </div>
 
+                      </div>
+
                     </div>
 
+                  </div>
+
                 </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
               </div>
 
 
