@@ -3,28 +3,28 @@
 <%- include('include/head') %>
 
     <style>
-      
+
     </style>
 
     <%- include('include/header') %>
         <!-- Content -->
         <div class="page-content bg-white ">
             <!-- inner page banner -->
-       <div class="dlab-bnr-inr overlay-black-middle text-center bg-pt"
-    style="background-image:url(/shubhamimages/banner/applicationbanner.png);">
-    <div class="container ">
-        <div class="dlab-bnr-inr-entry  align-m text-center">
-            <h1 class="text-white">Applications</h1>
+            <div class="dlab-bnr-inr overlay-black-middle text-center bg-pt"
+                style="background-image:url(/shubhamimages/banner/applicationbanner.png);">
+                <div class="container ">
+                    <div class="dlab-bnr-inr-entry  align-m text-center">
+                        <h1 class="text-white">Applications</h1>
 
-            <div class="breadcrumb-row" >
-                <ul class="list-inline ">
-                    <li ><a href="/">Home</a></li>
-                    <li>Applications</li>
-                </ul>
+                        <div class="breadcrumb-row">
+                            <ul class="list-inline ">
+                                <li><a href="/">Home</a></li>
+                                <li>Applications</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
             <!-- inner page banner END -->
             <!-- contact area -->
             <div class="content-block">
@@ -48,151 +48,142 @@
                                     product quality with reliable performance.</p>
                             </div>
                             <div class="row">
-<div class="site-filters m-b20 filters2">
-    <ul class="filters row" data-bs-toggle="buttons">
+                                <div class="site-filters m-b20 filters2">
+                                    <ul class="filters row" data-bs-toggle="buttons">
 
-        <!-- ALL -->
-        <li data-filter="" class="btn active col-lg-3 col-md-4 col-sm-6">
-            <input type="radio">
-            <a href="javascript:void(0)">
-                <span>All</span>
-            </a>
-        </li>
+                                        <!-- ALL -->
+                                        <li data-filter="" class="btn active col-lg-3 col-md-4 col-sm-6">
+                                            <input type="radio">
+                                            <a href="javascript:void(0)">
+                                                <span>All</span>
+                                            </a>
+                                        </li>
 
-        <!-- DYNAMIC APPLICATION FILTERS -->
-        <% applications.forEach(application => { %>
+                                        <!-- DYNAMIC APPLICATION FILTERS -->
+                                        <% applications.forEach(application=> { %>
 
-            <li
-                data-filter="<%= application.slug %>"
-                class="btn col-lg-3 col-md-4 col-sm-6"
-            >
-                <input type="radio">
+                                            <li data-filter="<%= application.slug %>"
+                                                class="btn col-lg-3 col-md-4 col-sm-6">
+                                                <input type="radio">
 
-                <a href="javascript:void(0)">
-                    <span>
-                        <%= application.shortTitle || application.title %>
-                    </span>
-                </a>
-            </li>
+                                                <a href="javascript:void(0)">
+                                                    <span>
+                                                        <%= application.shortTitle || application.title %>
+                                                    </span>
+                                                </a>
+                                            </li>
 
-        <% }) %>
+                                            <% }) %>
 
-    </ul>
-</div>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="row p-l0 sp10">
 
                                 <div class="col-lg-12">
 
-                             <!-- APPLICATION LIST -->
-<ul id="masonry" class="dlab-gallery-listing gallery mfp-gallery text-center">
+                                    <!-- APPLICATION LIST -->
+                                    <ul id="masonry" class="dlab-gallery-listing gallery mfp-gallery text-center">
 
-    <% applications.forEach(application => { %>
+                                        <% applications.forEach(application=> { %>
 
-        <li class="card-container col-lg-4 col-md-6 col-sm-6 <%= application.slug %>">
+                                            <li
+                                                class="card-container col-lg-4 col-md-6 col-sm-6 <%= application.slug %>">
 
-            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox3">
+                                                <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox3">
 
-                <img
-                    src="<%= application.image %>"
-                    alt="<%= application.title %>"
-                >
+                                                    <img src="<%= application.image %>" alt="<%= application.title %>">
 
-                <div class="overlay-bx">
+                                                    <div class="overlay-bx">
 
-                    <div class="portinner">
+                                                        <div class="portinner">
 
-                        <div class="port-up">
+                                                            <div class="port-up">
 
-                            <span class="text-primary">
-                                APPLICATION
-                            </span>
+                                                                <span class="text-primary">
+                                                                    APPLICATION
+                                                                </span>
 
-                            <h3 class="port-title">
-                                <a href="javascript:void(0)"
-                                   class="application-select"
-                                   data-slug="<%= application.slug %>">
+                                                                <h3 class="port-title">
+                                                                    <a href="javascript:void(0)"
+                                                                        class="application-select"
+                                                                        data-slug="<%= application.slug %>">
 
-                                    <%= application.title %>
+                                                                        <%= application.title %>
 
-                                </a>
-                            </h3>
+                                                                    </a>
+                                                                </h3>
 
-                        </div>
+                                                            </div>
 
-                            <div class="port-down">
+                                                            <div class="port-down">
 
-                                <a href="javascript:void(0)"
-                                class="btn-link application-select"
-                                data-slug="<%= application.slug %>">
+                                                                <a href="javascript:void(0)"
+                                                                    class="btn-link application-select"
+                                                                    data-slug="<%= application.slug %>">
 
-                                    View Detail
-                                    <i class="la la-arrow-right"></i>
+                                                                    View Detail
+                                                                    <i class="la la-arrow-right"></i>
 
-                                </a>
+                                                                </a>
 
-                            </div>
+                                                            </div>
 
-                    </div>
+                                                        </div>
 
-                </div>
+                                                    </div>
 
-            </div>
+                                                </div>
 
-        </li>
+                                            </li>
 
-    <% }) %>
+                                            <% }) %>
 
-</ul>
+                                    </ul>
 
 
-<!-- SELECTED APPLICATION DETAIL -->
-<div id="application-detail" class="application-detail-section" style="display:none;">
+                                    <!-- SELECTED APPLICATION DETAIL -->
+                                    <div id="application-detail" class="application-detail-section"
+                                        style="display:none;">
 
-    <% applications.forEach(application => { %>
+                                        <% applications.forEach(application=> { %>
 
-        <div
-            class="application-detail"
-            id="detail-<%= application.slug %>"
-            style="display:none;"
-        >
+                                            <div class="application-detail" id="detail-<%= application.slug %>"
+                                                style="display:none;">
 
-            <div class="row align-items-center">
+                                                <div class="row align-items-center">
 
-                <!-- IMAGE LEFT -->
-                <div class="col-lg-6 col-md-6 m-b30">
+                                                    <!-- IMAGE LEFT -->
+                                                    <div class="col-lg-6 col-md-6 m-b30">
 
-                    <div class="application-detail-image">
+                                                        <div class="application-detail-image">
 
-                        <img
-                            src="<%= application.image %>"
-                            alt="<%= application.title %>"
-                            class="img-fluid"
-                        >
+                                                            <img src="<%= application.image %>"
+                                                                alt="<%= application.title %>" class="img-fluid">
 
-                    </div>
+                                                        </div>
 
-                </div>
+                                                    </div>
 
 
-                <!-- TEXT RIGHT -->
-                <div class="col-lg-6 col-md-6 m-b30">
+                                                    <!-- TEXT RIGHT -->
+                                                    <div class="col-lg-6 col-md-6 m-b30">
 
-                    <div class="application-detail-content">
+                                                        <div class="application-detail-content">
 
-                        <span class="text-primary">
-                            APPLICATION
-                        </span>
+                                                            <span class="text-primary">
+                                                                APPLICATION
+                                                            </span>
 
-                        <h2 class="m-b20">
-                            <%= application.title %>
-                        </h2>
+                                                            <h2 class="m-b20">
+                                                                <%= application.title %>
+                                                            </h2>
 
-                        <p>
-                            <%= application.description %>
-                        </p>
+                                                            <p>
+                                                                <%= application.description %>
+                                                            </p>
 
-                        <!-- <a
+                                                            <!-- <a
                             href="/applications/<%= application.slug %>"
                             class="site-button"
                         >
@@ -200,17 +191,17 @@
                             <i class="la la-arrow-right"></i>
                         </a> -->
 
-                    </div>
+                                                        </div>
 
-                </div>
+                                                    </div>
 
-            </div>
+                                                </div>
 
-        </div>
+                                            </div>
 
-    <% }) %>
+                                            <% }) %>
 
-</div>
+                                    </div>
 
 
                                 </div>
@@ -320,70 +311,70 @@
 
             <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-            
-           <script>
-$(document).ready(function () {
 
-    // ALL APPLICATIONS
-    $('.filters li[data-filter=""]').on('click', function () {
+            <script>
+                $(document).ready(function () {
 
-        // Show normal application cards
-        $('#masonry').show();
+                    // ALL APPLICATIONS
+                    $('.filters li[data-filter=""]').on('click', function () {
 
-        // Hide detail section
-        $('#application-detail').hide();
+                        // Show normal application cards
+                        $('#masonry').show();
 
-        $('.application-detail').hide();
+                        // Hide detail section
+                        $('#application-detail').hide();
 
-    });
+                        $('.application-detail').hide();
 
-
-    // APPLICATION FILTER BUTTON
-    $('.filters li[data-filter!=""]').on('click', function () {
-
-        let slug = $(this).attr('data-filter');
-
-        // Hide normal cards
-        $('#masonry').hide();
-
-        // Show detail container
-        $('#application-detail').show();
-
-        // Hide all application details
-        $('.application-detail').hide();
-
-        // Show selected application
-        $('#detail-' + slug).fadeIn();
-
-    });
+                    });
 
 
-    // CLICK APPLICATION CARD / VIEW DETAIL
-    $('.application-select').on('click', function () {
+                    // APPLICATION FILTER BUTTON
+                    $('.filters li[data-filter!=""]').on('click', function () {
 
-        let slug = $(this).data('slug');
+                        let slug = $(this).attr('data-filter');
 
-        // Hide normal cards
-        $('#masonry').hide();
+                        // Hide normal cards
+                        $('#masonry').hide();
 
-        // Show detail container
-        $('#application-detail').show();
+                        // Show detail container
+                        $('#application-detail').show();
 
-        // Hide all details
-        $('.application-detail').hide();
+                        // Hide all application details
+                        $('.application-detail').hide();
 
-        // Show selected detail
-        $('#detail-' + slug).fadeIn();
+                        // Show selected application
+                        $('#detail-' + slug).fadeIn();
 
-        // Scroll to detail
-        $('html, body').animate({
-            scrollTop: $('#application-detail').offset().top - 100
-        }, 500);
+                    });
 
-    });
 
-});
-</script>
+                    // CLICK APPLICATION CARD / VIEW DETAIL
+                    $('.application-select').on('click', function () {
+
+                        let slug = $(this).data('slug');
+
+                        // Hide normal cards
+                        $('#masonry').hide();
+
+                        // Show detail container
+                        $('#application-detail').show();
+
+                        // Hide all details
+                        $('.application-detail').hide();
+
+                        // Show selected detail
+                        $('#detail-' + slug).fadeIn();
+
+                        // Scroll to detail
+                        $('html, body').animate({
+                            scrollTop: $('#application-detail').offset().top - 100
+                        }, 500);
+
+                    });
+
+                });
+            </script>
 
 
 

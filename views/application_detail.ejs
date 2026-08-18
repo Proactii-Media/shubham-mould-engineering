@@ -20,41 +20,42 @@
         }
 
         .application-banner {
-    position: relative;
-}
+            position: relative;
+        }
 
-.application-banner::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.1); /* medium */
-}
+        .application-banner::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.1);
+            /* medium */
+        }
 
-.application-banner .container {
-    position: relative;
-    z-index: 2;
-}
+        .application-banner .container {
+            position: relative;
+            z-index: 2;
+        }
     </style>
 
     <%- include('include/header') %>
         <!-- Content -->
         <div class="page-content bg-white">
             <!-- inner page banner -->
-       <div class="dlab-bnr-inr text-center bg-pt application-banner"
-    style="background-image:url(/shubhamimages/banner/productbanner.png);">
-    <div class="container">
-        <div class="dlab-bnr-inr-entry overlay-black-middle align-m text-center">
-            <h1 class="text-white">Applications</h1>
+            <div class="dlab-bnr-inr text-center bg-pt application-banner"
+                style="background-image:url(/shubhamimages/banner/productbanner.png);">
+                <div class="container">
+                    <div class="dlab-bnr-inr-entry overlay-black-middle align-m text-center">
+                        <h1 class="text-white">Applications</h1>
 
-            <div class="breadcrumb-row" style="color: #0000">
-                <ul class="list-inline ">
-                    <li ><a href="/">Home</a></li>
-                    <li>Applications</li>
-                </ul>
+                        <div class="breadcrumb-row" style="color: #0000">
+                            <ul class="list-inline ">
+                                <li><a href="/">Home</a></li>
+                                <li>Applications</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
             <!-- inner page banner END -->
             <!-- contact area -->
             <div class="content-block">
@@ -78,37 +79,35 @@
                                     product quality with reliable performance.</p>
                             </div>
                             <div class="row">
-<div class="site-filters m-b20 filters2">
-    <ul class="filters row" data-bs-toggle="buttons">
+                                <div class="site-filters m-b20 filters2">
+                                    <ul class="filters row" data-bs-toggle="buttons">
 
-        <!-- ALL -->
-        <li data-filter="" class="btn active col-lg-3 col-md-4 col-sm-6">
-            <input type="radio">
-            <a href="javascript:void(0)">
-                <span>All</span>
-            </a>
-        </li>
+                                        <!-- ALL -->
+                                        <li data-filter="" class="btn active col-lg-3 col-md-4 col-sm-6">
+                                            <input type="radio">
+                                            <a href="javascript:void(0)">
+                                                <span>All</span>
+                                            </a>
+                                        </li>
 
-        <!-- DYNAMIC APPLICATION FILTERS -->
-        <% applications.forEach(application => { %>
+                                        <!-- DYNAMIC APPLICATION FILTERS -->
+                                        <% applications.forEach(application=> { %>
 
-            <li
-                data-filter="<%= application.slug %>"
-                class="btn col-lg-3 col-md-4 col-sm-6"
-            >
-                <input type="radio">
+                                            <li data-filter="<%= application.slug %>"
+                                                class="btn col-lg-3 col-md-4 col-sm-6">
+                                                <input type="radio">
 
-                <a href="javascript:void(0)">
-                    <span>
-                        <%= application.shortTitle || application.title %>
-                    </span>
-                </a>
-            </li>
+                                                <a href="javascript:void(0)">
+                                                    <span>
+                                                        <%= application.shortTitle || application.title %>
+                                                    </span>
+                                                </a>
+                                            </li>
 
-        <% }) %>
+                                            <% }) %>
 
-    </ul>
-</div>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="row p-l0 sp10">
 

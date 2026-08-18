@@ -7,7 +7,8 @@
 		<!-- Content -->
 		<div class="page-content bg-white">
 			<!-- inner page banner -->
-			<div class="dlab-bnr-inr overlay-black-middle bg-pt" style="background-image:url(/shubhamimages/banner/productbanner.png);">
+			<div class="dlab-bnr-inr overlay-black-middle bg-pt"
+				style="background-image:url(/shubhamimages/banner/productbanner.png);">
 				<div class="container">
 					<div class="dlab-bnr-inr-entry">
 						<h1 class="text-white">Products</h1>
@@ -98,8 +99,6 @@
 						</div>
 						<!-- FILTER END -->
 
-
-
 						<!-- PRODUCT LIST -->
 
 						<div class="clearfix" id="lightgallery">
@@ -159,17 +158,8 @@
 													</div>
 
 												</div>
-
-
-
 											</div>
-
-
-
-
 											<div class="dez-info p-a30 bg-white">
-
-
 												<p class="dez-title m-t0">
 
 													<a href="<%= product.link %>">
@@ -236,36 +226,36 @@
 
 
 			<script>
-document.addEventListener("DOMContentLoaded", function () {
+				document.addEventListener("DOMContentLoaded", function () {
 
-    function equalInfoHeight() {
+					function equalInfoHeight() {
 
-        const infos = document.querySelectorAll(".dez-info");
+						const infos = document.querySelectorAll(".dez-info");
 
-        infos.forEach(info => {
-            info.style.height = "auto";
-        });
+						infos.forEach(info => {
+							info.style.height = "auto";
+						});
 
-        let max = 0;
+						let max = 0;
 
-        infos.forEach(info => {
-            if (info.offsetHeight > max) {
-                max = info.offsetHeight;
-            }
-        });
+						infos.forEach(info => {
+							if (info.offsetHeight > max) {
+								max = info.offsetHeight;
+							}
+						});
 
-        infos.forEach(info => {
-            info.style.height = max + "px";
-        });
+						infos.forEach(info => {
+							info.style.height = max + "px";
+						});
 
-    }
+					}
 
-    equalInfoHeight();
+					equalInfoHeight();
 
-    window.addEventListener("resize", equalInfoHeight);
+					window.addEventListener("resize", equalInfoHeight);
 
-});
-</script>
+				});
+			</script>
 
 			<script data-cfasync="false"
 				src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
@@ -309,7 +299,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 			<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-			
+
 
 
 

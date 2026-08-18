@@ -35,7 +35,7 @@ const sendContactMail = async (req, res) => {
 
     try {
 
-;
+        ;
 
         // Get form values
         const name = req.body.dzName;

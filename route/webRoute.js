@@ -10,9 +10,7 @@ const product_detail = require("../controller/web_controller/product.js");
 const product = require("../controller/web_controller/product.js");
 
 
-
-
-webRouter.get("/", home.getAllHome); 
+webRouter.get("/", home.getAllHome);
 webRouter.get("/about", about.getAllAbout);
 webRouter.get("/contact", contact.getAllContact);
 webRouter.post("/contact", contact.sendContactMail);
