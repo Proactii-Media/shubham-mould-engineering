@@ -44,11 +44,7 @@ const sendContactMail = async (req, res) => {
         const subject = req.body.dzOther?.Subject;
         const message = req.body.dzMessage;
 
-        console.log("NAME:", name);
-        console.log("EMAIL:", email);
-        console.log("PHONE:", phone);
-        console.log("SUBJECT:", subject);
-        console.log("MESSAGE:", message);
+
 
 
         // ===============================
@@ -56,13 +52,21 @@ const sendContactMail = async (req, res) => {
         // ===============================
 
         if (!name || !email || !phone || !subject || !message) {
-
             return res.status(400).json({
                 success: false,
                 message: "Please fill all required fields."
             });
-
         }
+
+        // Phone validation - exactly 10 digits
+        if (!/^\d{10}$/.test(phone)) {
+            return res.status(400).json({
+                success: false,
+                message: "Phone number must contain exactly 10 digits."
+            });
+        }
+
+
 
 
         // ===============================
