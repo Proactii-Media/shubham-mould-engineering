@@ -35,8 +35,6 @@ const sendContactMail = async (req, res) => {
 
     try {
 
-        ;
-
         // Get form values
         const name = req.body.dzName;
         const email = req.body.dzEmail;
@@ -44,11 +42,6 @@ const sendContactMail = async (req, res) => {
         const subject = req.body.dzOther?.Subject;
         const message = req.body.dzMessage;
 
-
-
-
-        // ===============================
-        // VALIDATION
         // ===============================
 
         if (!name || !email || !phone || !subject || !message) {
@@ -66,9 +59,6 @@ const sendContactMail = async (req, res) => {
             });
         }
 
-
-
-
         // ===============================
         // GMAIL TRANSPORTER
         // ===============================
@@ -81,10 +71,7 @@ const sendContactMail = async (req, res) => {
                 user: "pm7244875@gmail.com",
                 pass: "imdvvhhckyvaxkbe"
             }
-
         });
-
-
         // ===============================
         // SEND EMAIL
         // ===============================
