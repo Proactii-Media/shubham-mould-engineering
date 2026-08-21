@@ -1,0 +1,152 @@
+<%- include('include/head') %>
+
+
+
+    <%- include('include/header') %>
+
+        <!-- header END -->
+        <!-- Content -->
+        <div class="page-content bg-white">
+            <!-- inner page banner -->
+            <div class="dlab-bnr-inr " style="background-image:url(/shubhamimages/banner/clientbanner.png);">
+                <div class="container">
+                    <div class="dlab-bnr-inr-entry">
+                        <h1 class="text-white">Our Trusted Clients</h1>
+                        <!-- Breadcrumb row -->
+                        <div class="breadcrumb-row">
+                            <ul class="list-inline">
+                                <li><a href="/">Home</a></li>
+
+                                <li>Our Trusted Clients</li>
+                            </ul>
+                        </div>
+                        <!-- Breadcrumb row END -->
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .client-logo-box {
+                    width: 100%;
+                    height: 220px;
+                }
+
+                .client-logo-media {
+                    width: 100%;
+                    height: 220px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    background: #fff;
+                }
+
+                .client-logo-media img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    padding: 25px;
+                }
+
+                .client-title h2 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 25px;
+                }
+
+                .client-title h2::before,
+                .client-title h2::after {
+                    content: "";
+                    height: 1px;
+                    background: #ddd;
+                    width: 120px;
+                }
+
+                .client-title h2 span {
+                    white-space: nowrap;
+                }
+            </style>
+            <!-- inner page banner END -->
+            <div class="bg-gray lightgallery" id="lightgallery">
+                <!-- Left & right section start -->
+                <div class="section-full bg-gray content-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                               <div class="section-head style2 text-center">
+                                <h2 class="title m-b10">Our Awesome Clients</h2>
+                               
+                            </div>
+                                <!-- Images overlay on hover -->
+                                <div class="section-content box-sort-in button-example p-b0">
+                                    <div class="row">
+
+                                        <% clientLogos.forEach((logo)=> { %>
+
+                                            <div class="col-lg-3 col-md-6 col-sm-6 m-b15">
+                                                <div class="dlab-box client-logo-box">
+
+                                                    <a href="<%= logo.link %>">
+                                                        <div class="dlab-media dlab-img-overlay9 client-logo-media">
+                                                            <img src="<%= logo.image %>" alt="Client Logo">
+                                                        </div>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+
+                                            <% }); %>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Images overlay on hover END -->
+                </div>
+                <!-- Left & right section  END -->
+            </div>
+        </div>
+        <!-- Left & right section END -->
+        <!-- Content END-->
+        <!-- Footer -->
+        <%- include('include/footer') %>
+            <!-- Footer End -->
+        
+            </div>
+            <!-- JAVASCRIPT FILES ========================================= -->
+            <script data-cfasync="false"
+                src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+            <script src="js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
+            <script src="plugins/wow/wow.js"></script><!-- WOW JS -->
+
+            <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+            <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
+            <script src="plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+            <script src="plugins/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
+            <script src="plugins/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
+            <script src="plugins/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
+            <script src="plugins/imagesloaded/imagesloaded.js"></script><!-- IMAGESLOADED -->
+            <script src="plugins/masonry/masonry-3.1.4.js"></script><!-- MASONRY -->
+            <script src="plugins/masonry/masonry.filter.js"></script><!-- MASONRY -->
+            <script src="plugins/owl-carousel/owl.carousel.js"></script><!-- OWL SLIDER -->
+            <script src="plugins/lightgallery/js/lightgallery-all.min.js"></script><!-- Lightgallery -->
+            <script src="plugins/scroll/scrollbar.min.js"></script><!-- scroll -->
+            <script src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+            <script src="js/dz.carousel.min.js"></script><!-- SORTCODE FUCTIONS  -->
+            <script src="plugins/countdown/jquery.countdown.js"></script><!-- COUNTDOWN FUCTIONS  -->
+            <script src="js/dz.ajax.js"></script><!-- CONTACT JS  -->
+            <script src="plugins/rangeslider/rangeslider.js"></script><!-- Rangeslider -->
+            <script src="plugins/switcher/switcher.js"></script><!-- Switcher -->
+
+            <script type="module"
+                src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496"
+                integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ=="
+                data-cf-beacon='{"version":"2024.11.0","token":"0931814f84b94398b852d3ac91b5f293","r":1}'
+                crossorigin="anonymous"></script>
+            </body>
+
+            </html>

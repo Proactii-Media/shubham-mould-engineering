@@ -1,579 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <%- include('include/head') %>
-
-
-
-    <%- include('include/header') %>
-
-
-        <!-- Content -->
-        <div class="page-content bg-white">
-
-
-            <!-- Banner -->
-            <div class="dlab-bnr-inr overlay-black-middle text-center bg-pt"
-                style="background-image: url('/shubhamimages/banner/contact.png');">
-                <div class="container">
-                    <div class="dlab-bnr-inr-entry align-m text-center">
-
-                        <h1 class="text-white">
-                            Contact Us
-                        </h1>
-
-                        <div class="breadcrumb-row">
-                            <ul class="list-inline">
-                                <li>
-                                    <a href="/">Home</a>
-                                </li>
-                                <li>Contact Us</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- Banner END -->
-
-
-            <!-- Contact Area -->
-            <div class="section-full content-inner bg-white contact-style-1">
-
-                <div class="container">
-
-
-                    <!-- Contact Information -->
-                    <div class="row dzseth">
-
-
-                        <!-- Address -->
-                        <div class="col-lg-4 col-md-6 col-sm-6 m-b30">
-
-                            <div class="icon-bx-wraper bx-style-1 p-lr20 p-tb30 center seth radius-sm">
-
-                                <div class="icon-lg text-primary m-b20">
-
-                                    <a href="javascript:void(0);" class="icon-cell">
-                                        <i class="ti-location-pin"></i>
-                                    </a>
-
-                                </div>
-
-                                <div class="icon-content">
-
-                                    <h5 class="dlab-tilte text-uppercase">
-                                        Address
-                                    </h5>
-
-                                    <p>
-                                        Survey No. 295/L G-1, Chirag Udyog Bhavan,
-                                        Golden Industrial Estate, Dabhel, Daman -
-                                        396 210 (U.T) INDIA
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Email -->
-                        <div class="col-lg-4 col-md-6 col-sm-6 m-b30">
-
-                            <div class="icon-bx-wraper bx-style-1 p-lr20 p-tb30 center seth radius-sm">
-
-                                <div class="icon-lg text-primary m-b20">
-
-                                    <a href="javascript:void(0);" class="icon-cell">
-                                        <i class="ti-email"></i>
-                                    </a>
-
-                                </div>
-
-                                <div class="icon-content">
-
-                                    <h5 class="dlab-tilte text-uppercase">
-                                        Email
-                                    </h5>
-
-                                    <p>
-
-                                        <a href="mailto:subhammouldsengine@gmail.com">
-                                            subhammouldsengine@gmail.com
-                                        </a>
-
-                                        <br>
-
-                                        <a href="mailto:arvindlhr007@gmail.com">
-                                            arvindlhr007@gmail.com
-                                        </a>
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Phone -->
-                        <div class="col-lg-4 col-md-6 col-sm-6 m-b30">
-
-                            <div class="icon-bx-wraper bx-style-1 p-lr20 p-tb30 center seth radius-sm">
-
-                                <div class="icon-lg text-primary m-b20">
-
-                                    <a href="javascript:void(0);" class="icon-cell">
-                                        <i class="ti-mobile"></i>
-                                    </a>
-
-                                </div>
-
-                                <div class="icon-content">
-
-                                    <h5 class="dlab-tilte text-uppercase">
-                                        Phone
-                                    </h5>
-
-                                    <p>
-
-                                        <a href="tel:+919974921502">
-                                            +91 99749 21502
-                                        </a>
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <!-- Form + Map -->
-                    <div class="row">
-
-
-                        <!-- Form -->
-                        <div class="col-lg-6 m-b30">
-
-                            <div class="p-a30 bg-gray clearfix radius-sm">
-
-                                <h3>
-                                    Send Message Us
-                                </h3>
-
-
-                                <!-- SUCCESS / ERROR MESSAGE -->
-                                <div id="formSuccessMsg" class="form-success-message"></div>
-
-
-                                <!-- Contact Form -->
-                                <form method="POST" action="/contact" id="contactForm">
-
-                                    <input type="hidden" value="Contact" name="dzToDo">
-
-
-                                    <div class="row">
-
-
-                                        <!-- Name -->
-                                        <div class="col-md-6">
-
-                                            <div class="form-group">
-
-                                                <div class="input-group">
-
-                                                    <input name="dzName" type="text" required class="form-control"
-                                                        placeholder="Your Name">
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-
-                                        <!-- Email -->
-                                        <div class="col-md-6">
-
-                                            <div class="form-group">
-
-                                                <div class="input-group">
-
-                                                    <input name="dzEmail" type="email" required class="form-control"
-                                                        placeholder="Your Email Id">
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-
-                                        <!-- Phone -->
-                                        <div class="col-md-6">
-
-                                            <div class="form-group">
-
-                                                <div class="input-group">
-
-                                                    <input name="dzOther[Phone]" type="text" required
-                                                        class="form-control" placeholder="Phone">
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-
-                                        <!-- Subject -->
-                                        <div class="col-md-6">
-
-                                            <div class="form-group">
-
-                                                <div class="input-group">
-
-                                                    <input name="dzOther[Subject]" type="text" required
-                                                        class="form-control" placeholder="Subject">
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-
-                                        <!-- Message -->
-                                        <div class="col-md-12">
-
-                                            <div class="form-group">
-
-                                                <div class="input-group">
-
-                                                    <textarea name="dzMessage" rows="4" required class="form-control"
-                                                        placeholder="Your Message..."></textarea>
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-
-                                        <!-- Submit -->
-                                        <div class="col-md-12">
-
-                                            <button id="submitBtn" name="submit" type="submit" value="Submit"
-                                                class="site-button">
-
-                                                <span class="button-text">
-                                                    Submit
-                                                </span>
-
-                                                <span class="button-spinner"></span>
-
-                                            </button>
-
-                                        </div>
-
-
-                                    </div>
-
-                                </form>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Google Map -->
-                        <div class="col-lg-6 m-b30 d-flex">
-
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.50086235677!2d72.89581377436996!3d20.418539108459182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0d13d00536d9f%3A0xc5a46a65ad0b2f61!2sChirag%20Industries!5e1!3m2!1sen!2sin!4v1787031775061!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-            </div>
-            <!-- Contact Area END -->
-
-
+<%- include('include/header') %>
+<div class="page-content bg-white">
+  <div class="dlab-bnr-inr overlay-black-middle text-center bg-pt" style="background-image: url('/shubhamimages/banner/contact.png');">
+    <div class="container">
+      <div class="dlab-bnr-inr-entry align-m text-center">
+        <h1 class="text-white">Contact Us</h1>
+        <div class="breadcrumb-row">
+          <ul class="list-inline">
+            <li><a href="/">Home</a></li>
+            <li>Contact Us</li>
+          </ul>
         </div>
-        <!-- Content END -->
-
-
-        <%- include('include/footer') %>
-
-
-            <!-- JavaScript -->
-
-            <script src="/js/jquery.min.js"></script>
-
-            <script src="/plugins/wow/wow.js"></script>
-
-            <script src="/js/bootstrap.bundle.min.js"></script>
-
-            <script src="/plugins/bootstrap-select/bootstrap-select.min.js"></script>
-
-            <script src="/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
-
-            <script src="/plugins/magnific-popup/magnific-popup.js"></script>
-
-            <script src="/plugins/counter/waypoints-min.js"></script>
-
-            <script src="/plugins/counter/counterup.min.js"></script>
-
-            <script src="/plugins/imagesloaded/imagesloaded.js"></script>
-
-            <script src="/plugins/masonry/masonry-3.1.4.js"></script>
-
-            <script src="/plugins/masonry/masonry.filter.js"></script>
-
-            <script src="/plugins/owl-carousel/owl.carousel.js"></script>
-
-            <script src="/js/lightgallery-all.min.js"></script>
-
-            <script src="/plugins/scroll/scrollbar.min.js"></script>
-
-            <script src="/js/custom.js"></script>
-
-            <script src="/js/dz.carousel.min.js"></script>
-            <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-
-            <!-- Contact Form JavaScript -->
-
-            <script>
-
-                (function () {
-
-                    const form = document.getElementById("contactForm");
-                    const submitBtn = document.getElementById("submitBtn");
-                    const successMsg = document.getElementById("formSuccessMsg");
-
-
-                    if (!form || !submitBtn || !successMsg) {
-
-                        console.error("Contact form elements not found.");
-
-                        return;
-
-                    }
-
-
-                    form.addEventListener("submit", async function (e) {
-
-                        e.preventDefault();
-
-
-                        // Clear previous message
-                        successMsg.classList.remove("show", "error");
-                        successMsg.textContent = "";
-
-
-                        // Disable submit button
-                        submitBtn.classList.add("loading");
-                        submitBtn.disabled = true;
-
-
-                        /*
-                         * Convert FormData to URLSearchParams.
-                         *
-                         * This sends the form as:
-                         * application/x-www-form-urlencoded
-                         *
-                         * Express receives it through:
-                         * express.urlencoded({ extended: true })
-                         *
-                         * Therefore:
-                         *
-                         * dzOther[Phone]
-                         * dzOther[Subject]
-                         *
-                         * become:
-                         *
-                         * req.body.dzOther.Phone
-                         * req.body.dzOther.Subject
-                         */
-
-                        const formData = new URLSearchParams(
-                            new FormData(form)
-                        );
-
-
-                        try {
-
-                            const response = await fetch("/contact", {
-
-                                method: "POST",
-
-                                headers: {
-                                    "Content-Type":
-                                        "application/x-www-form-urlencoded"
-                                },
-
-                                body: formData
-
-                            });
-
-
-                            const responseText = await response.text();
-
-
-                            console.log(
-                                "Server status:",
-                                response.status
-                            );
-
-                            console.log(
-                                "Server response:",
-                                responseText
-                            );
-
-
-                            let result = null;
-
-
-                            try {
-
-                                result = JSON.parse(responseText);
-
-                            } catch (jsonError) {
-
-                                console.warn(
-                                    "Response is not JSON:",
-                                    responseText
-                                );
-
-                            }
-
-
-                            // ==============================
-                            // SUCCESS
-                            // ==============================
-
-                            if (
-                                response.ok &&
-                                result &&
-                                result.success === true
-                            ) {
-
-                                successMsg.classList.remove("error");
-
-                                successMsg.classList.add("show");
-
-                                successMsg.textContent =
-                                    "✅ Your form is submitted successfully!";
-
-
-                                // Clear form
-                                form.reset();
-
-                            }
-
-
-                            // ==============================
-                            // ERROR
-                            // ==============================
-
-                            else {
-
-                                let errorMessage =
-                                    "Something went wrong. Please try again.";
-
-
-                                if (result && result.message) {
-
-                                    errorMessage = result.message;
-
-                                }
-                                else if (result && result.error) {
-
-                                    errorMessage = result.error;
-
-                                }
-
-
-                                showError(errorMessage);
-
-                            }
-
-
-                        } catch (error) {
-
-                            console.error(
-                                "Fetch / Network error:",
-                                error
-                            );
-
-
-                            showError(
-                                "Unable to connect to server. Please try again."
-                            );
-
-                        }
-
-
-                        // Enable submit button
-                        submitBtn.classList.remove("loading");
-
-                        submitBtn.disabled = false;
-
-
-                        // Hide message after 10 seconds
-                        clearTimeout(window._formMsgTimer);
-
-
-                        window._formMsgTimer = setTimeout(function () {
-
-                            successMsg.classList.remove(
-                                "show",
-                                "error"
-                            );
-
-                            successMsg.textContent = "";
-
-                        }, 10000);
-
-                    });
-
-
-                    // ==============================
-                    // SHOW ERROR
-                    // ==============================
-
-                    function showError(message) {
-
-                        successMsg.classList.remove("show");
-
-                        successMsg.classList.add(
-                            "show",
-                            "error"
-                        );
-
-                        successMsg.textContent =
-                            "❌ " + message;
-
-                    }
-
-
-                })();
-
-            </script>
-
-
-            </body>
-
+      </div>
+    </div>
+  </div>
+  <div class="section-full content-inner bg-white contact-style-1">
+    <div class="container">
+      <div class="row dzseth">
+        <div class="col-lg-4 col-md-6 col-sm-6 m-b30">
+          <div class="icon-bx-wraper bx-style-1 p-lr20 p-tb30 center seth radius-sm">
+            <div class="icon-lg text-primary m-b20">
+              <a href="javascript:void(0);" class="icon-cell"><i class="ti-location-pin"></i></a>
+            </div>
+            <div class="icon-content">
+              <h5 class="dlab-tilte text-uppercase">Address</h5>
+              <p>Survey No. 295/L G-1, Chirag Udyog Bhavan, Golden Industrial Estate, Dabhel, Daman - 396 210 (U.T) INDIA</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 m-b30">
+          <div class="icon-bx-wraper bx-style-1 p-lr20 p-tb30 center seth radius-sm">
+            <div class="icon-lg text-primary m-b20">
+              <a href="javascript:void(0);" class="icon-cell"><i class="ti-email"></i></a>
+            </div>
+            <div class="icon-content">
+              <h5 class="dlab-tilte text-uppercase">Email</h5>
+              <p><a href="mailto:arvindlhr007@gmail.com">arvindlhr007@gmail.com</a><br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 m-b30">
+          <div class="icon-bx-wraper bx-style-1 p-lr20 p-tb30 center seth radius-sm">
+            <div class="icon-lg text-primary m-b20">
+              <a href="javascript:void(0);" class="icon-cell"><i class="ti-mobile"></i></a>
+            </div>
+            <div class="icon-content">
+              <h5 class="dlab-tilte text-uppercase">Phone</h5>
+              <p><a href="tel:+919974921502">+91 99749 21502</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 m-b30">
+          <div class="p-a30 bg-gray clearfix radius-sm">
+            <h3>Send Message Us</h3>
+            <div id="formSuccessMsg" class="form-success-message"></div>
+            <form method="POST" action="/contact" id="contactForm">
+              <input type="hidden" value="Contact" name="dzToDo">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input name="dzName" type="text" required class="form-control" placeholder="Your Name">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input name="dzEmail" type="email" required class="form-control" placeholder="Your Email Id">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input name="dzOther[Phone]" type="text" required class="form-control" placeholder="Phone">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input name="dzOther[Subject]" type="text" required class="form-control" placeholder="Subject">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <textarea name="dzMessage" rows="4" required class="form-control" placeholder="Your Message..."></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <button id="submitBtn" name="submit" type="submit" value="Submit" class="site-button">
+                    <span class="button-text">Submit</span>
+                    <span class="button-spinner"></span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-6 m-b30 d-flex">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.50086235677!2d72.89581377436996!3d20.418539108459182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0d13d00536d9f%3A0xc5a46a65ad0b2f61!2sChirag%20Industries!5e1!3m2!1sen!2sin!4v1787031775061!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('include/footer') %>
+<script src="/js/jquery.min.js"></script>
+<script src="/plugins/wow/wow.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+<script src="/plugins/magnific-popup/magnific-popup.js"></script>
+<script src="/plugins/counter/waypoints-min.js"></script>
+<script src="/plugins/counter/counterup.min.js"></script>
+<script src="/plugins/imagesloaded/imagesloaded.js"></script>
+<script src="/plugins/masonry/masonry-3.1.4.js"></script>
+<script src="/plugins/masonry/masonry.filter.js"></script>
+<script src="/plugins/owl-carousel/owl.carousel.js"></script>
+<script src="/js/lightgallery-all.min.js"></script>
+<script src="/plugins/scroll/scrollbar.min.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/dz.carousel.min.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+(function() {
+  const form = document.getElementById("contactForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const successMsg = document.getElementById("formSuccessMsg");
+  if (!form || !submitBtn || !successMsg) { console.error("Contact form elements not found."); return; }
+  form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+    successMsg.classList.remove("show", "error");
+    successMsg.textContent = "";
+    submitBtn.classList.add("loading");
+    submitBtn.disabled = true;
+    const formData = new URLSearchParams(new FormData(form));
+    try {
+      const response = await fetch("/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData
+      });
+      const responseText = await response.text();
+      console.log("Server status:", response.status);
+      console.log("Server response:", responseText);
+      let result = null;
+      try { result = JSON.parse(responseText); } catch (jsonError) { console.warn("Response is not JSON:", responseText); }
+      if (response.ok && result && result.success === true) {
+        successMsg.classList.remove("error");
+        successMsg.classList.add("show");
+        successMsg.textContent = "✅ Your form is submitted successfully!";
+        form.reset();
+      } else {
+        let errorMessage = "Something went wrong. Please try again.";
+        if (result && result.message) errorMessage = result.message;
+        else if (result && result.error) errorMessage = result.error;
+        showError(errorMessage);
+      }
+    } catch (error) {
+      console.error("Fetch / Network error:", error);
+      showError("Unable to connect to server. Please try again.");
+    }
+    submitBtn.classList.remove("loading");
+    submitBtn.disabled = false;
+    clearTimeout(window._formMsgTimer);
+    window._formMsgTimer = setTimeout(function() {
+      successMsg.classList.remove("show", "error");
+      successMsg.textContent = "";
+    }, 10000);
+  });
+  function showError(message) {
+    successMsg.classList.remove("show");
+    successMsg.classList.add("show", "error");
+    successMsg.textContent = "❌ " + message;
+  }
+})();
+</script>
+</body>
 </html>

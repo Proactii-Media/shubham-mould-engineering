@@ -41,57 +41,32 @@ const clientLogos = [
 const services = [
   {
     id: 1,
-    title: "Special Purpose Machine Manufacturing",
+    title: "Know Your Need",
     slug: "special-purpose-machine-manufacturing",
-    icon: "flaticon-robot-arm",
+    image: "/shubhamimages/service/meet.png",
     description:
-      "Customized special purpose machines designed for industrial automation requirements."
+      "<strong>1-7 Days</strong>, our expert team will contact you, to know your industry and you special need."
   },
 
   {
     id: 2,
-    title: "Industrial Automation Solutions",
+    title: "Automated Solutions for You",
     slug: "industrial-automation-solutions",
-    icon: "flaticon-factory-1",
+    image: "/shubhamimages/service/2.png",
     description:
-      "Complete industrial automation solutions to improve productivity and efficiency."
+      "<strong>7-15 Days</strong>, after knowing your need, our experts will tailor an Automated Solution just for you, combining with your need an d our understanding toward your industry."
   },
 
   {
     id: 3,
-    title: "Packaging & Filling Machinery",
+    title: "Delivery",
     slug: "packaging-and-filling-machinery",
-    icon: "flaticon-conveyor-1",
+    image: "shubhamimages/service/delivery.png",
     description:
-      "Advanced packaging and filling machine solutions for industries."
+      "<strong>30-50 Days</strong>, after you confirm our solution and order, we will start Manufacturing your machine, and try our best to give you a speed and satisfing delivery."
   },
 
-  {
-    id: 4,
-    title: "Testing & Inspection Solutions",
-    slug: "testing-and-inspection-solutions",
-    icon: "flaticon-engineer-1",
-    description:
-      "Precision testing and inspection solutions for maintaining quality."
-  },
-
-  {
-    id: 5,
-    title: "Precision Engineering & Tooling",
-    slug: "precision-engineering-and-tooling",
-    icon: "flaticon-settings",
-    description:
-      "High precision engineering works, jigs, fixtures and machine components."
-  },
-
-  {
-    id: 6,
-    title: "Machine Support & Maintenance",
-    slug: "machine-support-and-maintenance",
-    icon: "flaticon-engineer-1",
-    description:
-      "Installation, maintenance and after sales support services."
-  }
+ 
 ];
 
 
@@ -102,7 +77,7 @@ const applications = [
     id: 1,
     title: "Pen & Writing Instrument Industry",
     slug: "pen-writing-instrument-industry",
-    image: "/shubhamimages/products/auto1.png",
+    image: "/shubhamimages/application/pen2.png",
     shortTitle: "Pen & Writing Instruments",
     description:
       "We provide advanced automatic assembly solutions for pen, refill and writing instrument manufacturing. Our machines are designed for high-speed production, precise component assembly and consistent product quality. These automated systems help manufacturers reduce manual operations, improve production efficiency and achieve reliable performance."
@@ -112,7 +87,7 @@ const applications = [
     id: 2,
     title: "Packaging Industry",
     slug: "packaging-industry",
-    image: "/shubhamimages/application/packaging.jpg",
+    image: "/shubhamimages/application/1.png",
     shortTitle: "Packaging",
     description:
       "We manufacture reliable packaging machinery for blister card sealing, pouch sealing and other industrial packaging applications. Our machines are designed to provide consistent sealing quality, accurate operation and efficient production. These solutions help manufacturers improve packaging productivity, reduce manual handling and maintain uniform output."
@@ -122,7 +97,7 @@ const applications = [
     id: 3,
     title: "Moulding Industry",
     slug: "moulding-industry",
-    image: "/shubhamimages/application/colgate.png",
+    image: "/shubhamimages/application/moulding.png",
     shortTitle: "Plastic & Moulding",
     description:
       "Our moulding and special purpose solutions support plastic component manufacturing and precision moulding applications. We develop reliable machinery for accurate processing, consistent production and efficient operation. Our automation solutions help manufacturers improve productivity, reduce manual intervention and maintain high-quality manufacturing standards."
@@ -132,7 +107,7 @@ const applications = [
     id: 4,
     title: "Oil & Lubricant Industry",
     slug: "oil-lubricant-industry",
-    image: "/shubhamimages/products/oil_cap_spout.png",
+    image: "/shubhamimages/application/oil.png",
     shortTitle: "Oil & Lubricants",
     description:
       "Our machinery solutions support oil and lubricant packaging applications, including oil spout, cap and clip assembly. Our automated systems are designed for accurate component assembly, consistent production and reliable operation. These solutions help manufacturers improve assembly efficiency, reduce manual handling and achieve uniform product quality."
@@ -142,7 +117,7 @@ const applications = [
     id: 5,
     title: "Ink & Filling Industry",
     slug: "ink-filling-industry",
-    image: "/shubhamimages/application/marker.png",
+    image: "/shubhamimages/application/ink.png",
     shortTitle: "Ink & Filling",
     description:
       "We provide filling solutions for ink and liquid product applications with a focus on accuracy and consistent performance. Our filling machines are designed for precise dosing, controlled filling and reduced material wastage. These solutions help manufacturers improve production efficiency, maintain filling consistency and achieve reliable output."
@@ -152,7 +127,7 @@ const applications = [
     id: 6,
     title: "Testing & Quality Control",
     slug: "testing-quality-control",
-    image: "/shubhamimages/application/bottleleackage.png",
+    image: "/shubhamimages/application/testing.png",
     shortTitle: "Testing & Quality",
     description:
       "We provide industrial testing solutions for quality inspection and performance verification across various manufacturing applications. Our machines support bottle leakage testing, spring tension testing and other quality control processes. These systems help manufacturers identify defects, maintain product consistency and ensure reliable quality standards."
@@ -162,12 +137,118 @@ const applications = [
     id: 7,
     title: "Automatic Counting & Automation",
     slug: "automatic-counting-automation",
-    image: "/shubhamimages/application/automatic_refill.png",
+    image: "/shubhamimages/application/automatic.png",
     shortTitle: "Automatic Counting & Automation",
     description:
       "We provide automatic counting and industrial automation solutions for pen refills, components and other manufacturing applications. Our systems are designed for accurate counting, efficient material handling and continuous production. These solutions help reduce manual work, minimize counting errors and improve overall production efficiency."
   }
 ];
+
+
+const plasticproduct = [
+{
+    id: 2,
+
+    title: "PVC Plastic Component",
+
+    slug: "pvc-plastic-component",
+
+    category: "plastic-products",
+
+    type: "Plastic Product",
+
+    image: "/shubhamimages/products/plastic.png",
+
+    detailImage : "/shubhamimages/products/plastic2.png",
+
+    bannerImage: "/shubhamimages/banner/product_banner/plastic.png",
+
+    video: "/shubhamimages/video/pvc.mp4",
+
+    link: "/plastic-products/pvc-plastic-component",
+
+    keyFeatures: [
+        {
+            title: "High-Quality PVC Material",
+            description:
+                "Manufactured using high-quality PVC material to provide reliable performance, durability and consistent product quality."
+        },
+
+        {
+            title: "Precise Dimensions",
+            description:
+                "Designed with accurate dimensions and consistent geometry to ensure proper fitting and compatibility with intended applications."
+        },
+
+        {
+            title: "Durable Construction",
+            description:
+                "The PVC component offers good mechanical strength and durability for reliable performance in industrial applications."
+        },
+
+        {
+            title: "Smooth Finish",
+            description:
+                "Produced with a clean and smooth surface finish that enhances appearance and supports easy handling and installation."
+        },
+
+        {
+            title: "Application Specific Design",
+            description:
+                "Designed according to application requirements to provide reliable functionality and compatibility with associated components."
+        }
+    ],
+
+    description:
+        "The PVC Plastic Component is a high-quality plastic component designed for industrial and product-specific applications. Manufactured using durable PVC material, it offers consistent dimensions, reliable performance and good durability. The component can be used in various plastic product assemblies and industrial applications where accurate fitting and dependable performance are required.",
+
+    specifications: {
+        "Product Type": "PVC Plastic Component",
+        "Material": "PVC",
+        "Color": "As per requirement",
+        "Finish": "Smooth",
+        "Design": "Application Specific",
+        "Manufacturing": "Precision Manufactured",
+        "Application": "Industrial and Plastic Product Applications",
+        "Customization": "Available as per requirement"
+    },
+
+    features: [
+        "High-quality PVC material",
+        "Accurate dimensions",
+        "Durable construction",
+        "Smooth surface finish",
+        "Lightweight design",
+        "Consistent product quality",
+        "Application-specific design",
+        "Easy handling and installation",
+        "Suitable for industrial applications",
+        "Customizable as per requirement"
+    ],
+
+    benefits: [
+        "Reliable product performance",
+        "Good durability",
+        "Consistent dimensional accuracy",
+        "Easy handling",
+        "Low maintenance requirement",
+        "Suitable for various applications",
+        "Improved product reliability",
+        "Cost-effective plastic component solution"
+    ],
+
+    applications: [
+        "Plastic product assembly",
+        "Industrial plastic components",
+        "PVC product applications",
+        "Component fitting applications",
+        "Industrial assemblies",
+        "Custom plastic component applications"
+    ]
+}
+
+
+]
 
 
 
@@ -181,10 +262,10 @@ const products = [
     slug: "automatic-pen-assembly-machine-4up-sme-p-07",
     category: "pen-assembly-machine",
     type: "Pen Assembly Machine",
-    image: "/shubhamimages/banner/auto1.png",
+    image: "/shubhamimages/products/auto1.png",
     bannerImage: "/shubhamimages/banner/product_banner/9.png",
     video: "/shubhamimages/video/automatic.mp4",
-    link: "/products/automatic-pen-assembly-machine-4up-sme-p-07",
+    link: "/engineering-products/automatic-pen-assembly-machine-4up-sme-p-07",
     keyFeatures: [
       {
         title: "Automated Assembly",
@@ -203,8 +284,8 @@ const products = [
         description: "Designed for high-volume manufacturing, the machine provides accurate component positioning and consistent assembly quality."
       },
       {
-        title: "PLC and HMI Control",
-        description: "Delta PLC and 7-inch HMI provide easy machine monitoring, operation and production control."
+        title: "SMC Pneumatic Control",
+        description: "Delta SMC Pneumatic Control provide easy machine monitoring, operation and production control."
       }
     ],
 
@@ -230,7 +311,7 @@ const products = [
       "High-speed automatic pen assembly",
       "High precision and consistent assembly",
       "Compact and customer-friendly machine design",
-      "Imported PLC and touchscreen control",
+      "Imported SMC Pneumatic Control and touchscreen control",
       "Adjustable variable high-speed operation",
       "LED light in work area for easy setting and operation",
       "Can be integrated with linear, oval and rotary indexers",
@@ -268,7 +349,7 @@ const products = [
     image: "/shubhamimages/products/auto1.png",
     bannerImage: "/shubhamimages/banner/product_banner/9.png",
     video: "/shubhamimages/video/auto2up.mp4",
-    link: "/products/automatic-pen-assembly-machine-2up-sme-p-09",
+    link: "/engineering-products/automatic-pen-assembly-machine-2up-sme-p-09",
 
     keyFeatures: [
       {
@@ -288,8 +369,8 @@ const products = [
         description: "Designed for high-volume manufacturing, the machine provides accurate component positioning and consistent assembly quality."
       },
       {
-        title: "PLC and HMI Control",
-        description: "Delta PLC and 7-inch HMI provide easy machine monitoring, operation and production control."
+        title: "SMC Pneumatic Control",
+        description: "Delta SMC Pneumatic Control provide easy machine monitoring, operation and production control."
       }
     ],
 
@@ -314,7 +395,7 @@ const products = [
       "Precision pen assembly",
       "2UP automatic operation",
       "Adjustable production speed",
-      "Delta PLC and touchscreen HMI",
+      "Delta SMC Pneumatic Control and touchscreen HMI",
       "LED work-area lighting",
       "Compact machine design",
       "Automation integration capability",
@@ -346,7 +427,7 @@ const products = [
     image: "/shubhamimages/products/semi_automatic_assembly.png",
     bannerImage: "/shubhamimages/banner/product_banner/20.png",
     video: "/shubhamimages/video/semiautomatic.mp4",
-    link: "/products/semi-automatic-assembly-machine-2up-sme-p-09-sme-r-09",
+    link: "/engineering-products/semi-automatic-assembly-machine-2up-sme-p-09-sme-r-09",
 
     keyFeatures: [
       {
@@ -436,7 +517,7 @@ const products = [
     image: "/shubhamimages/products/semi_automatic_assembly.png",
     bannerImage: "/shubhamimages/banner/product_banner/21.png",
     video: "/shubhamimages/video/semiautomatic.mp4",
-    link: "/products/semi-automatic-assembly-machine-4up-sme-p-09-sme-r-09",
+    link: "/engineering-products/semi-automatic-assembly-machine-4up-sme-p-09-sme-r-09",
 
   keyFeatures: [
     {
@@ -528,7 +609,7 @@ const products = [
     image: "/shubhamimages/products/semi_automatic_assembly.png",
     bannerImage: "/shubhamimages/banner/product_banner/20.png",
     video: "/shubhamimages/video/semiautomatic.mp4",
-    link: "/products/refill-assembly-machine-sme-r-09",
+    link: "/engineering-products/refill-assembly-machine-sme-r-09",
     keyFeatures: [
       {
         title: "Functions",
@@ -619,7 +700,7 @@ const products = [
     image: "/shubhamimages/products/semi_automatic_assembly.png",
     bannerImage: "/shubhamimages/banner/product_banner/20.png",
     video: "/shubhamimages/video/semiautomatic.mp4",
-    link: "/products/refill-assembly-machine-4up-sme-r-07",
+    link: "/engineering-products/refill-assembly-machine-4up-sme-r-07",
 
     keyFeatures: [
       {
@@ -643,9 +724,9 @@ const products = [
           "Ensures accurate fitting and positioning of refill components for consistent assembly quality."
       },
       {
-        title: "PLC and HMI Control",
+        title: "SMC Pneumatic Control",
         description:
-          "Delta PLC and 7-inch touchscreen HMI provide convenient machine monitoring, operation and production control."
+          "Delta SMC Pneumatic Control and 7-inch touchscreen HMI provide convenient machine monitoring, operation and production control."
       },
       {
         title: "SMC Pneumatic System",
@@ -681,7 +762,7 @@ const products = [
       "High-speed refill assembly",
       "4UP production system",
       "High precision component fitting",
-      "Delta PLC control",
+      "Delta SMC Pneumatic Control control",
       "7-inch touchscreen HMI",
       "SMC pneumatic system",
       "LED work-area lighting",
@@ -715,7 +796,7 @@ const products = [
     image: "/shubhamimages/products/oil_cap_spout.png",
     bannerImage: "/shubhamimages/banner/product_banner/17.png",
     video: "/shubhamimages/video/oil.mp4",
-    link: "/products/cap-clip-assembly-machine",
+    link: "/engineering-products/cap-clip-assembly-machine",
 
     description:
       "The Spout Cap Assembly Machine is designed to automatically assemble spout caps consisting of the main cap body and nozzle/spout component for oil bottles. The machine streamlines the production process by automatically orienting, feeding and assembling the individual components with precise and efficient operation.",
@@ -768,7 +849,7 @@ const products = [
       "Sequential component feeding",
       "Precision spout insertion",
       "2UP production system",
-      "PLC-based machine control",
+      "SMC Pneumatic Control-based machine control",
       "Touchscreen HMI",
       "Adjustable operating speed",
       "Automation integration capability"
@@ -802,7 +883,7 @@ const products = [
     image: "/shubhamimages/products/refill_wax.png",
     bannerImage: "/shubhamimages/banner/product_banner/23.png",
     video: "/shubhamimages/video/refillWaxing.mp4",
-    link: "/products/refill-waxing-machine",
+    link: "/engineering-products/refill-waxing-machine",
     keyFeatures: [
       {
         title: "Function",
@@ -858,7 +939,7 @@ const products = [
     image: "/shubhamimages/products/blisterCard.png",
     bannerImage: "/shubhamimages/banner/product_banner/12.png",
     video: "/shubhamimages/video/blisterCard.mp4",
-    link: "/products/blister-card-sealing-machine",
+    link: "/engineering-products/blister-card-sealing-machine",
 
     description:
       "The 360° Rotary Blister Card Sealing Machine from Subham Moulds & Engineering is engineered for precision, efficiency, and high-volume productivity. The machine provides a reliable and efficient solution for modern blister card packaging requirements, delivering consistent sealing performance for industrial production.",
@@ -937,7 +1018,7 @@ const products = [
     image: "/shubhamimages/products/marker.png",
     bannerImage: "/shubhamimages/banner/product_banner/14.png",
     // video: "https://www.youtube.com/watch?v=UXiPtVOQVv0",
-    link: "/products/marker-ink-bottle-filling-machine",
+    link: "/engineering-products/marker-ink-bottle-filling-machine",
 
     keyFeatures: [
       {
@@ -1006,10 +1087,10 @@ const products = [
     slug: "automatic-refill-counting-machine",
     category: "automation-system",
     type: "Automation System",
-    image: "/shubhamimages/products/automatic_refill.png",
+    image: "/shubhamimages/products/22.png",
     bannerImage: "/shubhamimages/banner/product_banner/10.png",
     video: "/shubhamimages/video/counting.mp4",
-    link: "/products/automatic-refill-counting-machine",
+    link: "/engineering-products/automatic-refill-counting-machine",
     keyFeatures: [
       {
         title: "Automatic Refill Counting",
@@ -1077,10 +1158,10 @@ const products = [
     slug: "vibrator-bowl-4-track-pen-barrel",
     category: "automation-system",
     type: "Automation System",
-    image: "/shubhamimages/products/vibratorBoel4.png",
+    image: "/shubhamimages/products/vibretor.png",
     bannerImage: "/shubhamimages/banner/product_banner/21.png",
     video: "/shubhamimages/video/4track.mp4",
-    link: "/products/vibrator-bowl-4-track-pen-barrel",
+    link: "/engineering-products/vibrator-bowl-4-track-pen-barrel",
     keyFeatures: [
       {
         title: "Automated Sorting",
@@ -1141,7 +1222,7 @@ const products = [
     type: "Packaging Machine",
     image: "/shubhamimages/products/pouch.png",
     bannerImage: "/shubhamimages/banner/product_banner/19.png",
-    link: "/products/pouch-sealing-machine",
+    link: "/engineering-products/pouch-sealing-machine",
     keyFeatures: [
       {
         title: "Reliable Pouch Sealing",
@@ -1210,7 +1291,7 @@ const products = [
     type: "Moulding Machine",
     image: "/shubhamimages/products/colgate.png",
     bannerImage: "/shubhamimages/banner/product_banner/16.png",
-    link: "/products/toothbrush-double-moulding-machine",
+    link: "/engineering-products/toothbrush-double-moulding-machine",
     keyFeatures: [
       {
         title: "Double Moulding Capability",
@@ -1280,7 +1361,7 @@ const products = [
     image: "/shubhamimages/products/bottleleackage.png",
     bannerImage: "/shubhamimages/banner/product_banner/13.png",
     video: "/shubhamimages/video/bottleLeakage.mp4",
-    link: "/products/bottle-leakage-testing-machine",
+    link: "/engineering-products/bottle-leakage-testing-machine",
 
     description:
       "The Bottle Leakage Testing Machine (2UP), manufactured by Subham Moulds & Engineering, is built with advanced technology to make the production process more reliable, efficient, and precise. The machine is designed to test bottle seal integrity and identify leakage during manufacturing and packaging operations.",
@@ -1361,7 +1442,7 @@ const products = [
     bannerImage: "/shubhamimages/banner/product_banner/15.png",
     video: "/shubhamimages/video/caphandle.mp4",
 
-    link: "/products/cap-handle-spring-tension-testing-machine",
+    link: "/engineering-products/cap-handle-spring-tension-testing-machine",
     keyFeatures: [
       {
         title: "High-Precision Spring Testing",
@@ -1430,7 +1511,7 @@ const products = [
     image: "/shubhamimages/products/penBarrel.png",
     bannerImage: "/shubhamimages/banner/product_banner/18.png",
     video: "/shubhamimages/products/videos/pen-barrel-auto-rotating-set.mp4",
-    link: "/products/pen-barrel-auto-rotating-set",
+    link: "/engineering-products/pen-barrel-auto-rotating-set",
 
 
     description:
@@ -1502,4 +1583,4 @@ const products = [
 
 ];
 
-module.exports = { clientLogos, products, services, applications };
+module.exports = { clientLogos, products, services, applications,plasticproduct};

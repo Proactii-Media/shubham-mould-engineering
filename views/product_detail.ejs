@@ -74,6 +74,46 @@
         background-image: url('/shubhamimages/banner/2.png');
       }
     }
+
+    .video-bx {
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .video-thumbnail {
+      width: 100%;
+      height: 350px;
+      object-fit: contain;
+      display: block;
+      background: #fff;
+    }
+
+    .video-not-available {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+
+      padding: 8px 15px;
+      border-radius: 4px;
+
+      font-size: 13px;
+      font-weight: 500;
+
+      display: flex;
+      align-items: center;
+      gap: 7px;
+
+      white-space: nowrap;
+    }
+
+    .video-not-available i {
+      font-size: 14px;
+    }
   </style>
 
   <%- include('include/header') %>
@@ -225,13 +265,9 @@
                     </div>
 
 
-                    <div class="col-xl-6 col-lg-12 col-md-6 col-sm-6 m-b30">
+                    <!-- <div class="col-xl-6 col-lg-12 col-md-6 col-sm-6 m-b30">
 
-                      <!-- <img
-                src="<%= product.image %>"
-                class="img-cover rounded"
-                alt="<%= product.title %>"
-            > -->
+
 
                       <div class="video-bx">
                         <img src="<%= product.image %>" alt="Signature">
@@ -241,7 +277,39 @@
                         </div>
                       </div>
 
+                    </div> -->
+
+                    <div class="col-xl-6 col-lg-12 col-md-6 col-sm-6 m-b30">
+
+                      <div class="video-bx" id="videoBox">
+
+                        <!-- Product Image -->
+                        <img src="<%= product.image %>" alt="<%= product.title %>" class="video-thumbnail">
+
+                        <% if (product.video) { %>
+
+                          <!-- Video Available -->
+                          <div class="video-play-icon">
+                            <a href="javascript:void(0);" class="bg-primary"
+                              onclick="playVideo('<%= product.video %>')">
+                              <i class="fas fa-play"></i>
+                            </a>
+                          </div>
+
+                          <% } else { %>
+
+                            <!-- Video Not Available -->
+                            <div class="video-not-available">
+                              <i class="fas fa-video-slash"></i>
+                              <span>Video Not Available</span>
+                            </div>
+
+                            <% } %>
+
+                      </div>
+
                     </div>
+
 
                   </div>
 
@@ -292,26 +360,6 @@
                 </div>
               </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
           </div>
         </div>
@@ -321,7 +369,7 @@
     </div>
     <!-- contact area END -->
     </div>
-    <!-- Content END-->
+
 
     <!-- Call To Action End -->
     <div class="section-full call-action bg-primary wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
@@ -425,6 +473,26 @@
 
 
       <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+      <script>
+        function playVideo(videoUrl) {
+
+          const videoBox = document.getElementById("videoBox");
+
+          videoBox.innerHTML = `
+            <iframe
+                width="100%"
+                height="350"
+                src="${videoUrl}"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+            </iframe>
+        `;
+        }
+      </script>
+
 
 
 

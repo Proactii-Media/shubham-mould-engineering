@@ -5,7 +5,7 @@ const { applications } = require("../../constants/data");
 
 const getAllproduct = async (req, res) => {
     try {
-        res.render("products", {
+        res.render("engineering-products", {
             products,
             applications,
         });

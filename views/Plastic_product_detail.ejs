@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('include/head') %>
+<style>
+.specification-header{background-color:#E80028!important}
+.specification-header th{color:#fff!important;background-color:#E80028!important}
+.strong{font-weight:700!important}
+.about-box{padding:10px;border:2px dashed #E80028;border-radius:20px;display:inline-block}
+.about-box img{display:block;border-radius:10px}
+.dlab-gallery-box .dlab-media img{width:100%;height:350px;object-fit:cover}
+.product-banner-title{font-size:40px;line-height:1.2;max-width:400px}
+.product-banner{background-image:url('<%= product.bannerImage %>');background-position:right center;background-size:contain;background-repeat:no-repeat}
+@media (max-width:1024px){.product-banner .your-text-container-class{width:100%!important;max-width:100%!important;padding:30px 20px!important;background:rgba(0,0,0,0.4)!important}.break-mobile{display:block!important}.dlab-bnr-inr{height:280px}}
+@media (max-width:768px){.product-banner{background-image:url('/shubhamimages/banner/2.png')}}
+.video-bx{position:relative;overflow:hidden;background:#fff}
+.video-thumbnail{width:100%;height:350px;object-fit:contain;display:block;background:#fff}
+.video-not-available{position:absolute;bottom:15px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.75);color:#fff;padding:8px 15px;border-radius:4px;font-size:13px;font-weight:500;display:flex;align-items:center;gap:7px;white-space:nowrap}
+.video-not-available i{font-size:14px}
+</style>
+<%- include('include/header') %>
+<div class="page-content bg-white">
+  <div class="dlab-bnr-inr bg-pt product-banner">
+    <div class="container">
+      <div class="dlab-bnr-inr-entry">
+        <h1 class="text-white product-banner-title"><%= product.title.replace(/\s*\([^)]*\)/, '' ) %></h1>
+        <div class="breadcrumb-row">
+          <ul class="list-inline"><li><a href="/">Home</a></li><li>Products</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-block">
+    <div class="section-full content-inner">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-md-5">
+            <div class="widget sidebar-widget ext-sidebar-menu widget_nav_menu">
+              <ul class="menu">
+                <% plasticproduct.forEach(item=> { %>
+                  <li class="<%= product.slug === item.slug ? 'active' : '' %>">
+                    <a href="/plastic-products/<%= item.slug %>"><%= item.title %></a>
+                  </li>
+                <% }) %>
+              </ul>
+            </div>
+            <div class="widget">
+              <div class="download-file">
+                <h4 class="title">Get our brochures</h4>
+                <ul>
+                  <li>
+                    <a href="/shubhamimages/subham.pdf" target="_blank">
+                      <div class="text">Company Brochures</div>
+                      <i class="fas fa-download"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-9 col-lg-8 col-md-7 m-b30">
+            <div class="dz-media rounded-sm">
+              <img src="<%= product.image %>" class="rounded" alt="" style="width:100%;height:450px;object-fit:contain;">
+            </div>
+            <div class="dz-content m-t30">
+              <div class="m-b40">
+                <h4 class="title"><%= product.title %></h4>
+                <p class="font-18"><%= product.description %></p>
+              </div>
+              <div class="sort-title clearfix text-center"><h4>Key Features and Functionality</h4></div>
+              <ul style="padding-left:0;margin-left:0;list-style-position:outside;">
+                <% product.keyFeatures.forEach((feature)=> { %>
+                  <li style="padding-bottom:12px;line-height:1.6;padding-left:5px;margin-left:20px;">
+                    <strong style="color:#232323;"><%= feature.title %>:</strong> <%= feature.description %>
+                  </li>
+                <% }) %>
+              </ul>
+              <div class="sort-title clearfix text-center"><h4>Technical Specifications</h4></div>
+              <table class="table table-striped mb-5">
+                <thead><tr class="specification-header"><th>Mode Of Production</th><th>Details</th></tr></thead>
+                <tbody>
+                  <% Object.entries(product.specifications || {}).forEach(([key, value])=> { %>
+                    <tr><th><%= key %></th><td><%= value %></td></tr>
+                  <% }) %>
+                </tbody>
+              </table>
+              <div class="row d-flex align-items-center m-b40">
+                <div class="col-xl-6 col-lg-12 col-md-6 col-sm-6">
+                  <div><h4>Key Features & Benefits</h4></div>
+                  <ul class="list-checked black">
+                    <% (product.features || []).forEach(feature=> { %>
+                      <li><%= feature %></li>
+                    <% }) %>
+                  </ul>
+                </div>
+                <div class="col-xl-6 col-lg-12 col-md-6 col-sm-6 m-b30">
+                  <div class="video-bx" id="videoBox">
+                    <img src="<%= product.image %>" alt="<%= product.title %>" class="video-thumbnail">
+                    <% if (product.video) { %>
+                      <div class="video-play-icon">
+                        <a href="javascript:void(0);" class="bg-primary" onclick="playVideo('<%= product.video %>')">
+                          <i class="fas fa-play"></i>
+                        </a>
+                      </div>
+                    <% } else { %>
+                      <div class="video-not-available">
+                        <i class="fas fa-video-slash"></i>
+                        <span>Video Not Available</span>
+                      </div>
+                    <% } %>
+                  </div>
+                </div>
+              </div>
+              <div class="section-full bg-white mt-3 bg-img-fix">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="sort-title clearfix text-center"><h4>Applications</h4></div>
+                      <div class="section-content box-sort-in m-b10 p-b0 button-example m-b30">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <ul class="list-star red list-box">
+                              <% (product.applications || []).forEach(application=> { %>
+                                <li><%= application %></li>
+                              <% }) %>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-full call-action bg-primary wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 text-white">
+        <h2 class="title" style="font-size:24px;">Advanced Assembly Machines, Manufactured for Global Industries</h2>
+      </div>
+      <div class="col-lg-3 d-flex">
+        <a href="/contact" class="site-button white align-self-center outline ms-auto radius-xl btnhover16 outline-2">Request A Quote</a>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('include/footer') %>
+<script>
+document.addEventListener("DOMContentLoaded",function(){function equalInfoHeight(){const infos=document.querySelectorAll(".dez-info");infos.forEach(info=>{info.style.height="auto"});let max=0;infos.forEach(info=>{if(info.offsetHeight>max)max=info.offsetHeight});infos.forEach(info=>{info.style.height=max+"px"})}equalInfoHeight();window.addEventListener("resize",equalInfoHeight)});
+</script>
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/plugins/wow/wow.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+<script src="/plugins/magnific-popup/magnific-popup.js"></script>
+<script src="/plugins/counter/waypoints-min.js"></script>
+<script src="/plugins/counter/counterup.min.js"></script>
+<script src="/plugins/imagesloaded/imagesloaded.js"></script>
+<script src="/plugins/masonry/masonry-3.1.4.js"></script>
+<script src="/plugins/masonry/masonry.filter.js"></script>
+<script src="/plugins/owl-carousel/owl.carousel.js"></script>
+<script src="/js/lightgallery-all.min.js"></script>
+<script src="/plugins/scroll/scrollbar.min.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/dz.carousel.min.js"></script>
+<script src="/plugins/countdown/jquery.countdown.js"></script>
+<script src="/js/dz.ajax.js"></script>
+<script src="/plugins/rangeslider/rangeslider.js"></script>
+<script src="/plugins/switcher/switcher.js"></script>
+<script src="/js/jquery.lazy.min.js"></script>
+<script src="/js/jquery.themepunch.tools.min.js"></script>
+<script src="/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="/js/extensions/revolution.extension.video.min.js"></script>
+<script src="/js/rev.slider.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+function playVideo(videoUrl){const videoBox=document.getElementById("videoBox");videoBox.innerHTML='<iframe width="100%" height="350" src="'+videoUrl+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';}
+</script>
+<script>$(document).ready(function(){new WOW().init()});</script>
+</body>
+</html>
