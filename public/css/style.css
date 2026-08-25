@@ -7978,6 +7978,20 @@ a,
     outline: none !important;
 	border: 0;
 }
+
+
+@media (max-width: 766px) {
+  .site-filters li.btn {
+    margin-bottom: 10px !important;
+        box-shadow: none;
+    -webkit-box-shadow: none;
+    outline: none !important;
+	border: 0;
+   
+  }
+}
+
+
 .site-filters li input {
     display: none;
 }

@@ -29,51 +29,33 @@
 				<!-- FILTERS -->
 				<div class="site-filters clearfix center m-b40">
 					<ul class="filters" data-bs-toggle="buttons">
-						<li data-filter="" class="btn active">
-							<input type="radio">
-							<a href="javascript:void(0)" class="site-button-secondry button-sm radius-xl">
-								<span>All</span>
-							</a>
-						</li>
-						<li data-filter="pen-assembly-machine" class="btn">
-							<input type="radio">
-							<a href="javascript:void(0)" class="site-button-secondry button-sm radius-xl">
-								<span>Pen Assembly</span>
-							</a>
-						</li>
-						<li data-filter="refill-assembly-machine" class="btn">
-							<input type="radio">
-							<a href="javascript:void(0)" class="site-button-secondry button-sm radius-xl">
-								<span>Refill Machine</span>
-							</a>
-						</li>
-						<li data-filter="packaging-machine" class="btn">
-							<input type="radio">
-							<a href="javascript:void(0)" class="site-button-secondry button-sm radius-xl">
-								<span>Packaging</span>
-							</a>
-						</li>
-						<li data-filter="automation-system" class="btn">
-							<input type="radio">
-							<a href="javascript:void(0)" class="site-button-secondry button-sm radius-xl">
-								<span>Automation</span>
-							</a>
-						</li>
-						<li data-filter="testing-machine" class="btn">
-							<input type="radio">
-							<a href="javascript:void(0)" class="site-button-secondry button-sm radius-xl">
-								<span>Testing</span>
-							</a>
-						</li>
-						<li data-filter="special-purpose-machine" class="btn">
-							<input type="radio">
-							<a href="javascript:void(0)" class="site-button-secondry button-sm radius-xl">
-								<span>Special Purpose</span>
-							</a>
-						</li>
-					</ul>
+
+    <!-- ALL -->
+    <li data-filter="" class="btn active">
+        <input type="radio">
+
+        <a href="javascript:void(0)" class="site-button-secondry button-sm radius-xl">
+            <span>All</span>
+        </a>
+    </li>
+
+
+    <!-- UNIQUE PRODUCT TYPES -->
+    <% productTypes.forEach(productmenu => { %>
+
+        <li data-filter="<%= productmenu.category %>" class="btn">
+            <input type="radio">
+
+            <a href="javascript:void(0)" class="site-button-secondry button-sm radius-xl">
+                <span><%= productmenu.type %></span>
+            </a>
+        </li>
+
+    <% }) %>
+
+</ul>
 				</div>
-				<!-- FILTER END -->
+				<!-- FILTER END --> 
 				<!-- PRODUCT LIST -->
 				<div class="clearfix" id="lightgallery">
 					<ul id="masonry" class="portfolio-ic dlab-gallery-listing gallery-grid-4 gallery row p-l0 sp10 lightgallery text-center">
