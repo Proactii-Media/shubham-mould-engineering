@@ -48,7 +48,8 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-7 col-xl-2 col-lg-3 col-sm-6 footer-col-4">
-                    <div class="widget widget_services border-0">
+                    <!-- <div class="widget widget_services border-0">
+                        
                         <h5 class="footer-title text-white">Applications</h5>
 
                         <ul>
@@ -62,7 +63,21 @@
 
                                 <% }) %>
                         </ul>
-                    </div>
+                    </div> -->
+
+                    <div class="widget widget_services border-0">
+    <h5 class="footer-title text-white">Applications</h5>
+
+    <ul>
+        <% applications.forEach((item) => { %>
+            <li>
+                <a href="/applications?application=<%= item.slug %>">
+                    <%= item.title %>
+                </a>
+            </li>
+        <% }) %>
+    </ul>
+</div>
                 </div>
                 <div class="col-md-6 col-xl-4 col-lg-3 col-sm-6 footer-col-4">
                     <div class="widget widget_getintuch">
@@ -71,7 +86,7 @@
                             <li><i class="ti-location-pin"></i><strong>address</strong> Survey No. 295/L G-1, Chirag
                                 Udyog Bhavan, Golden Industrial Estate,Dabhel, Daman - 396 210 (U.T) INDIA</li>
                             <li><i class="ti-mobile"></i><strong>phone</strong><a href="tel:+919974921502">+91
-                                    9974921502
+                                    99749 21502
                                 </a></li>
                             <li><i class="ti-email"></i><strong>email</strong><a
                                     href="mailto:arvindlhr007@gmail.com"><span class="__cf_email__"
@@ -150,3 +165,44 @@
         </a>
     </li>
 </ul> -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const params = new URLSearchParams(window.location.search);
+    const selectedSlug = params.get("application");
+
+    if (!selectedSlug) {
+        return;
+    }
+
+    const detailSection = document.getElementById("application-detail");
+    const selectedDetail = document.getElementById("detail-" + selectedSlug);
+
+    if (selectedDetail) {
+
+        // Show detail container
+        detailSection.style.display = "block";
+
+        // Hide all details
+        document.querySelectorAll(".application-detail").forEach(function (detail) {
+            detail.style.display = "none";
+        });
+
+        // Show selected application
+        selectedDetail.style.display = "block";
+
+        // Hide application cards
+        const masonry = document.getElementById("masonry");
+
+        if (masonry) {
+            masonry.style.display = "none";
+        }
+
+        // Scroll to detail
+        detailSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+});
+</script>
