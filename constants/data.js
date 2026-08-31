@@ -163,7 +163,7 @@ const plasticproduct = [
 
     bannerImage: "/shubhamimages/banner/product_banner/plastic.png",
 
-    video: "/shubhamimages/video/pvc.mp4",
+   
 
     link: "/plastic-products/pvc-plastic-component",
 
@@ -515,7 +515,7 @@ const products = [
       category: "pen-assembly-machine",
     type: "Pen Assembly Machine",
     image: "/shubhamimages/products/semi_automatic_assembly.png",
-    bannerImage: "/shubhamimages/banner/product_banner/21.png",
+    bannerImage: "/shubhamimages/banner/product_banner/20.png",
     video: "/shubhamimages/video/semiautomatic.mp4",
     link: "/engineering-products/semi-automatic-assembly-machine-4up-sme-p-09-sme-r-09",
 

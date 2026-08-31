@@ -101,12 +101,17 @@
                           <i class="fas fa-play"></i>
                         </a>
                       </div>
-                    <% } else { %>
-                      <div class="video-not-available">
-                        <i class="fas fa-video-slash"></i>
-                        <span>Video Not Available</span>
-                      </div>
-                    <% } %>
+           
+                           <% } else { %>
+
+                            <!-- Video Not Available -->
+                            <div class="video-not-available">
+                              <i class="fas fa-video-slash"></i>
+                              <span>Video Not Available</span>
+                            </div>
+
+                            <% } %>
+         
                   </div>
                 </div>
               </div>
@@ -153,40 +158,47 @@
 <script>
 document.addEventListener("DOMContentLoaded",function(){function equalInfoHeight(){const infos=document.querySelectorAll(".dez-info");infos.forEach(info=>{info.style.height="auto"});let max=0;infos.forEach(info=>{if(info.offsetHeight>max)max=info.offsetHeight});infos.forEach(info=>{info.style.height=max+"px"})}equalInfoHeight();window.addEventListener("resize",equalInfoHeight)});
 </script>
-<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script src="/js/jquery.min.js"></script>
-<script src="/plugins/wow/wow.js"></script>
-<script src="/js/bootstrap.bundle.min.js"></script>
-<script src="/plugins/bootstrap-select/bootstrap-select.min.js"></script>
-<script src="/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
-<script src="/plugins/magnific-popup/magnific-popup.js"></script>
-<script src="/plugins/counter/waypoints-min.js"></script>
-<script src="/plugins/counter/counterup.min.js"></script>
-<script src="/plugins/imagesloaded/imagesloaded.js"></script>
-<script src="/plugins/masonry/masonry-3.1.4.js"></script>
-<script src="/plugins/masonry/masonry.filter.js"></script>
-<script src="/plugins/owl-carousel/owl.carousel.js"></script>
-<script src="/js/lightgallery-all.min.js"></script>
-<script src="/plugins/scroll/scrollbar.min.js"></script>
-<script src="/js/custom.js"></script>
-<script src="/js/dz.carousel.min.js"></script>
-<script src="/plugins/countdown/jquery.countdown.js"></script>
-<script src="/js/dz.ajax.js"></script>
-<script src="/plugins/rangeslider/rangeslider.js"></script>
-<script src="/plugins/switcher/switcher.js"></script>
-<script src="/js/jquery.lazy.min.js"></script>
-<script src="/js/jquery.themepunch.tools.min.js"></script>
-<script src="/js/jquery.themepunch.revolution.min.js"></script>
-<script src="/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="/js/extensions/revolution.extension.video.min.js"></script>
-<script src="/js/rev.slider.js"></script>
-<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+   <!-- <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+      <script src="/js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
+      <script src="/plugins/wow/wow.js"></script><!-- WOW JS -->
+
+
+      <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+      <script src="/plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
+      <script src="/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+      <script src="/plugins/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
+      <script src="/plugins/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
+      <script src="/plugins/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
+      <script src="/plugins/imagesloaded/imagesloaded.js"></script><!-- IMAGESLOADED -->
+      <script src="/plugins/masonry/masonry-3.1.4.js"></script><!-- MASONRY -->
+      <script src="/plugins/masonry/masonry.filter.js"></script><!-- MASONRY -->
+      <script src="/plugins/owl-carousel/owl.carousel.js"></script><!-- OWL SLIDER -->
+      <script src="/plugins/lightgallery/js/lightgallery-all.min.js"></script><!-- Lightgallery -->
+      <script src="/plugins/scroll/scrollbar.min.js"></script><!-- scroll -->
+      <script src="/js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+      <script src="/js/dz.carousel.min.js"></script><!-- SORTCODE FUCTIONS  -->
+      <script src="/plugins/countdown/jquery.countdown.js"></script><!-- COUNTDOWN FUCTIONS  -->
+      <script src="/js/dz.ajax.js"></script><!-- CONTACT JS  -->
+      <script src="/plugins/rangeslider/rangeslider.js"></script><!-- Rangeslider -->
+      <script src="/plugins/switcher/switcher.js"></script><!-- Switcher -->
+      <script src="/js/jquery.lazy.min.js"></script>
+      <!-- REVOLUTION JS FILES -->
+      <script src="/plugins/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
+      <script src="/plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+      <!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+      <script src="/plugins/revolution/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+      <script src="/plugins/revolution/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+      <script src="/plugins/revolution/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+      <script src="/plugins/revolution/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+      <script src="/plugins/revolution/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+      <script src="/plugins/revolution/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+      <script src="/plugins/revolution/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+      <script src="/plugins/revolution/revolution/js/extensions/revolution.extension.video.min.js"></script>
+      <script src="/js/rev.slider.js"></script>
+
+      <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script>
 function playVideo(videoUrl){const videoBox=document.getElementById("videoBox");videoBox.innerHTML='<iframe width="100%" height="350" src="'+videoUrl+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';}
 </script>

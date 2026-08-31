@@ -31,26 +31,21 @@
                     </div>
                 </div>
 
-
-
                 <div class="col-md-3 col-5 col-xl-2 col-lg-2 col-sm-6 footer-col-4">
                     <div class="widget widget_services border-0">
                         <h5 class="footer-title text-white">Company</h5>
                         <ul>
                             <li><a href="/about">About Us</a></li>
-                            <li><a href="/products">Products</a></li>
+                            <li><a href="/engineering-products">Products</a></li>
                             <li><a href="/applications">Applications</a></li>
                             <li><a href="/quality_policy">Quality Policy</a></li>
                             <li><a href="our_clients">Our Clients</a></li>
-
-
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-7 col-xl-2 col-lg-3 col-sm-6 footer-col-4">
                     <div class="widget widget_services border-0">
                         <h5 class="footer-title text-white">Applications</h5>
-
                         <ul>
                             <% applications.forEach((item)=> { %>
 
@@ -58,6 +53,7 @@
                                     <a href="/applications">
                                         <%= item.title %>
                                     </a>
+
                                 </li>
 
                                 <% }) %>
@@ -70,8 +66,7 @@
                         <ul>
                             <li><i class="ti-location-pin"></i><strong>address</strong> Survey No. 295/L G-1, Chirag
                                 Udyog Bhavan, Golden Industrial Estate,Dabhel, Daman - 396 210 (U.T) INDIA</li>
-                            <li><i class="ti-mobile"></i><strong>phone</strong><a href="tel:+919974921502">+91
-                                    99749 21502
+                            <li><i class="ti-mobile"></i><strong>phone</strong><a href="tel:+919974921502">+91 99749 21502
                                 </a></li>
                             <li><i class="ti-email"></i><strong>email</strong><a
                                     href="mailto:arvindlhr007@gmail.com"><span class="__cf_email__"
@@ -150,3 +145,6 @@
         </a>
     </li>
 </ul> -->
+<script>
+  $(document).ready(function(){$('.filters li[data-filter=""]').on('click',function(){$('#masonry').show();$('#application-detail').hide();$('.application-detail').hide()});$('.filters li[data-filter!=""]').on('click',function(){let slug=$(this).attr('data-filter');$('#masonry').hide();$('#application-detail').show();$('.application-detail').hide();$('#detail-'+slug).fadeIn()});$('.application-select').on('click',function(){let slug=$(this).data('slug');$('#masonry').hide();$('#application-detail').show();$('.application-detail').hide();$('#detail-'+slug).fadeIn();$('html, body').animate({scrollTop:$('#application-detail').offset().top-100},500)})});
+</script>
