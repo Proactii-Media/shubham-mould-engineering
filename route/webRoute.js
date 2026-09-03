@@ -10,6 +10,7 @@ const qualityPolicy = require("../controller/web_controller/qualitypolicy.js");
 const product = require("../controller/web_controller/product.js");
 const plasticproduct = require("../controller/web_controller/plasticproduct.js")
 const clientLogos = require("../controller/web_controller/clientlogos.js");
+const service = require("../controller/web_controller/services.js");
 
 
 webRouter.get("/", home.getAllHome);
@@ -20,14 +21,9 @@ webRouter.get("/quality_policy", qualityPolicy.getAllQualityPolicy);
 webRouter.get("/applications", application.getAllApplications);
 webRouter.get("/engineering-products", product.getAllproduct);
 webRouter.get("/engineering-products/:slug", product.getProductSlug);
-
+webRouter.get("/services",service.getAllService);
 webRouter.get("/plastic-products", plasticproduct.getAllPlasticproduct);
 webRouter.get("/plastic-products/:slug",plasticproduct.getPlasticProductSlug);
-
-
-
-
-
 webRouter.get("/our_clients", clientLogos.getAllClientlogos)
 
 module.exports = webRouter;

@@ -1,190 +1,196 @@
-<!DOCTYPE html>
-<html lang="en">
 <%- include('include/head') %>
-<%- include('include/header') %>
-<div class="page-content bg-white">
-  <div class="dlab-bnr-inr overlay-black-middle text-center bg-pt" style="background-image: url('/shubhamimages/banner/contact.png');">
-    <div class="container">
-      <div class="dlab-bnr-inr-entry align-m text-center">
-        <h1 class="text-white">Contact Us</h1>
-        <div class="breadcrumb-row">
-          <ul class="list-inline">
-            <li><a href="/">Home</a></li>
-            <li>Contact Us</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section-full content-inner bg-white contact-style-1">
-    <div class="container">
-      <div class="row dzseth">
-        <div class="col-lg-4 col-md-6 col-sm-6 m-b30">
-          <div class="icon-bx-wraper bx-style-1 p-lr20 p-tb30 center seth radius-sm">
-            <div class="icon-lg text-primary m-b20">
-              <a href="javascript:void(0);" class="icon-cell"><i class="ti-location-pin"></i></a>
-            </div>
-            <div class="icon-content">
-              <h5 class="dlab-tilte text-uppercase">Address</h5>
-              <p>Survey No. 295/L G-1, Chirag Udyog Bhavan, Golden Industrial Estate, Dabhel, Daman - 396 210 (U.T) INDIA</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6 m-b30">
-          <div class="icon-bx-wraper bx-style-1 p-lr20 p-tb30 center seth radius-sm">
-            <div class="icon-lg text-primary m-b20">
-              <a href="javascript:void(0);" class="icon-cell"><i class="ti-email"></i></a>
-            </div>
-            <div class="icon-content">
-              <h5 class="dlab-tilte text-uppercase">Email</h5>
-              <p><a href="mailto:arvindlhr007@gmail.com">arvindlhr007@gmail.com</a><br></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6 m-b30">
-          <div class="icon-bx-wraper bx-style-1 p-lr20 p-tb30 center seth radius-sm">
-            <div class="icon-lg text-primary m-b20">
-              <a href="javascript:void(0);" class="icon-cell"><i class="ti-mobile"></i></a>
-            </div>
-            <div class="icon-content">
-              <h5 class="dlab-tilte text-uppercase">Phone</h5>
-              <p><a href="tel:+919974921502">+91 99749 21502</a></p>
+  <%- include('include/header') %>
+    <div class="page-content bg-white">
+      <div class="dlab-bnr-inr overlay-black-middle text-center bg-pt"
+        style="background-image: url('/shubhamimages/banner/contact.png');">
+        <div class="container">
+          <div class="dlab-bnr-inr-entry align-m text-center">
+            <h1 class="text-white">Contact Us</h1>
+            <div class="breadcrumb-row">
+              <ul class="list-inline">
+                <li><a href="/">Home</a></li>
+                <li>Contact Us</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-6 m-b30">
-          <div class="p-a30 bg-gray clearfix radius-sm">
-            <h3>Send Message Us</h3>
-            <div id="formSuccessMsg" class="form-success-message"></div>
-            <form method="POST" action="/contact" id="contactForm">
-              <input type="hidden" value="Contact" name="dzToDo">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <div class="input-group">
-                      <input name="dzName" type="text" required class="form-control" placeholder="Your Name">
-                    </div>
-                  </div>
+      <div class="section-full content-inner bg-white contact-style-1">
+        <div class="container">
+          <div class="row dzseth">
+            <div class="col-lg-4 col-md-6 col-sm-6 m-b30">
+              <div class="icon-bx-wraper bx-style-1 p-lr20 p-tb30 center seth radius-sm">
+                <div class="icon-lg text-primary m-b20">
+                  <a href="javascript:void(0);" class="icon-cell"><i class="ti-location-pin"></i></a>
                 </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <div class="input-group">
-                      <input name="dzEmail" type="email" required class="form-control" placeholder="Your Email Id">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <div class="input-group">
-                      <input name="dzOther[Phone]" type="text" required class="form-control" placeholder="Phone">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <div class="input-group">
-                      <input name="dzOther[Subject]" type="text" required class="form-control" placeholder="Subject">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <div class="input-group">
-                      <textarea name="dzMessage" rows="4" required class="form-control" placeholder="Your Message..."></textarea>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <button id="submitBtn" name="submit" type="submit" value="Submit" class="site-button">
-                    <span class="button-text">Submit</span>
-                    <span class="button-spinner"></span>
-                  </button>
+                <div class="icon-content">
+                  <h5 class="dlab-tilte text-uppercase">Address</h5>
+                  <p>Survey No. 295/L G-1, Chirag Udyog Bhavan, Golden Industrial Estate, Dabhel, Daman - 396 210 (U.T)
+                    INDIA</p>
                 </div>
               </div>
-            </form>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 m-b30">
+              <div class="icon-bx-wraper bx-style-1 p-lr20 p-tb30 center seth radius-sm">
+                <div class="icon-lg text-primary m-b20">
+                  <a href="javascript:void(0);" class="icon-cell"><i class="ti-email"></i></a>
+                </div>
+                <div class="icon-content">
+                  <h5 class="dlab-tilte text-uppercase">Email</h5>
+                  <p><a href="mailto:arvindlhr007@gmail.com">arvindlhr007@gmail.com</a><br></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 m-b30">
+              <div class="icon-bx-wraper bx-style-1 p-lr20 p-tb30 center seth radius-sm">
+                <div class="icon-lg text-primary m-b20">
+                  <a href="javascript:void(0);" class="icon-cell"><i class="ti-mobile"></i></a>
+                </div>
+                <div class="icon-content">
+                  <h5 class="dlab-tilte text-uppercase">Phone</h5>
+                  <p><a href="tel:+919974921502">+91 99749 21502</a></p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-6 m-b30 d-flex">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3169.748364745238!2d72.87748337523976!3d20.40651698109164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDI0JzIzLjUiTiA3MsKwNTInNDguMiJF!5e1!3m2!1sen!2sin!4v1787547096783!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <div class="row">
+            <div class="col-lg-6 m-b30">
+              <div class="p-a30 bg-gray clearfix radius-sm">
+                <h3>Send Message Us</h3>
+                <div id="formSuccessMsg" class="form-success-message"></div>
+                <form method="POST" action="/contact" id="contactForm">
+                  <input type="hidden" value="Contact" name="dzToDo">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <input name="dzName" type="text" required class="form-control" placeholder="Your Name">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <input name="dzEmail" type="email" required class="form-control" placeholder="Your Email Id">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <input name="dzOther[Phone]" type="text" required class="form-control" placeholder="Phone">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <input name="dzOther[Subject]" type="text" required class="form-control"
+                            placeholder="Subject">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <textarea name="dzMessage" rows="4" required class="form-control"
+                            placeholder="Your Message..."></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <button id="submitBtn" name="submit" type="submit" value="Submit" class="site-button">
+                        <span class="button-text">Submit</span>
+                        <span class="button-spinner"></span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-6 m-b30 d-flex">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3169.748364745238!2d72.87748337523976!3d20.40651698109164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDI0JzIzLjUiTiA3MsKwNTInNDguMiJF!5e1!3m2!1sen!2sin!4v1787547096783!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<%- include('include/footer') %>
-<script src="/js/jquery.min.js"></script>
-<script src="/plugins/wow/wow.js"></script>
-<script src="/js/bootstrap.bundle.min.js"></script>
-<script src="/plugins/bootstrap-select/bootstrap-select.min.js"></script>
-<script src="/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
-<script src="/plugins/magnific-popup/magnific-popup.js"></script>
-<script src="/plugins/counter/waypoints-min.js"></script>
-<script src="/plugins/counter/counterup.min.js"></script>
-<script src="/plugins/imagesloaded/imagesloaded.js"></script>
-<script src="/plugins/masonry/masonry-3.1.4.js"></script>
-<script src="/plugins/masonry/masonry.filter.js"></script>
-<script src="/plugins/owl-carousel/owl.carousel.js"></script>
-<script src="/js/lightgallery-all.min.js"></script>
-<script src="/plugins/scroll/scrollbar.min.js"></script>
-<script src="/js/custom.js"></script>
-<script src="/js/dz.carousel.min.js"></script>
-<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script>
-(function() {
-  const form = document.getElementById("contactForm");
-  const submitBtn = document.getElementById("submitBtn");
-  const successMsg = document.getElementById("formSuccessMsg");
-  if (!form || !submitBtn || !successMsg) { console.error("Contact form elements not found."); return; }
-  form.addEventListener("submit", async function(e) {
-    e.preventDefault();
-    successMsg.classList.remove("show", "error");
-    successMsg.textContent = "";
-    submitBtn.classList.add("loading");
-    submitBtn.disabled = true;
-    const formData = new URLSearchParams(new FormData(form));
-    try {
-      const response = await fetch("/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: formData
-      });
-      const responseText = await response.text();
-      console.log("Server status:", response.status);
-      console.log("Server response:", responseText);
-      let result = null;
-      try { result = JSON.parse(responseText); } catch (jsonError) { console.warn("Response is not JSON:", responseText); }
-      if (response.ok && result && result.success === true) {
-        successMsg.classList.remove("error");
-        successMsg.classList.add("show");
-        successMsg.textContent = "✅ Your form is submitted successfully!";
-        form.reset();
-      } else {
-        let errorMessage = "Something went wrong. Please try again.";
-        if (result && result.message) errorMessage = result.message;
-        else if (result && result.error) errorMessage = result.error;
-        showError(errorMessage);
-      }
-    } catch (error) {
-      console.error("Fetch / Network error:", error);
-      showError("Unable to connect to server. Please try again.");
-    }
-    submitBtn.classList.remove("loading");
-    submitBtn.disabled = false;
-    clearTimeout(window._formMsgTimer);
-    window._formMsgTimer = setTimeout(function() {
-      successMsg.classList.remove("show", "error");
-      successMsg.textContent = "";
-    }, 10000);
-  });
-  function showError(message) {
-    successMsg.classList.remove("show");
-    successMsg.classList.add("show", "error");
-    successMsg.textContent = "❌ " + message;
-  }
-})();
-</script>
-</body>
-</html>
+    <%- include('include/footer') %>
+      <script src="/js/jquery.min.js"></script>
+      <script src="/plugins/wow/wow.js"></script>
+      <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+      <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
+      <script src="plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS-->
+      <script src="/plugins/magnific-popup/magnific-popup.js"></script>
+      <script src="/plugins/counter/waypoints-min.js"></script>
+      <script src="/plugins/counter/counterup.min.js"></script>
+      <script src="/plugins/imagesloaded/imagesloaded.js"></script>
+      <script src="/plugins/masonry/masonry-3.1.4.js"></script>
+      <script src="/plugins/masonry/masonry.filter.js"></script>
+      <script src="/plugins/owl-carousel/owl.carousel.js"></script>
+      <script src="/plugins/lightgallery/js/lightgallery-all.min.js"></script><!-- Lightgallery -->
+      <script src="/plugins/scroll/scrollbar.min.js"></script>
+      <script src="/js/custom.js"></script>
+      <script src="/js/dz.carousel.min.js"></script>
+      <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+      <script>
+        (function () {
+          const form = document.getElementById("contactForm");
+          const submitBtn = document.getElementById("submitBtn");
+          const successMsg = document.getElementById("formSuccessMsg");
+          if (!form || !submitBtn || !successMsg) { console.error("Contact form elements not found."); return; }
+          form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+            successMsg.classList.remove("show", "error");
+            successMsg.textContent = "";
+            submitBtn.classList.add("loading");
+            submitBtn.disabled = true;
+            const formData = new URLSearchParams(new FormData(form));
+            try {
+              const response = await fetch("/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: formData
+              });
+              const responseText = await response.text();
+              console.log("Server status:", response.status);
+              console.log("Server response:", responseText);
+              let result = null;
+              try { result = JSON.parse(responseText); } catch (jsonError) { console.warn("Response is not JSON:", responseText); }
+              if (response.ok && result && result.success === true) {
+                successMsg.classList.remove("error");
+                successMsg.classList.add("show");
+                successMsg.textContent = "✅ Your form is submitted successfully!";
+                form.reset();
+              } else {
+                let errorMessage = "Something went wrong. Please try again.";
+                if (result && result.message) errorMessage = result.message;
+                else if (result && result.error) errorMessage = result.error;
+                showError(errorMessage);
+              }
+            } catch (error) {
+              console.error("Fetch / Network error:", error);
+              showError("Unable to connect to server. Please try again.");
+            }
+            submitBtn.classList.remove("loading");
+            submitBtn.disabled = false;
+            clearTimeout(window._formMsgTimer);
+            window._formMsgTimer = setTimeout(function () {
+              successMsg.classList.remove("show", "error");
+              successMsg.textContent = "";
+            }, 10000);
+          });
+          function showError(message) {
+            successMsg.classList.remove("show");
+            successMsg.classList.add("show", "error");
+            successMsg.textContent = "❌ " + message;
+          }
+        })();
+      </script>
+      </body>
+
+      </html>

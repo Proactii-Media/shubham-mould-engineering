@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <%- include('include/head') %>
+
 <style>
 .specification-header{background-color:#E80028!important}
 .specification-header th{color:#fff!important;background-color:#E80028!important}
@@ -17,6 +17,7 @@
 .video-not-available{position:absolute;bottom:15px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.75);color:#fff;padding:8px 15px;border-radius:4px;font-size:13px;font-weight:500;display:flex;align-items:center;gap:7px;white-space:nowrap}
 .video-not-available i{font-size:14px}
 </style>
+
 <%- include('include/header') %>
 <div class="page-content bg-white">
   <div class="dlab-bnr-inr bg-pt product-banner">
@@ -64,12 +65,14 @@
             <div class="dz-content m-t30">
               <div class="m-b40">
                 <h4 class="title"><%= product.title %></h4>
-                <p class="font-18"><%= product.description %></p>
+                <p class="font-18" style="text-align: justify;">
+                  <%= product.description %>
+                </p>
               </div>
               <div class="sort-title clearfix text-center"><h4>Key Features and Functionality</h4></div>
               <ul style="padding-left:0;margin-left:0;list-style-position:outside;">
                 <% product.keyFeatures.forEach((feature)=> { %>
-                  <li style="padding-bottom:12px;line-height:1.6;padding-left:5px;margin-left:20px;">
+                  <li style="padding-bottom:12px;line-height:1.6;padding-left:5px;margin-left:20px; text-align:justify;">
                     <strong style="color:#232323;"><%= feature.title %>:</strong> <%= feature.description %>
                   </li>
                 <% }) %>
