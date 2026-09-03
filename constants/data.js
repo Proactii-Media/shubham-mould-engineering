@@ -1748,7 +1748,7 @@ const products = [
 
   image: "/shubhamimages/products/heat_transfer.png",
   bannerImage: "/shubhamimages/banner/product_banner/heat.png",
-  video: "/shubhamimages/video/heat_transfer.mp4",
+
 
   link: "/engineering-products/automatic-heat-transfer-machine",
 
