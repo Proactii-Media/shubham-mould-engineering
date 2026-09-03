@@ -1899,7 +1899,7 @@ const afterSalesServices = [
     id: 4,
     title: "MAINTENANCE",
     subtitle: "SOLID PERFORMANCE",
-    icon: "ti-settings",
+icon: "ti-reload",
     description:
       "The best way to minimize downtime costs and maintain the performance of your GEREKE equipment and production is to plan preventive maintenance work. Just lean on us, we’ll be there for you.",
   },
