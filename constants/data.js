@@ -99,7 +99,7 @@ const applications = [
     id: 3,
     title: "Moulding Industry",
     slug: "moulding-industry",
-    image: "/shubhamimages/application/moulding.png",
+    image: "/shubhamimages/application/ink1.png",
     shortTitle: "Plastic & Moulding",
     description:
       "Our moulding and special purpose solutions support plastic component manufacturing and precision moulding applications. We develop reliable machinery for accurate processing, consistent production and efficient operation. Our automation solutions help manufacturers improve productivity, reduce manual intervention and maintain high-quality manufacturing standards."
@@ -170,23 +170,21 @@ const plasticproduct = [
 {
     id: 2,
 
-    title: "PVC Plastic Component",
+  title: "PVC Elbow, PVC Pipe",
 
-    slug: "pvc-plastic-component",
+  slug: "pvc-elbow-pvc-pipe",
 
-    category: "plastic-products",
+  category: "plastic-products",
 
-    type: "Plastic Product",
+  type: "Plastic Product",
 
-    image: "/shubhamimages/products/plastic2.png",
+  image: "/shubhamimages/products/plastic2.png",
 
-    detailImage : "/shubhamimages/products/plastic2.png",
+  detailImage: "/shubhamimages/products/plastic2.png",
 
-    bannerImage: "/shubhamimages/banner/product_banner/plastic.png",
+  bannerImage: "/shubhamimages/banner/product_banner/plastic.png",
 
-   
-
-    link: "/plastic-products/pvc-plastic-component",
+  link: "/plastic-products/pvc-elbow-pvc-pipe",
 
     keyFeatures: [
         {
@@ -534,9 +532,9 @@ const products = [
     slug: "semi-automatic-assembly-machine-4up-sme-p-09-sme-r-09",
       category: "pen-assembly-machine",
     type: "Automatic Pen Assembly Machine",
-    image: "/shubhamimages/products/semi_automatic_assembly.png",
-    bannerImage: "/shubhamimages/banner/product_banner/20.png",
-    video: "/shubhamimages/video/semiautomatic.mp4",
+    image: "/shubhamimages/products/4semi.png",
+    bannerImage: "/shubhamimages/banner/product_banner/4semi.png",
+    video: "/shubhamimages/video/4semi.mp4",
     link: "/engineering-products/semi-automatic-assembly-machine-4up-sme-p-09-sme-r-09",
 
   keyFeatures: [
@@ -944,7 +942,7 @@ const products = [
   title: "Oil Spout Cap Automatic Assembly Machine",
 
   // Better matching slug
-  slug: "oil-spout-cap-automatic-assembly-machine",
+  slug: "oil-spout-cap-assembly-machine",
 
   category: "special-purpose-machine",
   type: "Assembly Machine",
@@ -1034,7 +1032,7 @@ const products = [
   {
     id: 7,
     title: "Automatic Refill Waxing Machine",
-    slug: "automatic-refill-waxing-machine",
+    slug: "refill-waxing-machine",
     category: "special-purpose-machine",
     type: "Special Purpose Machine",
     image: "/shubhamimages/products/refill_wax.png",
@@ -1247,7 +1245,7 @@ const products = [
     image: "/shubhamimages/products/22.png",
     bannerImage: "/shubhamimages/banner/product_banner/10.png",
     video: "/shubhamimages/video/counting.mp4",
-    link: "/engineering-products/automatic-refill-counting-machine",
+    link: "/engineering-products/refill-counting-machine",
     keyFeatures: [
       {
         title: "Automatic Refill Counting",
@@ -1836,6 +1834,111 @@ const products = [
     "Heat transfer foil application",
     "Writing instrument manufacturing",
     "Plastic product manufacturing"
+  ]
+},
+{
+  id: 19,
+  title: "Vibratory Feeder Bowl",
+  slug: "vibratory-feeder-bowl",
+   category: "automation-system",
+    type: "Automation System",
+
+  image: "/shubhamimages/products/bowl.png",
+  bannerImage: "/shubhamimages/banner/product_banner/bowl.png",
+
+
+  link: "/engineering-products/vibratory-feeder-bowl",
+
+  description:
+    "The Vibratory Feeder Bowl is an automatic component feeding and orientation system designed to continuously feed, sort and orient components before they enter an assembly or production process. It helps reduce manual handling, maintain a consistent component flow and improve the efficiency of automated production lines.",
+
+  keyFeatures: [
+    {
+      title: "Automatic Component Feeding",
+      description:
+        "The vibratory feeder automatically moves components from the bowl and provides a continuous supply to the next stage of the production process."
+    },
+    {
+      title: "Component Orientation",
+      description:
+        "The specially designed bowl track guides and orients components into the required position for assembly or further processing."
+    },
+    {
+      title: "Continuous Feeding",
+      description:
+        "The feeder provides a steady and controlled flow of components to support continuous automated production."
+    },
+    {
+      title: "Customized Bowl Design",
+      description:
+        "The bowl and internal tooling can be designed according to the size, shape, material and orientation requirements of the component."
+    },
+    {
+      title: "Reliable Automation",
+      description:
+        "Designed for integration with automatic assembly machines, counting systems, packaging equipment and other industrial automation applications."
+    },
+    {
+      title: "Reduced Manual Handling",
+      description:
+        "Automatic feeding and orientation reduce the need for manual component sorting and loading."
+    },
+    {
+      title: "Easy Integration",
+      description:
+        "The feeder can be integrated with linear feeders, conveyors, sensors and automatic assembly systems according to production requirements."
+    }
+  ],
+
+  specifications: {
+    "Machine Type": "Vibratory Feeder Bowl",
+    "Operation": "Automatic",
+    "Feeding Type": "Vibratory Feeding",
+    "Application": "Component Feeding & Orientation",
+    "Bowl Type": "Customized",
+    "Suitable Components": "Plastic & Metal Components",
+    "Feeding Direction": "Clockwise / Anti-Clockwise",
+    "Control": "Variable Speed / Vibration Control",
+    "Construction": "Industrial Grade",
+    "Integration": "Assembly & Automation Lines"
+  },
+
+  features: [
+    "Automatic component feeding",
+    "Automatic component orientation",
+    "Continuous material feeding",
+    "Customized bowl tooling",
+    "Variable vibration control",
+    "Precision component handling",
+    "Plastic and metal component feeding",
+    "Linear feeder integration",
+    "Sensor integration",
+    "Assembly machine integration",
+    "Reduced manual handling",
+    "Industrial automation solution"
+  ],
+
+  benefits: [
+    "Improved production efficiency",
+    "Reduced manual labor",
+    "Consistent component feeding",
+    "Accurate component orientation",
+    "Continuous production support",
+    "Reduced component handling errors",
+    "Easy integration with automation systems",
+    "Reliable long-term operation"
+  ],
+
+  applications: [
+    "Pen component feeding",
+    "Refill component feeding",
+    "Cap and clip feeding",
+    "Plastic component feeding",
+    "Metal component feeding",
+    "Packaging component feeding",
+    "Assembly line automation",
+    "Automatic counting systems",
+    "Industrial automation applications"
   ]
 }
 
