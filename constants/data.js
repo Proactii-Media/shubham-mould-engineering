@@ -682,7 +682,7 @@ const products = [
     "Machine Model": "SME-R-09",
     "Assembly Configuration": "2UP & 4UP",
     "Assembly Mode": "Chain Carry, Horizontal Type",
-    "Work Efficiency": "70-140 pcs/min",
+    "Work Efficiency": "140-180 pcs/min",
     "Suitable Diameter": "4-8mm",
     "Suitable Length": "60-200mm",
     "Touch Screen": "7-inch",
