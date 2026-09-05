@@ -79,7 +79,7 @@ const applications = [
   id: 1,
   title: "Pens & Stationery",
   slug: "pens-stationery",
-  image: "/shubhamimages/application/pen2.png",
+  image: "/shubhamimages/application/pen1.png",
   shortTitle: "Pens & Stationery",
   description:
      "At Shubham Mould & Engineering, we believe automation is the linchpin for creating exceptional stationery products. By integrating cutting-edge automated machinery into Your manufacturing lines, you can amplify efficiency, accuracy, and scalability like never before. This technological leap will translate to incredible value for you. You’ll experience consistent product quality that meets rigorous standards while enjoying quicker delivery times. Furthermore, automation significantly reduces waste, aligning with our commitment to sustainability. In essence, automation doesn’t just make your production faster—it makes your product better. Experience the elevated quality and value that only an automated, future-focused stationery manufacturing process can deliver."
@@ -89,7 +89,7 @@ const applications = [
     id: 2,
     title: "Packaging Industry",
     slug: "packaging-industry",
-    image: "/shubhamimages/application/pen1.png",
+    image: "/shubhamimages/application/p1.png",
     shortTitle: "Packaging",
     description:
       "We manufacture reliable packaging machinery for blister card sealing, pouch sealing and other industrial packaging applications. Our machines are designed to provide consistent sealing quality, accurate operation and efficient production. These solutions help manufacturers improve packaging productivity, reduce manual handling and maintain uniform output."
@@ -129,7 +129,7 @@ const applications = [
     id: 6,
     title: "Testing & Quality Control",
     slug: "testing-quality-control",
-    image: "/shubhamimages/application/testing1.png",
+    image: "/shubhamimages/application/testing.png",
     shortTitle: "Testing & Quality",
     description:
       "We provide industrial testing solutions for quality inspection and performance verification across various manufacturing applications. Our machines support bottle leakage testing, spring tension testing and other quality control processes. These systems help manufacturers identify defects, maintain product consistency and ensure reliable quality standards."
@@ -139,7 +139,7 @@ const applications = [
     id: 7,
     title: "Automatic Counting & Automation",
     slug: "automatic-counting-automation",
-    image: "/shubhamimages/application/automatic1.png",
+    image: "/shubhamimages/application/automatic.png",
     shortTitle: "Automatic Counting & Automation",
     description:
       "We provide automatic counting and industrial automation solutions for pen refills, components and other manufacturing applications. Our systems are designed for accurate counting, efficient material handling and continuous production. These solutions help reduce manual work, minimize counting errors and improve overall production efficiency."
@@ -274,6 +274,7 @@ const plasticproduct = [
 
 
 
+
 const products = [
 
   {
@@ -281,8 +282,8 @@ const products = [
     title: "Automatic Pen Assembly Machine 4UP (SME-P-07)",
     slug: "automatic-pen-assembly-machine-4up-sme-p-07",
     category: "pen-assembly-machine",
-    type: "Automatic Pen Assembly Machine",
-    image: "/shubhamimages/products/auto.png",
+    type: "Automatic Pen Assembly Machine",   // updated
+    image: "/shubhamimages/products/auto1.png",
     bannerImage: "/shubhamimages/banner/product_banner/9.png",
     video: "/shubhamimages/video/automatic.mp4",
     link: "/engineering-products/automatic-pen-assembly-machine-4up-sme-p-07",
@@ -365,8 +366,8 @@ const products = [
     title: "Automatic Pen Assembly Machine 2UP (SME-P-09)",
     slug: "automatic-pen-assembly-machine-2up-sme-p-09",
     category: "pen-assembly-machine",
-    type: "Automatic Pen Assembly Machine",
-    image: "/shubhamimages/products/auto.png",
+    type: "Automatic Pen Assembly Machine",   // updated
+    image: "/shubhamimages/products/auto1.png",
     bannerImage: "/shubhamimages/banner/product_banner/9.png",
     video: "/shubhamimages/video/auto2up.mp4",
     link: "/engineering-products/automatic-pen-assembly-machine-2up-sme-p-09",
@@ -443,7 +444,7 @@ const products = [
     title: "Semi Automatic Assembly Machine 2UP (SME-P-09 / SME-R-09)",
     slug: "semi-automatic-assembly-machine-2up-sme-p-09-sme-r-09",
     category: "pen-assembly-machine",
-    type: "Automatic Pen Assembly Machine",
+    type: "Pen Assembly Machine",   // unchanged (semi-auto)
     image: "/shubhamimages/products/semi_automatic_assembly.png",
     bannerImage: "/shubhamimages/banner/product_banner/20.png",
     video: "/shubhamimages/video/semiautomatic.mp4",
@@ -528,103 +529,103 @@ const products = [
     ]
   },
 
-  {
-    id: 4,
-    title: "Semi Automatic Assembly Machine 4UP (SME-P-09 / SME-R-09)",
-    slug: "semi-automatic-assembly-machine-4up-sme-p-09-sme-r-09",
-      category: "pen-assembly-machine",
-    type: "Automatic Pen Assembly Machine",
-    image: "/shubhamimages/products/semi_automatic_assembly.png",
-    bannerImage: "/shubhamimages/banner/product_banner/20.png",
-    video: "/shubhamimages/video/semiautomatic.mp4",
-    link: "/engineering-products/semi-automatic-assembly-machine-4up-sme-p-09-sme-r-09",
+//   {
+//     id: 4,
+//     title: "Semi Automatic Assembly Machine 4UP (SME-P-09 / SME-R-09)",
+//     slug: "semi-automatic-assembly-machine-4up-sme-p-09-sme-r-09",
+//       category: "pen-assembly-machine",
+//     type: "Pen Assembly Machine",
+//     image: "/shubhamimages/products/semi_automatic_assembly.png",
+//     bannerImage: "/shubhamimages/banner/product_banner/20.png",
+//     video: "/shubhamimages/video/semiautomatic.mp4",
+//     link: "/engineering-products/semi-automatic-assembly-machine-4up-sme-p-09-sme-r-09",
 
-  keyFeatures: [
-    {
-        title: "Functions",
-        description:
-            "The machine primarily automates the pen assembly process, significantly reducing the need for manual labor. The machine features overhead containers (hoppers) designed for feeding parts and executing the assembly process."
-    },
-    {
-    title: "4UP High-Speed Operation",
-    description:
-        "The 4UP configuration allows multiple components to be processed simultaneously, increasing production capacity and improving overall manufacturing efficiency."
-},
-    {
-        title: "Automatic Component Feeding",
-        description:
-            "The integrated feeding system automatically supplies pen components to the assembly station, ensuring smooth material flow and reducing manual handling."
-    },
-    {
-        title: "Precision Assembly",
-        description:
-            "The machine ensures accurate positioning and fitting of pen components during assembly, helping maintain consistent product quality and reliable performance."
-    },
-    {
-        title: "Continuous Production",
-        description:
-            "Designed for continuous industrial operation, the machine provides stable performance and consistent production output while reducing operator involvement."
-    }
-],
+//   keyFeatures: [
+//     {
+//         title: "Functions",
+//         description:
+//             "The machine primarily automates the pen assembly process, significantly reducing the need for manual labor. The machine features overhead containers (hoppers) designed for feeding parts and executing the assembly process."
+//     },
+//     {
+//     title: "4UP High-Speed Operation",
+//     description:
+//         "The 4UP configuration allows multiple components to be processed simultaneously, increasing production capacity and improving overall manufacturing efficiency."
+// },
+//     {
+//         title: "Automatic Component Feeding",
+//         description:
+//             "The integrated feeding system automatically supplies pen components to the assembly station, ensuring smooth material flow and reducing manual handling."
+//     },
+//     {
+//         title: "Precision Assembly",
+//         description:
+//             "The machine ensures accurate positioning and fitting of pen components during assembly, helping maintain consistent product quality and reliable performance."
+//     },
+//     {
+//         title: "Continuous Production",
+//         description:
+//             "Designed for continuous industrial operation, the machine provides stable performance and consistent production output while reducing operator involvement."
+//     }
+// ],
 
-    description:
-      "The Semi-Automatic Pen Assembly Machine 4UP (SME-P-09 / SME-R-09) is designed for efficient high-volume pen and refill assembly. The 4UP configuration enables multiple components to be processed simultaneously, helping manufacturers increase production capacity, reduce manual handling and maintain consistent assembly quality.",
+//     description:
+//       "The Semi-Automatic Pen Assembly Machine 4UP (SME-P-09 / SME-R-09) is designed for efficient high-volume pen and refill assembly. The 4UP configuration enables multiple components to be processed simultaneously, helping manufacturers increase production capacity, reduce manual handling and maintain consistent assembly quality.",
 
-    specifications: {
-      "Machine Type": "Semi Automatic Assembly Machine",
-      "Assembly Mode": "4up Chain carry, Horizintal Type",
-      "Machine Model": "SME-P-09 / SME-R-09",
-      "Work Efficiency": "140–160 pcs/min",
-      "Suitable Diameter": "4–8 mm",
-      "Suitable Length": "60–200 mm",
-      "Touch Screen": "7 inch",
-      "Machine Dimension": "3800 × 1000 × 1200 mm",
-      "Suitable Products": "Cylindrical Products",
-      "Pneumatic Brand": "SMC",
-      "Power Supply": "220V / 50Hz",
-      "Power Consumption": "2.6–3 KW"
-    },
+//     specifications: {
+//       "Machine Type": "Semi Automatic Assembly Machine",
+//       "Assembly Mode": "4up Chain carry, Horizintal Type",
+//       "Machine Model": "SME-P-09 / SME-R-09",
+//       "Work Efficiency": "140–160 pcs/min",
+//       "Suitable Diameter": "4–8 mm",
+//       "Suitable Length": "60–200 mm",
+//       "Touch Screen": "7 inch",
+//       "Machine Dimension": "3800 × 1000 × 1200 mm",
+//       "Suitable Products": "Cylindrical Products",
+//       "Pneumatic Brand": "SMC",
+//       "Power Supply": "220V / 50Hz",
+//       "Power Consumption": "2.6–3 KW"
+//     },
 
-    features: [
-      "High-speed 4UP assembly system",
-      "High precision assembly",
-      "Semi automatic operation",
-      "Integrated component feeding",
-      "Accurate component positioning",
-      "Consistent production performance",
-      "Easy machine operation",
-      "Industrial and durable machine construction"
-    ],
+//     features: [
+//       "High-speed 4UP assembly system",
+//       "High precision assembly",
+//       "Semi automatic operation",
+//       "Integrated component feeding",
+//       "Accurate component positioning",
+//       "Consistent production performance",
+//       "Easy machine operation",
+//       "Industrial and durable machine construction"
+//     ],
 
-    benefits: [
-      "Production capacity of 140–180 pieces per minute",
-      "Higher production output",
-      "High precision assembly",
-      "Reduced manual operation",
-      "Consistent assembly quality",
-      "Improved manufacturing efficiency",
-      "Reliable continuous operation",
-      "Long machine service life"
-    ],
+//     benefits: [
+//       "Production capacity of 140–180 pieces per minute",
+//       "Higher production output",
+//       "High precision assembly",
+//       "Reduced manual operation",
+//       "Consistent assembly quality",
+//       "Improved manufacturing efficiency",
+//       "Reliable continuous operation",
+//       "Long machine service life"
+//     ],
 
-    applications: [
-      "Pen assembly",
-      "Refill assembly",
-      "Stationery manufacturing",
-      "Component assembly",
-      "Cylindrical product assembly",
-      "High-volume industrial assembly"
-    ]
-  },
+//     applications: [
+//       "Pen assembly",
+//       "Refill assembly",
+//       "Stationery manufacturing",
+//       "Component assembly",
+//       "Cylindrical product assembly",
+//       "High-volume industrial assembly"
+//     ]
+//   },
 
 
 {
   id: 16,
-  title: "Ball/Gel Refill Automatic Assembly Machine 2UP & 4UP",
+  title: "Ball & Gel Refill Assembly Machine 2UP & 4UP",
   slug: "ball-gel-refill-assembly-machine",
 
   category: "refill-assembly-machine",
-  type: "Automatic Refill Assembly Machine",
+  type: "Automatic Refill Assembly Machine",   // updated
 
   image: "/shubhamimages/products/bellpen.png",
   bannerImage: "/shubhamimages/banner/product_banner/bell.png",
@@ -684,11 +685,11 @@ const products = [
     "Machine Model": "SME-R-09",
     "Assembly Configuration": "2UP & 4UP",
     "Assembly Mode": "Chain Carry, Horizontal Type",
-    "Work Efficiency": "70-140 pcs/min",
+    "Work Efficiency": "70-180 pcs/min",
     "Suitable Diameter": "4-8mm",
     "Suitable Length": "60-200mm",
     "Touch Screen": "7-inch",
-    "Machine Dimension": "3000 x 1000 x 1200mm",
+    "Machine Dimension": "3550 x 1000 x 1200mm",
     "Suitable for Products": "Cylindrical Products",
     "Pneumatic Brand": "SMC",
     "Power Supply": "220V / 50Hz",
@@ -732,13 +733,13 @@ const products = [
 {
   id: 17,
 
-  title: "Cap Clip Automatic Assembly Machine",
+  title: "Cap Clip Assembly Machine",
 
   slug: "cap-clip-assembly-machine",
 
   category: "special-purpose-machine",
 
-  type: "Assembly Machine",
+  type: "Automatic Assembly Machine",   // updated
 
   image: "/shubhamimages/products/clip1.png",
 
@@ -798,7 +799,7 @@ const products = [
   specifications: {
     "Machine Type": "Cap Clip Assembly Machine",
     "Assembly Mode": "Indexing, Vertical Type",
-    "Work Efficiency": "60-70 pcs/min",
+    "Work Efficiency": "30-60 pcs/min",
     "Suitable Diameter": "8-30mm",
     "Suitable Length": "30-150mm",
     "Touch Screen": "7-inch",
@@ -849,7 +850,7 @@ const products = [
   //   title: "Refill Assembly Machine 4UP (SME-R-07)",
   //   slug: "refill-assembly-machine-4up-sme-r-07",
   //   category: "refill-assembly-machine",
-  //   type: "Automatic Refill Assembly Machine",
+  //   type: "Refill Assembly Machine",
   //   image: "/shubhamimages/products/semi_automatic_assembly.png",
   //   bannerImage: "/shubhamimages/banner/product_banner/20.png",
   //   video: "/shubhamimages/video/semiautomatic.mp4",
@@ -941,13 +942,13 @@ const products = [
 
 {
   id: 6,
-  title: "Oil Spout Cap Automatic Assembly Machine",
+  title: "Oil Spout Cap Assembly Machine",
 
   // Better matching slug
-  slug: "oil-spout-cap-automatic-assembly-machine",
+  slug: "oil-spout-cap-assembly-machine",
 
   category: "special-purpose-machine",
-  type: "Assembly Machine",
+  type: "Automatic Assembly Machine",   // updated
 
   image: "/shubhamimages/products/oil_cap_spout.png",
   bannerImage: "/shubhamimages/banner/product_banner/17.png",
@@ -1033,10 +1034,10 @@ const products = [
 
   {
     id: 7,
-    title: "Automatic Refill Waxing Machine",
-    slug: "automatic-refill-waxing-machine",
+    title: "Refill Waxing Machine",
+    slug: "refill-waxing-machine",
     category: "special-purpose-machine",
-    type: "Special Purpose Machine",
+    type: "Automatic Special Purpose Machine",   // updated
     image: "/shubhamimages/products/refill_wax.png",
     bannerImage: "/shubhamimages/banner/product_banner/23.png",
     video: "/shubhamimages/video/refillWaxing.mp4",
@@ -1086,12 +1087,12 @@ const products = [
   },
 
 
-{
+  {
     id: 8,
-    title: "Automatic 360° Rotary Blister Card Sealing Machine",   // ✅ updated
+    title: "360° Rotary Blister Card Sealing Machine",
     slug: "blister-card-sealing-machine",
     category: "packaging-machine",
-    type: "Automatic Packaging Machine",                           // ✅ updated
+    type: "Automatic Packaging Machine",   // updated
 
     image: "/shubhamimages/products/blisterCard.png",
     bannerImage: "/shubhamimages/banner/product_banner/12.png",
@@ -1163,7 +1164,7 @@ const products = [
       "Product packaging operations",
       "High-volume packaging production"
     ]
-},
+  },
 
 
   {
@@ -1171,7 +1172,7 @@ const products = [
     title: "Marker Ink Bottle Filling Machine",
     slug: "marker-ink-bottle-filling-machine",
     category: "filling-machine",
-    type: "Automatic Filling Machine",   // Changed from "Filling Machine"
+    type: "Automatic Filling Machine",   // already updated
     image: "/shubhamimages/products/marker.png",
     bannerImage: "/shubhamimages/banner/product_banner/14.png",
     // video: "https://www.youtube.com/watch?v=UXiPtVOQVv0",
@@ -1240,10 +1241,10 @@ const products = [
 
   {
     id: 10,
-    title: "Refill Counting Machine",
-    slug: "refill-counting-machine",
+    title: "Automatic Refill Counting Machine",
+    slug: "automatic-refill-counting-machine",
     category: "automation-system",
-    type: "Automation System",
+    type: "Automation System",   // unchanged
     image: "/shubhamimages/products/22.png",
     bannerImage: "/shubhamimages/banner/product_banner/10.png",
     video: "/shubhamimages/video/counting.mp4",
@@ -1314,7 +1315,7 @@ const products = [
     title: "Vibrator Bowl 4 Track Pen Barrel",
     slug: "vibrator-bowl-4-track-pen-barrel",
     category: "automation-system",
-    type: "Automation System",
+    type: "Automation System",   // unchanged
     image: "/shubhamimages/products/vibretor.png",
     bannerImage: "/shubhamimages/banner/product_banner/21.png",
     video: "/shubhamimages/video/4track.mp4",
@@ -1373,10 +1374,10 @@ const products = [
 
   {
     id: 12,
-    title: "Automatic Pouch Sealing Machine",
+    title: "Pouch Sealing Machine",
     slug: "pouch-sealing-machine",
     category: "packaging-machine",
-    type: "Automatic Packaging Machine",
+    type: "Automatic Packaging Machine",   
     image: "/shubhamimages/products/pouch.png",
     bannerImage: "/shubhamimages/banner/product_banner/19.png",
     link: "/engineering-products/pouch-sealing-machine",
@@ -1445,7 +1446,7 @@ const products = [
     title: "Colgate Toothbrush Double Moulding Mould",
     slug: "toothbrush-double-moulding-machine",
     category: "moulding-machine",
-    type: "Moulding Machine",   
+    type: "Moulding Machine",   // reverted (not automatic)
     image: "/shubhamimages/products/colgate.png",
     bannerImage: "/shubhamimages/banner/product_banner/16.png",
     link: "/engineering-products/toothbrush-double-moulding-machine",
@@ -1513,7 +1514,7 @@ const products = [
     title: "Bottle Leakage Testing Machine",
     slug: "bottle-leakage-testing-machine",
     category: "testing-machine",
-    type: "Testing Machine",
+    type: "Testing Machine",   // unchanged (not automatic)
 
     image: "/shubhamimages/products/bottleleackage.png",
     bannerImage: "/shubhamimages/banner/product_banner/13.png",
@@ -1594,7 +1595,7 @@ const products = [
     title: "Cap Handle Spring Tension Testing Machine",
     slug: "cap-handle-spring-tension-testing-machine",
     category: "testing-machine",
-    type: "Testing Machine",
+    type: "Testing Machine",   // unchanged (not automatic)
     image: "/shubhamimages/products/capHandle.png",
     bannerImage: "/shubhamimages/banner/product_banner/15.png",
     video: "/shubhamimages/video/caphandle.mp4",
@@ -1664,7 +1665,7 @@ const products = [
     title: "Pen Barrel Auto Rotating Set",
     slug: "pen-barrel-auto-rotating-set",
     category: "automation-system",
-    type: "Automation System",
+    type: "Automation System",   // unchanged
     image: "/shubhamimages/products/penBarrel.png",
     bannerImage: "/shubhamimages/banner/product_banner/18.png",
     video: "/shubhamimages/products/videos/pen-barrel-auto-rotating-set.mp4",
@@ -1743,7 +1744,7 @@ const products = [
   title: "Automatic Heat Transfer Machine",
   slug: "automatic-heat-transfer-machine",
   category: "special-purpose-machine",
-  type: "Automatic Heat Transfer Machine",
+  type: "Automatic Heat Transfer Machine",   // updated
 
   image: "/shubhamimages/products/heat_transfer.png",
   bannerImage: "/shubhamimages/banner/product_banner/heat.png",
