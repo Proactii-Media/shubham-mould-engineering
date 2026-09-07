@@ -553,7 +553,7 @@ const products = [
     type: "Automatic Pen Assembly Machine",
     image: "/shubhamimages/products/4upsemi.png",
     bannerImage: "/shubhamimages/banner/product_banner/4upsemi.png",
-    video: "/shubhamimages/video/4semi.mp4",
+    video: "/shubhamimages/video/4upsemi.mp4",
     link: "/engineering-products/semi-automatic-assembly-machine-4up-sme-p-09-sme-r-09",
 
   keyFeatures: [
