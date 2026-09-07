@@ -168,11 +168,11 @@ const applications = [
 
 const plasticproduct = [
 {
-    id: 2,
+  id: 2,
 
-  title: "PVC Elbow, PVC Pipe",
+  title: "PVC Pipe Manufacturing & Supplier",
 
-  slug: "pvc-elbow-pvc-pipe",
+  slug: "pvc-pipe-manufacturing-supplier",
 
   category: "plastic-products",
 
@@ -184,86 +184,105 @@ const plasticproduct = [
 
   bannerImage: "/shubhamimages/banner/product_banner/plastic.png",
 
-  link: "/plastic-products/pvc-elbow-pvc-pipe",
+  link: "/plastic-products/pvc-pipe-manufacturing-supplier",
 
-    keyFeatures: [
-        {
-            title: "High-Quality PVC Material",
-            description:
-                "Manufactured using high-quality PVC material to provide reliable performance, durability and consistent product quality."
-        },
-
-        {
-            title: "Precise Dimensions",
-            description:
-                "Designed with accurate dimensions and consistent geometry to ensure proper fitting and compatibility with intended applications."
-        },
-
-        {
-            title: "Durable Construction",
-            description:
-                "The PVC component offers good mechanical strength and durability for reliable performance in industrial applications."
-        },
-
-        {
-            title: "Smooth Finish",
-            description:
-                "Produced with a clean and smooth surface finish that enhances appearance and supports easy handling and installation."
-        },
-
-        {
-            title: "Application Specific Design",
-            description:
-                "Designed according to application requirements to provide reliable functionality and compatibility with associated components."
-        }
-    ],
-
-    description:
-        "The PVC Plastic Component is a high-quality plastic component designed for industrial and product-specific applications. Manufactured using durable PVC material, it offers consistent dimensions, reliable performance and good durability. The component can be used in various plastic product assemblies and industrial applications where accurate fitting and dependable performance are required.",
-
-    specifications: {
-        "Product Type": "PVC Plastic Component",
-        "Material": "PVC",
-        "Color": "As per requirement",
-        "Finish": "Smooth",
-        "Design": "Application Specific",
-        "Manufacturing": "Precision Manufactured",
-        "Application": "Industrial and Plastic Product Applications",
-        "Customization": "Available as per requirement"
+  keyFeatures: [
+    {
+      title: "High-Quality PVC Material",
+      description:
+        "Manufactured using high-quality PVC material to provide reliable performance, strength, durability and consistent product quality."
     },
 
-    features: [
-        "High-quality PVC material",
-        "Accurate dimensions",
-        "Durable construction",
-        "Smooth surface finish",
-        "Lightweight design",
-        "Consistent product quality",
-        "Application-specific design",
-        "Easy handling and installation",
-        "Suitable for industrial applications",
-        "Customizable as per requirement"
-    ],
+    {
+      title: "Various Dimensions & Sizes",
+      description:
+        "Available in various dimensions and sizes to meet different agriculture, plumbing and industrial piping requirements."
+    },
 
-    benefits: [
-        "Reliable product performance",
-        "Good durability",
-        "Consistent dimensional accuracy",
-        "Easy handling",
-        "Low maintenance requirement",
-        "Suitable for various applications",
-        "Improved product reliability",
-        "Cost-effective plastic component solution"
-    ],
+    {
+      title: "High Pressure Resistance",
+      description:
+        "Designed to provide reliable performance under suitable operating pressure conditions for different piping applications."
+    },
 
-    applications: [
-        "Plastic product assembly",
-        "Industrial plastic components",
-        "PVC product applications",
-        "Component fitting applications",
-        "Industrial assemblies",
-        "Custom plastic component applications"
-    ]
+    {
+      title: "Anti-Corrosive & Durable",
+      description:
+        "PVC construction provides good resistance to corrosion and supports long-lasting performance in different operating environments."
+    },
+
+    {
+      title: "Smooth Surface Finish",
+      description:
+        "Manufactured with a smooth internal and external surface finish for easy handling, installation and reliable piping performance."
+    },
+
+    {
+      title: "Strict Quality Standards",
+      description:
+        "Manufactured according to strict quality standards to maintain consistent dimensions, strength and dependable product performance."
+    }
+  ],
+
+  description:
+    "We manufacture and supply high-quality PVC pipes for agriculture, plumbing and industrial applications. Our PVC pipes are designed for strength, durability and reliable long-term performance. Available in various dimensions and sizes, they offer high pressure resistance, anti-corrosive properties and a smooth finish. With consistent quality and precision manufacturing, our PVC pipes provide dependable solutions for a wide range of piping and fluid-handling applications.",
+
+  specifications: {
+    "Product Type": "PVC Pipe",
+    "Material": "PVC",
+    "Color": "As per requirement",
+    "Sizes": "Various sizes available",
+    "Dimensions": "As per requirement",
+    "Pressure Resistance": "High",
+    "Corrosion Resistance": "Anti-Corrosive",
+    "Surface Finish": "Smooth",
+    "Design": "Application Specific",
+    "Manufacturing": "Precision Manufactured",
+    "Quality": "Strict Quality Standards",
+    "Application": "Agriculture, Plumbing & Industrial",
+    "Customization": "Available as per requirement"
+  },
+
+  features: [
+    "High-quality PVC material",
+    "Various dimensions and sizes",
+    "High-pressure resistance capability",
+    "Anti-corrosive construction",
+    "Durable design",
+    "Smooth surface finish",
+    "Long service life",
+    "Accurate dimensions",
+    "Consistent product quality",
+    "Manufactured according to strict quality standards",
+    "Easy handling and installation",
+    "Suitable for agriculture, plumbing and industrial applications"
+  ],
+
+  benefits: [
+    "Reliable performance",
+    "Long service life",
+    "High durability",
+    "Good pressure resistance",
+    "Excellent corrosion resistance",
+    "Easy handling and installation",
+    "Consistent dimensional accuracy",
+    "Low maintenance requirement",
+    "Suitable for multiple applications",
+    "Cost-effective piping solution"
+  ],
+
+  applications: [
+    "Agricultural piping systems",
+    "Irrigation systems",
+    "Plumbing applications",
+    "Water supply systems",
+    "Industrial piping systems",
+    "Fluid handling applications",
+    "PVC pipe assemblies",
+    "Industrial plastic applications",
+    "Construction applications",
+    "Custom piping applications"
+  ]
 }
 
 
@@ -1939,6 +1958,115 @@ const products = [
     "Assembly line automation",
     "Automatic counting systems",
     "Industrial automation applications"
+  ]
+},
+{
+  id: 20,
+
+  title: "Plastic Broom & Brush Filament Wrapping Machine",
+
+  slug: "plastic-broom-brush-filament-wrapping-machine",
+
+  category: "plastic-products",
+
+  type: "Packing Machine",
+
+  image: "/shubhamimages/products/broom.png",
+
+  detailImage: "/shubhamimages/products/filament_wrapping.png",
+
+  bannerImage: "/shubhamimages/banner/product_banner/broom.png",
+
+  link: "/engineering-products/plastic-broom-brush-filament-wrapping-machine",
+
+  keyFeatures: [
+    {
+      title: "Automatic Filament Wrapping",
+      description:
+        "Designed to automatically wrap and pack plastic broom and brush filaments with a consistent and efficient wrapping process."
+    },
+
+    {
+      title: "Suitable for Broom & Brush Filaments",
+      description:
+        "The machine is suitable for wrapping plastic filament materials used in broom and brush manufacturing applications."
+    },
+
+    {
+      title: "Adjustable Size Range",
+      description:
+        "Designed to handle filament sizes from a minimum of 300 mm up to 3000 mm according to product requirements."
+    },
+
+    {
+      title: "Consistent Wrapping",
+      description:
+        "Provides uniform wrapping and packing to maintain consistent product presentation and secure filament bundles."
+    },
+
+    {
+      title: "Automatic Operation",
+      description:
+        "The automated wrapping process reduces manual handling and improves production efficiency."
+    },
+
+    {
+      title: "Industrial Production",
+      description:
+        "Designed for continuous industrial production where reliable filament wrapping and packing performance is required."
+    }
+  ],
+
+  description:
+    "The Plastic Broom & Brush Filament Wrapping Machine is designed for automatic wrapping and packing of plastic filaments used in broom and brush manufacturing. The machine provides consistent wrapping, reduces manual handling and improves production efficiency. It is designed to handle filament sizes from 300 mm to 3000 mm according to product requirements.",
+
+  specifications: {
+    "Machine Type": "Plastic Broom & Brush Filament Wrapping Machine",
+    "Machine Category": "Packing Machine",
+    "Operation": "Automatic",
+    "Suitable Product": "Plastic Broom & Brush Filaments",
+    "Minimum Size": "300 mm",
+    "Maximum Size": "3000 mm",
+    "Size Range": "300 - 3000 mm",
+    "Wrapping Type": "Filament Wrapping",
+    "Application": "Broom & Brush Manufacturing",
+    "Customization": "Available as per requirement"
+  },
+
+  features: [
+    "Automatic filament wrapping",
+    "Suitable for plastic broom filaments",
+    "Suitable for brush filaments",
+    "Size range from 300 to 3000 mm",
+    "Consistent wrapping process",
+    "Automatic packing operation",
+    "Reduced manual handling",
+    "Adjustable product size",
+    "Industrial production design",
+    "Reliable wrapping performance",
+    "Suitable for continuous production"
+  ],
+
+  benefits: [
+    "Improved production efficiency",
+    "Reduced manual labor",
+    "Consistent filament wrapping",
+    "Uniform product packing",
+    "Flexible size handling",
+    "Reduced handling time",
+    "Reliable machine performance",
+    "Suitable for industrial production"
+  ],
+
+  applications: [
+    "Plastic broom filament wrapping",
+    "Brush filament wrapping",
+    "Broom manufacturing",
+    "Brush manufacturing",
+    "Plastic filament packing",
+    "Broom filament packaging",
+    "Brush filament packaging",
+    "Plastic product packaging"
   ]
 }
 
