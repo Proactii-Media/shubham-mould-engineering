@@ -551,8 +551,8 @@ const products = [
     slug: "semi-automatic-assembly-machine-4up-sme-p-09-sme-r-09",
       category: "pen-assembly-machine",
     type: "Automatic Pen Assembly Machine",
-    image: "/shubhamimages/products/4semi.png",
-    bannerImage: "/shubhamimages/banner/product_banner/4semi.png",
+    image: "/shubhamimages/products/4upsemi.png",
+    bannerImage: "/shubhamimages/banner/product_banner/4upsemi.png",
     video: "/shubhamimages/video/4semi.mp4",
     link: "/engineering-products/semi-automatic-assembly-machine-4up-sme-p-09-sme-r-09",
 
@@ -1963,13 +1963,13 @@ const products = [
 {
   id: 20,
 
-  title: "Plastic Broom & Brush Filament Wrapping Machine",
+  title: "Plastic Broom & Brush Filament Automatic Wrapping Machine",
 
-  slug: "plastic-broom-brush-filament-wrapping-machine",
+  slug: "plastic-broom-brush-filament-automatic-wrapping-machine",
 
   category: "plastic-products",
 
-  type: "Packing Machine",
+  type: "Automatic Packing Machine",
 
   image: "/shubhamimages/products/broom.png",
 
@@ -1977,7 +1977,9 @@ const products = [
 
   bannerImage: "/shubhamimages/banner/product_banner/broom.png",
 
-  link: "/engineering-products/plastic-broom-brush-filament-wrapping-machine",
+  video: "/shubhamimages/video/broom.mp4",
+
+  link: "/engineering-products/plastic-broom-brush-filament-automatic-wrapping-machine",
 
   keyFeatures: [
     {
@@ -2018,17 +2020,17 @@ const products = [
   ],
 
   description:
-    "The Plastic Broom & Brush Filament Wrapping Machine is designed for automatic wrapping and packing of plastic filaments used in broom and brush manufacturing. The machine provides consistent wrapping, reduces manual handling and improves production efficiency. It is designed to handle filament sizes from 300 mm to 3000 mm according to product requirements.",
+    "The Plastic Broom & Brush Filament Automatic Wrapping Machine is designed for automatic wrapping and packing of plastic filaments used in broom and brush manufacturing. The machine provides consistent wrapping, reduces manual handling and improves production efficiency. It is designed to handle filament sizes from 300 mm to 3000 mm according to product requirements.",
 
   specifications: {
-    "Machine Type": "Plastic Broom & Brush Filament Wrapping Machine",
-    "Machine Category": "Packing Machine",
+    "Machine Type": "Plastic Broom & Brush Filament Automatic Wrapping Machine",
+    "Machine Category": "Automatic Packing Machine",
     "Operation": "Automatic",
     "Suitable Product": "Plastic Broom & Brush Filaments",
     "Minimum Size": "300 mm",
     "Maximum Size": "3000 mm",
     "Size Range": "300 - 3000 mm",
-    "Wrapping Type": "Filament Wrapping",
+    "Wrapping Type": "Automatic Filament Wrapping",
     "Application": "Broom & Brush Manufacturing",
     "Customization": "Available as per requirement"
   },
@@ -2068,7 +2070,238 @@ const products = [
     "Brush filament packaging",
     "Plastic product packaging"
   ]
+},
+
+{
+id: 21,
+
+title: "Automatic BIC Type Pen Assembly Machine 2UP",
+
+slug: "automatic-bic-type-pen-assembly-machine-2up",
+
+ category: "pen-assembly-machine",
+    type: "Automatic Pen Assembly Machine",
+
+    image: "/shubhamimages/products/semi_automatic_assembly.png",
+
+detailImage: "/shubhamimages/products/bic_pen_2up_detail.png",
+
+ bannerImage: "/shubhamimages/banner/product_banner/20.png",
+
+link: "/engineering-products/automatic-bic-type-pen-assembly-machine-2up",
+
+video: "/shubhamimages/video/tri.mp4",
+
+keyFeatures: [
+{
+title: "Automatic Pen Assembly",
+description:
+"Designed for automatic assembly of BIC type pens with an efficient and consistent production process."
+},
+
+
+{
+  title: "2UP Production System",
+  description:
+    "The 2UP configuration allows two pens to be assembled simultaneously, improving production efficiency."
+},
+
+{
+  title: "BIC Type Pen Compatibility",
+  description:
+    "Specifically designed for assembly applications involving BIC type pen components."
+},
+
+{
+  title: "Automatic Operation",
+  description:
+    "The automatic operating system reduces manual handling and provides smooth and consistent assembly performance."
+},
+
+{
+  title: "High Production Efficiency",
+  description:
+    "Designed to support continuous production while maintaining consistent assembly quality."
+},
+
+{
+  title: "Industrial Design",
+  description:
+    "Built for reliable operation in industrial pen manufacturing and assembly environments."
 }
+
+
+],
+
+description:
+"The Automatic BIC Type Pen Assembly Machine 2UP is designed for automatic assembly of BIC type pens. Its 2UP production system allows two pens to be processed simultaneously, helping improve production efficiency and reduce manual handling. The machine is suitable for continuous industrial pen manufacturing applications and provides consistent and reliable assembly performance.",
+
+specifications: {
+"Machine Type": "Automatic BIC Type Pen Assembly Machine 2UP",
+"Machine Category": "Automatic Assembly Machine",
+"Operation": "Automatic",
+"Pen Type": "BIC Type Pen",
+"Production System": "2UP",
+"Assembly Type": "Pen Assembly",
+"Automation": "Fully Automatic",
+"Application": "Pen Manufacturing & Assembly",
+"Production": "Continuous Production",
+"Customization": "Available as per requirement"
+},
+
+features: [
+"Automatic pen assembly",
+"BIC type pen compatible",
+"2UP production system",
+"Two pens assembled simultaneously",
+"Automatic component handling",
+"Reduced manual handling",
+"Consistent assembly process",
+"High production efficiency",
+"Industrial production design",
+"Reliable automatic operation",
+"Suitable for continuous production"
+],
+
+benefits: [
+"Improved production efficiency",
+"Reduced manual labor",
+"Higher production output",
+"Consistent pen assembly",
+"Reduced assembly time",
+"Improved product quality",
+"Reliable machine performance",
+"Suitable for continuous production"
+],
+
+applications: [
+"BIC type pen assembly",
+"Ball pen manufacturing",
+"Automatic pen assembly",
+"Pen component assembly",
+"Writing instrument manufacturing",
+"Plastic pen assembly",
+"Industrial pen production",
+"Automatic writing instrument assembly"
+]
+},
+{
+id: 22,
+
+title: "Automatic Steel Bottle Pressing Machine",
+
+slug: "automatic-steel-bottle-pressing-machine",
+
+category: "metal-products",
+
+type: "Automatic Pressing Machine",
+
+image: "/shubhamimages/products/steelbottle.png",
+
+detailImage: "/shubhamimages/products/steel_bottle_pressing_detail.png",
+
+bannerImage: "/shubhamimages/banner/product_banner/steelbottle.png",
+
+link: "/engineering-products/automatic-steel-bottle-pressing-machine",
+
+keyFeatures: [
+{
+title: "Automatic Bottle Pressing",
+description:
+"Designed for automatic pressing and forming operations on steel bottle components with a consistent and efficient production process."
+},
+
+
+{
+  title: "Steel Bottle Compatibility",
+  description:
+    "Suitable for pressing applications used in the manufacturing and forming of steel bottles and related metal containers."
+},
+
+{
+  title: "Automatic Operation",
+  description:
+    "The automatic operating system reduces manual handling and provides smooth and reliable machine performance."
+},
+
+{
+  title: "Consistent Pressing",
+  description:
+    "Provides controlled and uniform pressing to maintain consistent forming quality across production cycles."
+},
+
+{
+  title: "High Production Efficiency",
+  description:
+    "Designed for efficient production with reduced processing time and improved manufacturing productivity."
+},
+
+{
+  title: "Industrial Construction",
+  description:
+    "Built for reliable operation in industrial metal forming and steel bottle manufacturing environments."
+}
+
+
+],
+
+description:
+"The Automatic Steel Bottle Pressing Machine is designed for pressing and forming steel bottle components in industrial manufacturing applications. The machine provides consistent pressing performance, reduces manual handling and improves production efficiency. Its automatic operation makes it suitable for continuous steel bottle production and related metal forming applications.",
+
+specifications: {
+"Machine Type": "Automatic Steel Bottle Pressing Machine",
+"Machine Category": "Automatic Pressing Machine",
+"Operation": "Automatic",
+"Suitable Product": "Steel Bottles",
+"Material": "Steel / Metal",
+"Process": "Bottle Pressing & Forming",
+"Automation": "Fully Automatic",
+"Application": "Steel Bottle Manufacturing",
+"Production": "Continuous Production",
+"Customization": "Available as per requirement"
+},
+
+features: [
+"Automatic steel bottle pressing",
+"Suitable for steel bottle manufacturing",
+"Automatic pressing operation",
+"Consistent pressing performance",
+"Controlled forming process",
+"Reduced manual handling",
+"High production efficiency",
+"Industrial production design",
+"Reliable machine operation",
+"Suitable for continuous production"
+],
+
+benefits: [
+"Improved production efficiency",
+"Reduced manual labor",
+"Consistent pressing quality",
+"Reduced processing time",
+"Higher production output",
+"Uniform bottle forming",
+"Reliable machine performance",
+"Suitable for industrial production"
+],
+
+applications: [
+"Steel bottle pressing",
+"Steel bottle manufacturing",
+"Metal bottle forming",
+"Stainless steel bottle production",
+"Metal container manufacturing",
+"Bottle component pressing",
+"Industrial metal forming",
+"Automatic bottle production"
+]
+}
+
+
+
+
+
+
 
 ];
 
