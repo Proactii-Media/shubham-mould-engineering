@@ -294,13 +294,94 @@ const plasticproduct = [
 const products = [
 
   {
+  id: 1,
+  title: "Automatic Ball/Gel Pen Assembly Machine - 4UP",
+  slug: "automatic-ball-gel-pen-assembly-machine-4up",
+  category: "pen-assembly-machine",
+  type: "Automatic Pen Assembly Machine",
+  image: "/shubhamimages/products/auto.png",
+  bannerImage: "/shubhamimages/banner/product_banner/auto1.png",
+  video: "/shubhamimages/video/automatic.mp4",
+  link: "/engineering-products/automatic-ball-gel-pen-assembly-machine-4up",
+
+  keyFeatures: [
+    {
+      title: "Automated Assembly",
+      description: "The machine automatically performs repetitive pen assembly operations, reducing manual handling and improving production efficiency."
+    },
+    {
+      title: "4-UP High-Speed Production",
+      description: "The 4-UP configuration allows multiple pens to be processed simultaneously, achieving a high production capacity of approximately 140–180 pieces per minute."
+    },
+    {
+      title: "Integrated Feeding System",
+      description: "The machine uses an organized feeding system to continuously supply pen components to the assembly stations for uninterrupted production."
+    },
+    {
+      title: "Precision Engineering",
+      description: "Designed for high-volume manufacturing, the machine provides accurate component positioning and consistent assembly quality."
+    },
+    {
+      title: "SMC Pneumatic Control",
+      description: "Delta SMC Pneumatic Control provide easy machine monitoring, operation and production control."
+    }
+  ],
+
+  description:
+    "High-performance automatic pen assembly machine designed for fast, precise and reliable pen manufacturing. The SME-P-07 is engineered for continuous production with advanced automation, precision components and easy machine operation.",
+
+  specifications: {
+    "Assembly Mode": "Automatic Pen Assembly Machine",
+    "Assembly Mode ": "4up Chain carry, Horizontal Type",
+    "Workefficiency": "140-160 pcs/min",
+    "Suitable Diameter": "4 - 30mm",
+    "Suitable length": "60-200mm",
+    "Touch Screen": "7",
+    "Machine Dimension": "3550 x 1000 x 1200mm",
+    "Sitable for Products": "Cylindrical Products",
+    "Penumatic Brand": "SMC",
+    "Power Supply": "220V/ 50-Hz",
+    "Power Consumption": "2.6 -3KW"
+  },
+
+  features: [
+    "High-speed automatic pen assembly",
+    "High precision and consistent assembly",
+    "Compact and customer-friendly machine design",
+    "Imported SMC Pneumatic Control and touchscreen control",
+    "Adjustable variable high-speed operation",
+    "LED light in work area for easy setting and operation",
+    "Can be integrated with linear, oval and rotary indexers",
+    "Can be integrated with automation systems",
+    "CE certified electrical and critical components"
+  ],
+
+  benefits: [
+    "High production output",
+    "Consistent assembly quality",
+    "Reduced manual operation",
+    "Improved production efficiency",
+    "Easy machine operation",
+    "Reliable long-term performance"
+  ],
+
+  applications: [
+    "Ball pen manufacturing",
+    "Pen component assembly",
+    "Stationery manufacturing",
+    "Automatic pen production lines",
+    "High-volume pen manufacturing"
+  ]
+},
+
+  {
     id: 1,
     title: "Automatic Pen Assembly Machine 4UP (SME-P-07)",
     slug: "automatic-pen-assembly-machine-4up-sme-p-07",
     category: "pen-assembly-machine",
     type: "Automatic Pen Assembly Machine",
     image: "/shubhamimages/products/auto.png",
-    bannerImage: "/shubhamimages/banner/product_banner/9.png",
+    bannerImage: "/shubhamimages/banner/product_banner/auto1.png",
     video: "/shubhamimages/video/automatic.mp4",
     link: "/engineering-products/automatic-pen-assembly-machine-4up-sme-p-07",
     keyFeatures: [
@@ -384,7 +465,7 @@ const products = [
     category: "pen-assembly-machine",
     type: "Automatic Pen Assembly Machine",
     image: "/shubhamimages/products/auto.png",
-    bannerImage: "/shubhamimages/banner/product_banner/9.png",
+    bannerImage: "/shubhamimages/banner/product_banner/auto1.png",
     video: "/shubhamimages/video/auto2up.mp4",
     link: "/engineering-products/automatic-pen-assembly-machine-2up-sme-p-09",
 
@@ -454,6 +535,122 @@ const products = [
       "Automatic production lines"
     ]
   },
+
+  {
+id: 21,
+
+title: "Automatic BIC Type Pen Assembly Machine 2UP",
+
+slug: "automatic-bic-type-pen-assembly-machine-2up",
+
+ category: "pen-assembly-machine",
+    type: "Automatic Pen Assembly Machine",
+
+    image: "/shubhamimages/products/auto.png",
+
+detailImage: "/shubhamimages/products/bic_pen_2up_detail.png",
+
+ bannerImage: "/shubhamimages/banner/product_banner/auto1.png",
+
+link: "/engineering-products/automatic-bic-type-pen-assembly-machine-2up",
+
+video: "/shubhamimages/video/tri.mp4",
+
+keyFeatures: [
+{
+title: "Automatic Pen Assembly",
+description:
+"Designed for automatic assembly of BIC type pens with an efficient and consistent production process."
+},
+
+
+{
+  title: "2UP Production System",
+  description:
+    "The 2UP configuration allows two pens to be assembled simultaneously, improving production efficiency."
+},
+
+{
+  title: "BIC Type Pen Compatibility",
+  description:
+    "Specifically designed for assembly applications involving BIC type pen components."
+},
+
+{
+  title: "Automatic Operation",
+  description:
+    "The automatic operating system reduces manual handling and provides smooth and consistent assembly performance."
+},
+
+{
+  title: "High Production Efficiency",
+  description:
+    "Designed to support continuous production while maintaining consistent assembly quality."
+},
+
+{
+  title: "Industrial Design",
+  description:
+    "Built for reliable operation in industrial pen manufacturing and assembly environments."
+}
+
+
+],
+
+description:
+"The Automatic BIC Type Pen Assembly Machine 2UP is designed for automatic assembly of BIC type pens. Its 2UP production system allows two pens to be processed simultaneously, helping improve production efficiency and reduce manual handling. The machine is suitable for continuous industrial pen manufacturing applications and provides consistent and reliable assembly performance.",
+
+specifications: {
+"Machine Type": "Automatic BIC Type Pen Assembly Machine 2UP",
+"Machine Category": "Automatic Assembly Machine",
+"Operation": "Automatic",
+"Pen Type": "BIC Type Pen",
+"Production System": "2UP",
+"Assembly Type": "Pen Assembly",
+"Automation": "Fully Automatic",
+"Application": "Pen Manufacturing & Assembly",
+"Production": "Continuous Production",
+"Customization": "Available as per requirement"
+},
+
+features: [
+"Automatic pen assembly",
+"BIC type pen compatible",
+"2UP production system",
+"Two pens assembled simultaneously",
+"Automatic component handling",
+"Reduced manual handling",
+"Consistent assembly process",
+"High production efficiency",
+"Industrial production design",
+"Reliable automatic operation",
+"Suitable for continuous production"
+],
+
+benefits: [
+"Improved production efficiency",
+"Reduced manual labor",
+"Higher production output",
+"Consistent pen assembly",
+"Reduced assembly time",
+"Improved product quality",
+"Reliable machine performance",
+"Suitable for continuous production"
+],
+
+applications: [
+"BIC type pen assembly",
+"Ball pen manufacturing",
+"Automatic pen assembly",
+"Pen component assembly",
+"Writing instrument manufacturing",
+"Plastic pen assembly",
+"Industrial pen production",
+"Automatic writing instrument assembly"
+]
+},
+
+
 
   {
     id: 3,
@@ -815,7 +1012,7 @@ const products = [
   specifications: {
     "Machine Type": "Cap Clip Assembly Machine",
     "Assembly Mode": "Indexing, Vertical Type",
-    "Work Efficiency": "60-70 pcs/min",
+    "Work Efficiency": "70-80 pcs/min",
     "Suitable Diameter": "8-30mm",
     "Suitable Length": "30-150mm",
     "Touch Screen": "7-inch",
@@ -979,7 +1176,7 @@ const products = [
   specifications: {
     "Machine Type": "Oil Spout Cap Assembly Machine",
     "Assembly Mode": "Indexing, Vertical Type",
-    "Work Efficiency": "35-40 pcs/min",
+    "Work Efficiency": "40-50 pcs/min",
     "Suitable Diameter": "50 - 100mm",
     "Suitable Length": "60-200mm",
     "Touch Screen": "7",
@@ -1102,13 +1299,232 @@ const products = [
     ]
   },
 
+    {
+  id: 18,
+  title: "Automatic Heat Transfer Machine",
+  slug: "automatic-heat-transfer-machine",
+  category: "special-purpose-machine",
+  type: "Automatic Heat Transfer Machine",
+
+  image: "/shubhamimages/products/heat_transfer.png",
+  bannerImage: "/shubhamimages/banner/product_banner/heat.png",
+  video: "/shubhamimages/video/heat.mp4",
+
+
+  link: "/engineering-products/automatic-heat-transfer-machine",
+
+  description:
+    "The Automatic Heat Transfer Machine is designed for high-speed and consistent heat transfer printing on suitable plastic and cylindrical components. The machine automates component feeding, positioning, heating and transfer operations to reduce manual handling and achieve uniform printing quality.",
+
+  keyFeatures: [
+    {
+      title: "Automatic Heat Transfer",
+      description:
+        "The machine automatically performs the heat transfer process to apply printed foil or design onto suitable product surfaces with consistent results."
+    },
+    {
+      title: "Automatic Component Feeding",
+      description:
+        "Components are automatically fed and positioned at the transfer station for smooth and continuous production."
+    },
+    {
+      title: "Precise Product Positioning",
+      description:
+        "The automated positioning system ensures accurate placement of components during the heat transfer process."
+    },
+    {
+      title: "Controlled Heating",
+      description:
+        "The heating system provides controlled temperature operation to achieve reliable and consistent transfer quality."
+    },
+    {
+      title: "Consistent Printing Quality",
+      description:
+        "The machine maintains uniform transfer pressure, temperature and positioning for consistent printing results."
+    },
+    {
+      title: "Continuous Production",
+      description:
+        "Designed for continuous industrial operation with reduced manual intervention and improved production efficiency."
+    },
+    {
+      title: "Easy Operation",
+      description:
+        "The machine is designed for simple operation and convenient control of the heat transfer process."
+    }
+  ],
+
+  specifications: {
+    "Machine Type": "Automatic Heat Transfer Machine",
+    "Operation": "Automatic",
+    "Transfer Method": "Heat Transfer Foil",
+    "Suitable Products": "Plastic & Cylindrical Components",
+    "Heating System": "Electric Heating",
+    "Work Efficiency": "70-90 pcs/min",
+    "Control System": "PLC Controlled",
+    "Touch Screen": "7-inch",
+    "Power Supply": "220V / 50Hz"
+  },
+
+  features: [
+    "Automatic heat transfer printing",
+    "Automatic component feeding",
+    "Precise component positioning",
+    "Controlled heating system",
+    "Consistent transfer quality",
+    "Automatic foil transfer",
+    "PLC controlled operation",
+    "Touchscreen HMI",
+    "Continuous production operation",
+    "Reduced manual handling",
+    "Industrial machine construction"
+  ],
+
+  benefits: [
+    "Improved production efficiency",
+    "Consistent printing quality",
+    "Reduced manual operation",
+    "Accurate product positioning",
+    "Uniform heat transfer results",
+    "Reduced production errors",
+    "Reliable machine performance",
+    "Suitable for automated production lines"
+  ],
+
+  applications: [
+    "Marker cap printing",
+    "Plastic component printing",
+    "Pen component printing",
+    "Cylindrical product printing",
+    "Heat transfer foil application",
+    "Writing instrument manufacturing",
+    "Plastic product manufacturing"
+  ]
+},
+
+{
+  id: 20,
+
+  title: "Plastic Broom & Brush Filament Automatic Wrapping Machine",
+
+  slug: "plastic-broom-brush-filament-automatic-wrapping-machine",
+
+  category: "plastic-products",
+
+  type: "Automatic Packing Machine",
+
+  image: "/shubhamimages/products/broom.png",
+
+  detailImage: "/shubhamimages/products/filament_wrapping.png",
+
+  bannerImage: "/shubhamimages/banner/product_banner/broom.png",
+
+  video: "/shubhamimages/video/broom.mp4",
+
+  link: "/engineering-products/plastic-broom-brush-filament-automatic-wrapping-machine",
+
+  keyFeatures: [
+    {
+      title: "Automatic Filament Wrapping",
+      description:
+        "Designed to automatically wrap and pack plastic broom and brush filaments with a consistent and efficient wrapping process."
+    },
+
+    {
+      title: "Suitable for Broom & Brush Filaments",
+      description:
+        "The machine is suitable for wrapping plastic filament materials used in broom and brush manufacturing applications."
+    },
+
+    {
+      title: "Adjustable Size Range",
+      description:
+        "Designed to handle filament sizes from a minimum of 300 mm up to 3000 mm according to product requirements."
+    },
+
+    {
+      title: "Consistent Wrapping",
+      description:
+        "Provides uniform wrapping and packing to maintain consistent product presentation and secure filament bundles."
+    },
+
+    {
+      title: "Automatic Operation",
+      description:
+        "The automated wrapping process reduces manual handling and improves production efficiency."
+    },
+
+    {
+      title: "Industrial Production",
+      description:
+        "Designed for continuous industrial production where reliable filament wrapping and packing performance is required."
+    }
+  ],
+
+  description:
+    "The Plastic Broom & Brush Filament Automatic Wrapping Machine is designed for automatic wrapping and packing of plastic filaments used in broom and brush manufacturing. The machine provides consistent wrapping, reduces manual handling and improves production efficiency. It is designed to handle filament sizes from 300 mm to 3000 mm according to product requirements.",
+
+  specifications: {
+    "Machine Type": "Plastic Broom & Brush Filament Automatic Wrapping Machine",
+    "Machine Category": "Automatic Packing Machine",
+    "Operation": "Automatic",
+    "Suitable Product": "Plastic Broom & Brush Filaments",
+    "Minimum Size": "300 mm",
+    "Maximum Size": "3000 mm",
+    "Size Range": "300 - 3000 mm",
+    "Wrapping Type": "Automatic Filament Wrapping",
+    "Application": "Broom & Brush Manufacturing",
+    "Customization": "Available as per requirement"
+  },
+
+  features: [
+    "Automatic filament wrapping",
+    "Suitable for plastic broom filaments",
+    "Suitable for brush filaments",
+    "Size range from 300 to 3000 mm",
+    "Consistent wrapping process",
+    "Automatic packing operation",
+    "Reduced manual handling",
+    "Adjustable product size",
+    "Industrial production design",
+    "Reliable wrapping performance",
+    "Suitable for continuous production"
+  ],
+
+  benefits: [
+    "Improved production efficiency",
+    "Reduced manual labor",
+    "Consistent filament wrapping",
+    "Uniform product packing",
+    "Flexible size handling",
+    "Reduced handling time",
+    "Reliable machine performance",
+    "Suitable for industrial production"
+  ],
+
+  applications: [
+    "Plastic broom filament wrapping",
+    "Brush filament wrapping",
+    "Broom manufacturing",
+    "Brush manufacturing",
+    "Plastic filament packing",
+    "Broom filament packaging",
+    "Brush filament packaging",
+    "Plastic product packaging"
+  ]
+},
+
+
+
+
+
 
 {
     id: 8,
-    title: "Automatic 360° Rotary Blister Card Sealing Machine",   // ✅ updated
+    title: "Automatic 360° Rotary Blister Card Sealing Machine",   
     slug: "blister-card-sealing-machine",
     category: "packaging-machine",
-    type: "Automatic Packaging Machine",                           // ✅ updated
+    type: "Automatic Packaging Machine",                           
 
     image: "/shubhamimages/products/blisterCard.png",
     bannerImage: "/shubhamimages/banner/product_banner/12.png",
@@ -1326,66 +1742,7 @@ const products = [
   },
 
 
-  {
-    id: 11,
-    title: "Vibrator Bowl 4 Track Pen Barrel",
-    slug: "vibrator-bowl-4-track-pen-barrel",
-    category: "automation-system",
-    type: "Automation System",
-    image: "/shubhamimages/products/vibretor.png",
-    bannerImage: "/shubhamimages/banner/product_banner/21.png",
-    video: "/shubhamimages/video/4track.mp4",
-    link: "/engineering-products/vibrator-bowl-4-track-pen-barrel",
-    keyFeatures: [
-      {
-        title: "Automated Sorting",
-        description:
-          "This equipment is primarily used in high-speed manufacturing lines to automatically orient, sort, and feed small components such as pen parts, electronic components, or fasteners to downstream assembly machines. The machine utilizes vibrations to move parts up a helical track, where mechanical tooling or sensors ensure that only correctly oriented parts proceed. It provides a continuous and consistent flow of components for automated assembly operations.",
-      },
-      {
-        title: "Multi-Track Feeding",
-        description:
-          "The specific model features four distinct tracks, allowing it to simultaneously organize and deliver four separate rows of components to the assembly process."
-      },
-      {
-        title: "Operational Efficiency",
-        description:
-          "By automating the feeding process, it eliminates manual handling, ensures a consistent flow of parts, and significantly increases the throughput of assembly lines."
-      }
-    ],
 
-    description:
-      "This equipment is primarily used in high-speed manufacturing lines to automatically orient, sort, and feed small components (such as pen parts, electronic components, or fasteners) to downstream assembly machines.",
-
-    specifications: {
-      "Machine Type": "Vibratory Feeding System",
-      "Track": "4 Track",
-      "Application": "Pen Barrel Feeding",
-      "Machine Category": "Automation System"
-    },
-
-    features: [
-      "4-track component feeding",
-      "Automatic pen barrel orientation",
-      "Smooth material handling",
-      "Suitable for assembly line integration",
-      "Automation-ready design"
-    ],
-
-    benefits: [
-      "Continuous component feeding",
-      "Reduced manual handling",
-      "Improved production flow",
-      "Consistent component orientation"
-    ],
-
-    applications: [
-      "Pen barrel feeding",
-      "Pen assembly lines",
-      "Automatic component handling",
-      "Stationery manufacturing"
-    ]
-  },
 
 
   {
@@ -1755,106 +2112,68 @@ const products = [
     ]
   },
 
-  {
-  id: 18,
-  title: "Automatic Heat Transfer Machine",
-  slug: "automatic-heat-transfer-machine",
-  category: "special-purpose-machine",
-  type: "Automatic Heat Transfer Machine",
+    {
+    id: 11,
+    title: "Vibrator Bowl 4 Track Pen Barrel",
+    slug: "vibrator-bowl-4-track-pen-barrel",
+    category: "automation-system",
+    type: "Automation System",
+    image: "/shubhamimages/products/vibretor.png",
+    bannerImage: "/shubhamimages/banner/product_banner/21.png",
+    video: "/shubhamimages/video/4track.mp4",
+    link: "/engineering-products/vibrator-bowl-4-track-pen-barrel",
+    keyFeatures: [
+      {
+        title: "Automated Sorting",
+        description:
+          "This equipment is primarily used in high-speed manufacturing lines to automatically orient, sort, and feed small components such as pen parts, electronic components, or fasteners to downstream assembly machines. The machine utilizes vibrations to move parts up a helical track, where mechanical tooling or sensors ensure that only correctly oriented parts proceed. It provides a continuous and consistent flow of components for automated assembly operations.",
+      },
+      {
+        title: "Multi-Track Feeding",
+        description:
+          "The specific model features four distinct tracks, allowing it to simultaneously organize and deliver four separate rows of components to the assembly process."
+      },
+      {
+        title: "Operational Efficiency",
+        description:
+          "By automating the feeding process, it eliminates manual handling, ensures a consistent flow of parts, and significantly increases the throughput of assembly lines."
+      }
+    ],
 
-  image: "/shubhamimages/products/heat_transfer.png",
-  bannerImage: "/shubhamimages/banner/product_banner/heat.png",
+    description:
+      "This equipment is primarily used in high-speed manufacturing lines to automatically orient, sort, and feed small components (such as pen parts, electronic components, or fasteners) to downstream assembly machines.",
 
+    specifications: {
+      "Machine Type": "Vibratory Feeding System",
+      "Track": "4 Track",
+      "Application": "Pen Barrel Feeding",
+      "Machine Category": "Automation System"
+    },
 
-  link: "/engineering-products/automatic-heat-transfer-machine",
+    features: [
+      "4-track component feeding",
+      "Automatic pen barrel orientation",
+      "Smooth material handling",
+      "Suitable for assembly line integration",
+      "Automation-ready design"
+    ],
 
-  description:
-    "The Automatic Heat Transfer Machine is designed for high-speed and consistent heat transfer printing on suitable plastic and cylindrical components. The machine automates component feeding, positioning, heating and transfer operations to reduce manual handling and achieve uniform printing quality.",
+    benefits: [
+      "Continuous component feeding",
+      "Reduced manual handling",
+      "Improved production flow",
+      "Consistent component orientation"
+    ],
 
-  keyFeatures: [
-    {
-      title: "Automatic Heat Transfer",
-      description:
-        "The machine automatically performs the heat transfer process to apply printed foil or design onto suitable product surfaces with consistent results."
-    },
-    {
-      title: "Automatic Component Feeding",
-      description:
-        "Components are automatically fed and positioned at the transfer station for smooth and continuous production."
-    },
-    {
-      title: "Precise Product Positioning",
-      description:
-        "The automated positioning system ensures accurate placement of components during the heat transfer process."
-    },
-    {
-      title: "Controlled Heating",
-      description:
-        "The heating system provides controlled temperature operation to achieve reliable and consistent transfer quality."
-    },
-    {
-      title: "Consistent Printing Quality",
-      description:
-        "The machine maintains uniform transfer pressure, temperature and positioning for consistent printing results."
-    },
-    {
-      title: "Continuous Production",
-      description:
-        "Designed for continuous industrial operation with reduced manual intervention and improved production efficiency."
-    },
-    {
-      title: "Easy Operation",
-      description:
-        "The machine is designed for simple operation and convenient control of the heat transfer process."
-    }
-  ],
-
-  specifications: {
-    "Machine Type": "Automatic Heat Transfer Machine",
-    "Operation": "Automatic",
-    "Transfer Method": "Heat Transfer Foil",
-    "Suitable Products": "Plastic & Cylindrical Components",
-    "Heating System": "Electric Heating",
-    "Control System": "PLC Controlled",
-    "Touch Screen": "7-inch",
-    "Power Supply": "220V / 50Hz"
+    applications: [
+      "Pen barrel feeding",
+      "Pen assembly lines",
+      "Automatic component handling",
+      "Stationery manufacturing"
+    ]
   },
 
-  features: [
-    "Automatic heat transfer printing",
-    "Automatic component feeding",
-    "Precise component positioning",
-    "Controlled heating system",
-    "Consistent transfer quality",
-    "Automatic foil transfer",
-    "PLC controlled operation",
-    "Touchscreen HMI",
-    "Continuous production operation",
-    "Reduced manual handling",
-    "Industrial machine construction"
-  ],
 
-  benefits: [
-    "Improved production efficiency",
-    "Consistent printing quality",
-    "Reduced manual operation",
-    "Accurate product positioning",
-    "Uniform heat transfer results",
-    "Reduced production errors",
-    "Reliable machine performance",
-    "Suitable for automated production lines"
-  ],
-
-  applications: [
-    "Marker cap printing",
-    "Plastic component printing",
-    "Pen component printing",
-    "Cylindrical product printing",
-    "Heat transfer foil application",
-    "Writing instrument manufacturing",
-    "Plastic product manufacturing"
-  ]
-},
 {
   id: 19,
   title: "Vibratory Feeder Bowl",
@@ -1960,231 +2279,9 @@ const products = [
     "Industrial automation applications"
   ]
 },
-{
-  id: 20,
-
-  title: "Plastic Broom & Brush Filament Automatic Wrapping Machine",
-
-  slug: "plastic-broom-brush-filament-automatic-wrapping-machine",
-
-  category: "plastic-products",
-
-  type: "Automatic Packing Machine",
-
-  image: "/shubhamimages/products/broom.png",
-
-  detailImage: "/shubhamimages/products/filament_wrapping.png",
-
-  bannerImage: "/shubhamimages/banner/product_banner/broom.png",
-
-  video: "/shubhamimages/video/broom.mp4",
-
-  link: "/engineering-products/plastic-broom-brush-filament-automatic-wrapping-machine",
-
-  keyFeatures: [
-    {
-      title: "Automatic Filament Wrapping",
-      description:
-        "Designed to automatically wrap and pack plastic broom and brush filaments with a consistent and efficient wrapping process."
-    },
-
-    {
-      title: "Suitable for Broom & Brush Filaments",
-      description:
-        "The machine is suitable for wrapping plastic filament materials used in broom and brush manufacturing applications."
-    },
-
-    {
-      title: "Adjustable Size Range",
-      description:
-        "Designed to handle filament sizes from a minimum of 300 mm up to 3000 mm according to product requirements."
-    },
-
-    {
-      title: "Consistent Wrapping",
-      description:
-        "Provides uniform wrapping and packing to maintain consistent product presentation and secure filament bundles."
-    },
-
-    {
-      title: "Automatic Operation",
-      description:
-        "The automated wrapping process reduces manual handling and improves production efficiency."
-    },
-
-    {
-      title: "Industrial Production",
-      description:
-        "Designed for continuous industrial production where reliable filament wrapping and packing performance is required."
-    }
-  ],
-
-  description:
-    "The Plastic Broom & Brush Filament Automatic Wrapping Machine is designed for automatic wrapping and packing of plastic filaments used in broom and brush manufacturing. The machine provides consistent wrapping, reduces manual handling and improves production efficiency. It is designed to handle filament sizes from 300 mm to 3000 mm according to product requirements.",
-
-  specifications: {
-    "Machine Type": "Plastic Broom & Brush Filament Automatic Wrapping Machine",
-    "Machine Category": "Automatic Packing Machine",
-    "Operation": "Automatic",
-    "Suitable Product": "Plastic Broom & Brush Filaments",
-    "Minimum Size": "300 mm",
-    "Maximum Size": "3000 mm",
-    "Size Range": "300 - 3000 mm",
-    "Wrapping Type": "Automatic Filament Wrapping",
-    "Application": "Broom & Brush Manufacturing",
-    "Customization": "Available as per requirement"
-  },
-
-  features: [
-    "Automatic filament wrapping",
-    "Suitable for plastic broom filaments",
-    "Suitable for brush filaments",
-    "Size range from 300 to 3000 mm",
-    "Consistent wrapping process",
-    "Automatic packing operation",
-    "Reduced manual handling",
-    "Adjustable product size",
-    "Industrial production design",
-    "Reliable wrapping performance",
-    "Suitable for continuous production"
-  ],
-
-  benefits: [
-    "Improved production efficiency",
-    "Reduced manual labor",
-    "Consistent filament wrapping",
-    "Uniform product packing",
-    "Flexible size handling",
-    "Reduced handling time",
-    "Reliable machine performance",
-    "Suitable for industrial production"
-  ],
-
-  applications: [
-    "Plastic broom filament wrapping",
-    "Brush filament wrapping",
-    "Broom manufacturing",
-    "Brush manufacturing",
-    "Plastic filament packing",
-    "Broom filament packaging",
-    "Brush filament packaging",
-    "Plastic product packaging"
-  ]
-},
-
-{
-id: 21,
-
-title: "Automatic BIC Type Pen Assembly Machine 2UP",
-
-slug: "automatic-bic-type-pen-assembly-machine-2up",
-
- category: "pen-assembly-machine",
-    type: "Automatic Pen Assembly Machine",
-
-    image: "/shubhamimages/products/semi_automatic_assembly.png",
-
-detailImage: "/shubhamimages/products/bic_pen_2up_detail.png",
-
- bannerImage: "/shubhamimages/banner/product_banner/20.png",
-
-link: "/engineering-products/automatic-bic-type-pen-assembly-machine-2up",
-
-video: "/shubhamimages/video/tri.mp4",
-
-keyFeatures: [
-{
-title: "Automatic Pen Assembly",
-description:
-"Designed for automatic assembly of BIC type pens with an efficient and consistent production process."
-},
 
 
-{
-  title: "2UP Production System",
-  description:
-    "The 2UP configuration allows two pens to be assembled simultaneously, improving production efficiency."
-},
 
-{
-  title: "BIC Type Pen Compatibility",
-  description:
-    "Specifically designed for assembly applications involving BIC type pen components."
-},
-
-{
-  title: "Automatic Operation",
-  description:
-    "The automatic operating system reduces manual handling and provides smooth and consistent assembly performance."
-},
-
-{
-  title: "High Production Efficiency",
-  description:
-    "Designed to support continuous production while maintaining consistent assembly quality."
-},
-
-{
-  title: "Industrial Design",
-  description:
-    "Built for reliable operation in industrial pen manufacturing and assembly environments."
-}
-
-
-],
-
-description:
-"The Automatic BIC Type Pen Assembly Machine 2UP is designed for automatic assembly of BIC type pens. Its 2UP production system allows two pens to be processed simultaneously, helping improve production efficiency and reduce manual handling. The machine is suitable for continuous industrial pen manufacturing applications and provides consistent and reliable assembly performance.",
-
-specifications: {
-"Machine Type": "Automatic BIC Type Pen Assembly Machine 2UP",
-"Machine Category": "Automatic Assembly Machine",
-"Operation": "Automatic",
-"Pen Type": "BIC Type Pen",
-"Production System": "2UP",
-"Assembly Type": "Pen Assembly",
-"Automation": "Fully Automatic",
-"Application": "Pen Manufacturing & Assembly",
-"Production": "Continuous Production",
-"Customization": "Available as per requirement"
-},
-
-features: [
-"Automatic pen assembly",
-"BIC type pen compatible",
-"2UP production system",
-"Two pens assembled simultaneously",
-"Automatic component handling",
-"Reduced manual handling",
-"Consistent assembly process",
-"High production efficiency",
-"Industrial production design",
-"Reliable automatic operation",
-"Suitable for continuous production"
-],
-
-benefits: [
-"Improved production efficiency",
-"Reduced manual labor",
-"Higher production output",
-"Consistent pen assembly",
-"Reduced assembly time",
-"Improved product quality",
-"Reliable machine performance",
-"Suitable for continuous production"
-],
-
-applications: [
-"BIC type pen assembly",
-"Ball pen manufacturing",
-"Automatic pen assembly",
-"Pen component assembly",
-"Writing instrument manufacturing",
-"Plastic pen assembly",
-"Industrial pen production",
-"Automatic writing instrument assembly"
-]
-},
 {
 id: 22,
 

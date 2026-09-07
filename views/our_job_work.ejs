@@ -1,0 +1,614 @@
+<%- include('include/head') %>
+    <%- include('include/header') %>
+
+        <style>
+            .jobwork-image {
+                overflow: hidden;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            .jobwork-image img {
+                width: 100%;
+                display: block;
+                transition: transform 0.6s ease, filter 0.6s ease;
+            }
+
+            /* Hover effect */
+            .jobwork-image:hover img {
+                transform: scale(1.08) rotate(1deg);
+                filter: brightness(1.08);
+            }
+
+
+            /* ================================
+   JOB WORK PROCESS
+================================ */
+
+            .jobwork-process {
+                padding: 80px 0;
+                background: #f7f8fa;
+            }
+
+            .jobwork-process .section-title {
+                max-width: 700px;
+                margin: 0 auto 55px;
+            }
+
+            .jobwork-process .section-title h2 {
+                font-size: 36px;
+                font-weight: 700;
+                margin-bottom: 12px;
+                color: #222;
+            }
+
+            .jobwork-process .section-title p {
+                font-size: 16px;
+                color: #777;
+                margin: 0;
+            }
+
+            /* Process wrapper */
+
+            .process-wrapper {
+                max-width: 1000px;
+                margin: auto;
+                position: relative;
+            }
+
+            /* Vertical line */
+
+            .process-wrapper::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: #ddd;
+                transform: translateX(-50%);
+            }
+
+            /* Process item */
+
+            .process-item {
+                width: 50%;
+                padding: 0 45px 45px 0;
+                position: relative;
+                display: flex;
+                align-items: flex-start;
+            }
+
+            .process-item:nth-child(even) {
+                margin-left: 50%;
+                padding: 0 0 45px 45px;
+            }
+
+            /* Number */
+
+            .process-number {
+                width: 55px;
+                height: 55px;
+                min-width: 55px;
+                border-radius: 50%;
+                background: #ffffff;
+                border: 2px solid #e31e24;
+                color: #e31e24;
+                font-size: 17px;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                right: -27px;
+                top: 0;
+                z-index: 2;
+                transition: all 0.3s ease;
+            }
+
+            .process-item:nth-child(even) .process-number {
+                left: -27px;
+                right: auto;
+            }
+
+            /* Content box */
+
+            .process-content {
+                background: #fff;
+                padding: 25px 28px;
+                border-radius: 6px;
+                box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+                transition: all 0.3s ease;
+            }
+
+            .process-content h3 {
+                font-size: 20px;
+                font-weight: 600;
+                margin: 0 0 10px;
+                color: #222;
+            }
+
+            .process-content p {
+                font-size: 14px;
+                line-height: 1.7;
+                color: #777;
+                margin: 0;
+            }
+
+            /* Hover */
+
+            .process-item:hover .process-content {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+            }
+
+            .process-item:hover .process-number {
+                background: #e31e24;
+                color: #fff;
+            }
+
+            /* ================================
+   MOBILE
+================================ */
+
+            @media (max-width: 767px) {
+
+                .jobwork-process {
+                    padding: 60px 15px;
+                }
+
+                .jobwork-process .section-title h2 {
+                    font-size: 28px;
+                }
+
+                .process-wrapper {
+                    padding-left: 30px;
+                }
+
+                .process-wrapper::before {
+                    left: 8px;
+                    transform: none;
+                }
+
+                .process-item,
+                .process-item:nth-child(even) {
+                    width: 100%;
+                    margin-left: 0;
+                    padding: 0 0 30px 25px;
+                }
+
+                .process-number,
+                .process-item:nth-child(even) .process-number {
+                    left: -19px;
+                    right: auto;
+                    width: 40px;
+                    height: 40px;
+                    min-width: 40px;
+                    font-size: 13px;
+                }
+
+                .process-content {
+                    padding: 20px;
+                }
+
+                .process-content h3 {
+                    font-size: 18px;
+                }
+
+                .process-content p {
+                    font-size: 14px;
+                }
+            }
+        </style>
+
+        <!-- header END -->
+        <!-- Content -->
+        <div class="page-content bg-white">
+            <!-- inner page banner -->
+            <div class="dlab-bnr-inr " style="background-image:url(/shubhamimages/banner/jobwork1.png);">
+                <div class="container">
+                    <div class="dlab-bnr-inr-entry">
+                        <h1 class="text-white">VMC CNC Job Work</h1>
+                        <!-- Breadcrumb row -->
+                        <div class="breadcrumb-row">
+                            <ul class="list-inline">
+                                <li><a href="/">Home</a></li>
+
+                                <li>VMC CNC Job Work</li>
+                            </ul>
+                        </div>
+                        <!-- Breadcrumb row END -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+
+
+
+                <!-- Content Section -->
+                <div class="section-full content-inner const-about">
+                    <div class="container">
+
+                        <div class="section-head style2 text-center">
+                            <div class="sort-title clearfix text-center">
+                                <h4 style="font-size: 24px;">VMC CNC Job Work</h4>
+                                <p class="mt-3"><strong>Shubham Mould & Engineering</strong> provides reliable VMC CNC
+                                    Job Work services for manufacturing precision components, mould parts, machine
+                                    components and customized industrial parts. Our machining solutions are focused on
+                                    dimensional accuracy, consistent quality and dependable production.
+
+
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12 wow fadeInLeft" data-wow-duration="2s"
+                                data-wow-delay="0.3s">
+                                <div class="radius-sm m-b30 img-ho1">
+                                    <img src="/shubhamimages/about/jobwork1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12 wow fadeInRight" data-wow-duration="2s"
+                                data-wow-delay="0.6s">
+                                <div class="content-bx1">
+
+                                    <div class="section-head style2">
+                                        <h2 class="title">VMC CNC Job Work</h2>
+                                        <p><strong>Shubham Mould & Engineering</strong> provides reliable VMC CNC Job Work services for
+                                            manufacturing precision components, mould parts, machine components and
+                                            customized industrial parts. Our machining solutions are focused on
+                                            dimensional accuracy, consistent quality and dependable production.
+
+                                            We support both prototype and production requirements, helping customers
+                                            manufacture components according to their drawings, dimensions and
+                                            application requirements.</p>
+
+                                        <div class="section-content box-sort-in m-b10 p-b0 button-example">
+                                            <div class="row">
+
+                                                <div class="col-md-12 col-lg-12 col-sm-12">
+                                                    <ul class="list-checked black">
+                                                        <li>Precision CNC Machining</li>
+                                                        <li>Customized Component Manufacturing</li>
+                                                        <li>Mould & Die Components</li>
+                                                        <li>Prototype & Batch Production</li>
+                                                        <li>Machining as per Customer Drawing</li>
+
+
+                                                    </ul>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="jobwork-process">
+                        <div class="container">
+
+                            <div class="section-title text-center">
+                                <h2>Our Job Work Process</h2>
+                                <p>From drawing to final delivery, we ensure precision and quality at every stage.</p>
+                            </div>
+
+                            <div class="process-wrapper">
+
+                                <!-- 01 -->
+                                <div class="process-item">
+                                    <div class="process-number">01</div>
+                                    <div class="process-content">
+                                        <h3>Drawing / Sample Received</h3>
+                                        <p>
+                                            We receive the customer's drawing, CAD model, sample or component
+                                            requirements.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- 02 -->
+                                <div class="process-item">
+                                    <div class="process-number">02</div>
+                                    <div class="process-content">
+                                        <h3>Machining Planning</h3>
+                                        <p>
+                                            The component is evaluated and the appropriate machining process is planned.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- 03 -->
+                                <div class="process-item">
+                                    <div class="process-number">03</div>
+                                    <div class="process-content">
+                                        <h3>CNC Programming</h3>
+                                        <p>
+                                            The machining program is prepared according to the component geometry and
+                                            required operations.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- 04 -->
+                                <div class="process-item">
+                                    <div class="process-number">04</div>
+                                    <div class="process-content">
+                                        <h3>VMC Machining</h3>
+                                        <p>
+                                            The component is machined using CNC-controlled machining operations.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- 05 -->
+                                <div class="process-item">
+                                    <div class="process-number">05</div>
+                                    <div class="process-content">
+                                        <h3>Quality Inspection</h3>
+                                        <p>
+                                            The finished component is checked for dimensions, accuracy and overall
+                                            quality.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- 06 -->
+                                <div class="process-item">
+                                    <div class="process-number">06</div>
+                                    <div class="process-content">
+                                        <h3>Final Delivery</h3>
+                                        <p>
+                                            After inspection and approval, the finished components are prepared for
+                                            delivery.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                    <section class="jobwork-process" style="background: #fff;">
+                        <div class="container">
+
+                            <div class="row align-items-start">
+
+                                <!-- LEFT: Key Features -->
+                                <div class="col-xl-6 col-lg-12 col-md-6 col-sm-12">
+
+                                    <div class="sort-title clearfix text-center">
+                                        <h4>Key Features & Benefits</h4>
+                                    </div>
+
+                                    <ul class="list-checked black">
+
+                                        <li>
+                                            <strong>Precision Machining:</strong>
+                                            <div style="margin-top: 5px;">
+                                                Machining is carried out according to the required component dimensions
+                                                and specifications.
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong>Customized Manufacturing:</strong>
+                                            <div style="margin-top: 5px;">
+                                                We manufacture components according to customer drawings, samples and
+                                                specific requirements.
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong>Consistent Quality:</strong>
+                                            <div style="margin-top: 5px;">
+                                                Controlled machining processes help maintain consistent component
+                                                quality.
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong>Flexible Production:</strong>
+                                            <div style="margin-top: 5px;">
+                                                Suitable for prototype development, small batches and production
+                                                requirements.
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong>Industrial Applications:</strong>
+                                            <div style="margin-top: 5px;">
+                                                Our machining services can support various engineering, automation and
+                                                manufacturing industries.
+                                            </div>
+                                        </li>
+
+
+                                    </ul>
+
+                                </div>
+
+
+                                <!-- RIGHT: Applications -->
+                                <div class="col-xl-6 col-lg-12 col-md-6 col-sm-12">
+
+                                    <div class="sort-title clearfix text-center">
+                                        <h4>Applications</h4>
+                                    </div>
+
+                                    <div class="section-content box-sort-in m-b10 p-b0">
+
+                                        <ul class="list-star red list-box">
+
+                                            <li>Engineering Components</li>
+                                            <li>Machine Parts & Components</li>
+                                            <li>Automation Components</li>
+                                            <li>Industrial Machinery Parts</li>
+                                            <li>Precision Mechanical Components</li>
+                                            <li>Prototype Components</li>
+                                            <li>Small Batch Production Components</li>
+                                            <li>Custom-Machined Components</li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <div class="section-full bg-white mt-3 bg-img-fix">
+
+                        <div class="container">
+
+                            <div class="row">
+
+                                <div class="col-md-12">
+
+                                    <div class="sort-title clearfix text-center">
+                                        <h4>Why Choose Us</h4>
+                                    </div>
+
+                                    <div class="section-content box-sort-in m-b10 p-b0 button-example m-b30">
+
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+
+                                                <ul class="list-star red list-box">
+
+
+                                                    <li>
+                                                        <strong>High Precision:</strong> Accurate machining according to
+                                                        component drawings, dimensions and specifications.
+                                                    </li>
+
+                                                    <li>
+                                                        <strong>Customized Solutions:</strong> Components are
+                                                        manufactured as per customer drawings, samples and specific
+                                                        requirements.
+                                                    </li>
+
+                                                    <li>
+                                                        <strong>Quality Assurance:</strong> Controlled machining
+                                                        processes help maintain consistent quality and dimensional
+                                                        accuracy.
+                                                    </li>
+
+                                                    <li>
+                                                        <strong>Timely Delivery:</strong> Efficient production planning
+                                                        to meet committed delivery schedules.
+                                                    </li>
+
+                                                    <li>
+                                                        <strong>Flexible Manufacturing:</strong> Capability to support
+                                                        prototype, small-batch and regular production requirements.
+                                                    </li>
+
+                                                    <li>
+                                                        <strong>Reliable Support:</strong> Professional service and
+                                                        responsive support throughout the machining process.
+                                                    </li>
+
+
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Content Section End -->
+                <!-- Latest blog END -->
+
+            </div>
+
+        </div>
+
+        <!-- Call To Action Start -->
+        <div class="section-full call-action bg-primary wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-9 text-white">
+                        <h2 class="title" style="font-size: 21px; margin-bottom: 5px;">
+                            Need Precision VMC & CNC Job Work for Your Components?
+                        </h2>
+
+                        <p class="text-white m-b0" style="font-size: 14px;">
+                            Share your drawing, sample or machining requirements with us
+                            for reliable and accurate manufacturing solutions.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 d-flex">
+                        <a href="/contact"
+                            class="site-button white align-self-center outline ms-auto radius-xl outline-2 btnhover16">
+                            Get In Touch
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Call To Action End -->
+        <!-- Left & right section END -->
+        <!-- Content END-->
+        <!-- Footer -->
+        <%- include('include/footer') %>
+            <!-- Footer End -->
+
+            </div>
+            <!-- JAVASCRIPT FILES ========================================= -->
+            <!-- <script data-cfasync="false"
+                src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+            <script src="js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
+            <script src="plugins/wow/wow.js"></script><!-- WOW JS -->
+
+            <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+            <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
+            <script src="plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+            <script src="plugins/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
+            <script src="plugins/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
+            <script src="plugins/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
+            <script src="plugins/imagesloaded/imagesloaded.js"></script><!-- IMAGESLOADED -->
+            <script src="plugins/masonry/masonry-3.1.4.js"></script><!-- MASONRY -->
+            <script src="plugins/masonry/masonry.filter.js"></script><!-- MASONRY -->
+            <script src="plugins/owl-carousel/owl.carousel.js"></script><!-- OWL SLIDER -->
+            <script src="plugins/lightgallery/js/lightgallery-all.min.js"></script><!-- Lightgallery -->
+            <script src="plugins/scroll/scrollbar.min.js"></script><!-- scroll -->
+            <script src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+            <script src="js/dz.carousel.min.js"></script><!-- SORTCODE FUCTIONS  -->
+            <script src="plugins/countdown/jquery.countdown.js"></script><!-- COUNTDOWN FUCTIONS  -->
+            <script src="js/dz.ajax.js"></script><!-- CONTACT JS  -->
+            <script src="plugins/rangeslider/rangeslider.js"></script><!-- Rangeslider -->
+            <script src="plugins/switcher/switcher.js"></script><!-- Switcher -->
+
+            <script type="module"
+                src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496"
+                integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ=="
+                data-cf-beacon='{"version":"2024.11.0","token":"0931814f84b94398b852d3ac91b5f293","r":1}'
+                crossorigin="anonymous"></script>
+            </body>
+
+            </html>

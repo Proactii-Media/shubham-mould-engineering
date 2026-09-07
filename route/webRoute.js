@@ -11,6 +11,7 @@ const product = require("../controller/web_controller/product.js");
 const plasticproduct = require("../controller/web_controller/plasticproduct.js")
 const clientLogos = require("../controller/web_controller/clientlogos.js");
 const service = require("../controller/web_controller/services.js");
+const jobWork = require("../controller/web_controller/jobwork.js");
 
 
 webRouter.get("/", home.getAllHome);
@@ -25,5 +26,7 @@ webRouter.get("/services",service.getAllService);
 webRouter.get("/plastic-products", plasticproduct.getAllPlasticproduct);
 webRouter.get("/plastic-products/:slug",plasticproduct.getPlasticProductSlug);
 webRouter.get("/our_clients", clientLogos.getAllClientlogos)
+
+webRouter.get("/our_job_work", jobWork.getAllJobWork);
 
 module.exports = webRouter;
