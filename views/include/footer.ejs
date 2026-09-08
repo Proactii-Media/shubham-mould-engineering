@@ -1,3 +1,21 @@
+<style>
+    .certificate-img {
+        max-width: 60%;
+        height: auto;
+        display: inline-block;
+    }
+    @media (max-width: 991px) {
+        .certificate-img {
+            max-width: 60%;
+        }
+    }
+    @media (max-width: 500px) {
+        .certificate-img {
+            max-width: 50%;
+        }
+    }
+</style>
+
 <!-- Footer -->
 <footer class="site-footer">
     <div class="footer-top" style="background-image:url(/shubhamimages/bg2.png); background-size: contain;">
@@ -8,7 +26,7 @@
                         <div class="footer-logo logo-dark mb-2"
                             style="background-color: #fff; padding: 10px 15px; display: inline-block; border-radius: 4px;">
                             <a href="/">
-                                <img src="/shubhamimages/logo.jpg" alt=""
+                                <img src="/shubhamimages/logo2.png" alt=""
                                     style="height: 110px; width: auto; display: block;">
                             </a>
                         </div>
@@ -61,17 +79,33 @@
                 </div>
                 <div class="col-md-6 col-xl-4 col-lg-3 col-sm-6 footer-col-4">
                     <div class="widget widget_getintuch">
-                        <h5 class="footer-title text-white ">Contact us</h5>
+                        <h5 class="footer-title text-white">Contact Us</h5>
+
                         <ul>
-                            <li><i class="ti-location-pin"></i><strong>address</strong> Survey No. 295/L G-1, Chirag
-                                Udyog Bhavan, Golden Industrial Estate,Dabhel, Daman - 396 210 (U.T) INDIA</li>
-                            <li><i class="ti-mobile"></i><strong>phone</strong><a href="tel:+919974921502">+91 99749 21502
-                                </a></li>
-                            <li><i class="ti-email"></i><strong>email</strong><a
-                                    href="mailto:arvindlhr007@gmail.com"><span class="__cf_email__"
-                                        data-cfemail="4c25222a230c29342d213c2029622f2321">arvindlhr007@gmail.com</span></a>
+                            <li>
+                                <i class="ti-location-pin"></i>
+                                <strong>Address</strong>
+                                Survey No. 295/L G-1, Chirag Udyog Bhavan, Golden Industrial Estate,
+                                Dabhel, Daman - 396 210 (U.T) INDIA
+                            </li>
+
+                            <li>
+                                <i class="ti-mobile"></i>
+                                <strong>Phone</strong>
+                                <a href="tel:+919974921502">+91 99749 21502</a>
+                            </li>
+
+                            <li>
+                                <i class="ti-email"></i>
+                                <strong>Email</strong>
+                                <a href="mailto:info@subhammouldsandeng.com">info@subhammouldsandeng.com</a>
+                                <a href="mailto:arvindlhr007@gmail.com">arvindlhr007@gmail.com</a>
                             </li>
                         </ul>
+                        <!-- Certificates -->
+                        <div class="footer-certificates">
+                            <img src="/shubhamimages/iso1.png" alt="ISO Certificate" class="certificate-img">
+                        </div>
                     </div>
                 </div>
 
@@ -145,5 +179,5 @@
     </li>
 </ul> -->
 <script>
-  $(document).ready(function(){$('.filters li[data-filter=""]').on('click',function(){$('#masonry').show();$('#application-detail').hide();$('.application-detail').hide()});$('.filters li[data-filter!=""]').on('click',function(){let slug=$(this).attr('data-filter');$('#masonry').hide();$('#application-detail').show();$('.application-detail').hide();$('#detail-'+slug).fadeIn()});$('.application-select').on('click',function(){let slug=$(this).data('slug');$('#masonry').hide();$('#application-detail').show();$('.application-detail').hide();$('#detail-'+slug).fadeIn();$('html, body').animate({scrollTop:$('#application-detail').offset().top-100},500)})});
+    $(document).ready(function () { $('.filters li[data-filter=""]').on('click', function () { $('#masonry').show(); $('#application-detail').hide(); $('.application-detail').hide() }); $('.filters li[data-filter!=""]').on('click', function () { let slug = $(this).attr('data-filter'); $('#masonry').hide(); $('#application-detail').show(); $('.application-detail').hide(); $('#detail-' + slug).fadeIn() }); $('.application-select').on('click', function () { let slug = $(this).data('slug'); $('#masonry').hide(); $('#application-detail').show(); $('.application-detail').hide(); $('#detail-' + slug).fadeIn(); $('html, body').animate({ scrollTop: $('#application-detail').offset().top - 100 }, 500) }) });
 </script>

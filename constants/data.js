@@ -137,10 +137,10 @@ const applications = [
 
   {
     id: 7,
-    title: "Automatic Counting & Automation",
+    title: "Automation & Engineering Solutions",
     slug: "automatic-counting-automation",
     image: "/shubhamimages/application/automatic1.png",
-    shortTitle: "Automatic Counting & Automation",
+    shortTitle: "Automation & Engineering Solutions",
     description:
       "We provide automatic counting and industrial automation solutions for pen refills, components and other manufacturing applications. Our systems are designed for accurate counting, efficient material handling and continuous production. These solutions help reduce manual work, minimize counting errors and improve overall production efficiency."
   },
@@ -333,7 +333,7 @@ const products = [
   specifications: {
     "Assembly Mode": "Automatic Pen Assembly Machine",
     "Assembly Mode ": "4up Chain carry, Horizontal Type",
-    "Workefficiency": "140-160 pcs/min",
+    "Workefficiency": "70-90 pcs/min",
     "Suitable Diameter": "4 - 30mm",
     "Suitable length": "60-200mm",
     "Touch Screen": "7",
@@ -382,7 +382,7 @@ const products = [
     type: "Automatic Pen Assembly Machine",
     image: "/shubhamimages/products/auto.png",
     bannerImage: "/shubhamimages/banner/product_banner/auto1.png",
-    video: "/shubhamimages/video/automatic.mp4",
+    video: "/shubhamimages/video/4upauto.mp4",
     link: "/engineering-products/automatic-pen-assembly-machine-4up-sme-p-07",
     keyFeatures: [
       {
@@ -413,7 +413,7 @@ const products = [
     specifications: {
       "Assembly Mode": "Automatic Pen Assembly Machine",
       "Assembly Mode ": "4up Chain carry, Horizontal Type",
-      "Workefficiency": "140-160 pcs/min",
+      "Workefficiency": "140-180 pcs/min",
       "Suitable Diameter": "4 - 30mm",
       "Suitable length": "60-200mm",
       "Touch Screen": "7",
@@ -605,6 +605,7 @@ specifications: {
 "Machine Category": "Automatic Assembly Machine",
 "Operation": "Automatic",
 "Pen Type": "BIC Type Pen",
+"work Efficiency": "70-90 pcs/min",
 "Production System": "2UP",
 "Assembly Type": "Pen Assembly",
 "Automation": "Fully Automatic",
@@ -703,7 +704,7 @@ applications: [
       "Suitable Diameter": "4–8 mm",
       "Suitable Length": "60-200mm",
       "Touch Screen": "7 inch",
-      "Machine Dimension": "3550 × 1000 × 1200 mm",
+      "Machine Dimension": "3000 × 1000 × 1200 mm",
       "Suitable Products": "Cylindrical Products",
       "Pneumatic Brand": "SMC",
       "Power Supply": "220V / 50Hz",
@@ -788,7 +789,7 @@ applications: [
       "Machine Type": "Semi Automatic Assembly Machine",
       "Assembly Mode": "4up Chain carry, Horizintal Type",
       "Machine Model": "SME-P-09 / SME-R-09",
-      "Work Efficiency": "140–160 pcs/min",
+      "Work Efficiency": "140–180 pcs/min",
       "Suitable Diameter": "4–8 mm",
       "Suitable Length": "60–200 mm",
       "Touch Screen": "7 inch",
@@ -1411,7 +1412,7 @@ applications: [
 
   category: "plastic-products",
 
-  type: "Automatic Packing Machine",
+  type: "Automatic Wrapping Machine",
 
   image: "/shubhamimages/products/broom.png",
 
