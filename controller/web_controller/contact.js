@@ -80,7 +80,11 @@ const sendContactMail = async (req, res) => {
 
             from: "pm7244875@gmail.com",
 
-            to: "pm7244875@gmail.com",
+           to: [
+    "pm7244875@gmail.com",
+    "mukeshproactii@gmail.com",
+    "hello@proactii.com"
+],
 
             replyTo: email,
 

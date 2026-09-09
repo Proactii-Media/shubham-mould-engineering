@@ -347,7 +347,7 @@ const products = [
   specifications: {
     "Assembly Mode": "Automatic Pen Assembly Machine",
     "Assembly Mode ": "4up Chain carry, Horizontal Type",
-    "Workefficiency": "70-90 pcs/min",
+    "Workefficiency": "140-180 pcs/min",
     "Suitable Diameter": "4 - 30mm",
     "Suitable length": "60-200mm",
     "Touch Screen": "7",
