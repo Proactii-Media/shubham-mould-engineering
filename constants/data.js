@@ -141,8 +141,22 @@ const applications = [
     slug: "automatic-counting-automation",
     image: "/shubhamimages/application/automatic1.png",
     shortTitle: "Automation & Engineering Solutions",
-    description:
-      "We provide automatic counting and industrial automation solutions for pen refills, components and other manufacturing applications. Our systems are designed for accurate counting, efficient material handling and continuous production. These solutions help reduce manual work, minimize counting errors and improve overall production efficiency."
+   description: `
+   
+
+  <ul>
+
+  <li>All Types of Engineering Solution</li>
+    
+  
+    <li>Pen & Stationery, Pharma and House Ware Industrial Machinery</li>
+    <li>Special Purpose Machinery Manufacturer</li>
+    <li>Spare Parts of Tips LX Machinery</li>
+    <li>Pad Printing Jig / Fixture</li>
+    <li>World-Class Precision Engineering Works</li>
+    <li>Spare Parts of Machinery</li>
+  </ul>
+`
   },
   {
   id: 8,
@@ -947,13 +961,13 @@ applications: [
 {
   id: 17,
 
-  title: "Cap Clip Automatic Assembly Machine",
+  title: "Automatic Cap Clip Assembly Machine",
 
   slug: "cap-clip-assembly-machine",
 
   category: "special-purpose-machine",
 
-  type: "Assembly Machine",
+  type: "Automatic Assembly Machine",
 
   image: "/shubhamimages/products/clip1.png",
 
@@ -1162,7 +1176,7 @@ applications: [
   slug: "oil-spout-cap-assembly-machine",
 
   category: "special-purpose-machine",
-  type: "Assembly Machine",
+  type: "Automatic Assembly Machine",
 
   image: "/shubhamimages/products/oil_cap_spout.png",
   bannerImage: "/shubhamimages/banner/product_banner/17.png",

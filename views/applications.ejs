@@ -1,5 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<style>
+@media (max-width: 500px) {
+    .filters2 ul.filters {
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+
+    .filters2 ul.filters > li {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        float: none !important;
+        display: block !important;
+    }
+}
+</style>
+
+
 <%- include('include/head') %>
   <%- include('include/header') %>
     <div class="page-content bg-white ">
@@ -32,24 +48,40 @@
                 </div>
 
               </div>
-              <div class="row">
-                <div class="site-filters m-b20 filters2">
-                  <ul class="filters row" data-bs-toggle="buttons">
-                    <li data-filter="" class="btn active col-lg-3 col-md-4 col-sm-6">
-                      <input type="radio">
-                      <a href="javascript:void(0)"><span>All</span></a>
-                    </li>
-                    <% applications.forEach(application=> { %>
-                      <li data-filter="<%= application.slug %>" class="btn col-lg-3 col-md-4 col-sm-6">
-                        <input type="radio">
-                        <a href="javascript:void(0)"><span>
+           <div class="row">
+    <div class="site-filters m-b20 filters2">
+        <ul class="filters row" data-bs-toggle="buttons">
+
+            <li data-filter="" class="btn active col-12 col-md-4 col-lg-3">
+                <input type="radio">
+                <a href="javascript:void(0)">
+                    <span>All</span>
+                </a>
+            </li>
+
+            <% applications.forEach(application => { %>
+
+                <li data-filter="<%= application.slug %>"
+                    class="btn col-12 col-md-4 col-lg-3">
+
+                    <input type="radio">
+
+                    <a href="javascript:void(0)">
+                        <span>
                             <%= application.shortTitle || application.title %>
-                          </span></a>
-                      </li>
-                      <% }) %>
-                  </ul>
-                </div>
-              </div>
+                        </span>
+                    </a>
+
+                </li>
+
+            <% }) %>
+
+        </ul>
+    </div>
+</div>
+
+
+
               <div class="row p-l0 sp10">
                 <div class="col-lg-12">
                   <ul id="masonry" class="dlab-gallery-listing gallery mfp-gallery text-center">
