@@ -84,23 +84,89 @@
             margin-bottom: 0;
         }
 
-        .call-action1 {
-            padding: 10px 0;
-        }
+.main-slider {
+    position: relative;
+}
+
+.main-slider .call-action1 {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: transparent !important;
+    z-index: 99;
+}
+
+.main-slider .call-action1 .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.main-slider .call-action1 .title.newpara {
+    background-color: #E80028 !important;
+    color: #fff;
+    margin: 0,10px,0,0;
+        width: 49%;
+    margin: 0 0 0 auto;
+    padding: 2px 3px 2px 3px;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+
+    /* 45 degree cut on LEFT */
+ clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    4% 100%
+);
+}
+
+@media (max-width: 1025px) {
+.main-slider .call-action1 .title.newpara {
+        width: 60%;
+}
+}
+
+
+@media (max-width: 769px) {
+.main-slider .call-action1 .title.newpara {
+        width: 70%;
+}
+}  
+
+@media (max-width: 500px) {
+    .main-slider .call-action1 {
+        display: none !important;
+    }
+}
+
+
+
     </style>
     <%- include('include/header') %>
 
-        <div class="section-full call-action1  bg-primary wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-            <div class="container">
-                <div class=" text-white" style="text-align: center;">
-                    <h5 class="title">HIGH PRECISION, INTERNATIONAL QUALITY, LONG SERVICE LIFE....</h5>
-                </div>
-            </div>
-        </div>
+    
         <!-- Content -->
 
         <div class="main-slider style-two default-banner" id="home">
 
+                <!-- MOVED HERE -->
+    <div class="section-full call-action1 wow fadeIn">
+
+        <div class="container">
+
+            <p class="title newpara">
+                HIGH PRECISION, INTERNATIONAL QUALITY, LONG SERVICE LIFE....
+            </p>
+
+        </div>
+
+    </div>
             <div class="tp-banner-container">
 
 

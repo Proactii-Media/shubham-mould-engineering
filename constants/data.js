@@ -965,9 +965,9 @@ applications: [
 
   slug: "cap-clip-assembly-machine",
 
-  category: "special-purpose-machine",
+  category: "cap-clip-assembly-machine",
 
-  type: "Automatic Assembly Machine",
+  type: "Automatic Cap Assembly Machine",
 
   image: "/shubhamimages/products/clip1.png",
 
@@ -1170,19 +1170,14 @@ applications: [
 
 {
   id: 6,
-  title: "Oil Spout Cap Automatic Assembly Machine",
-
-  // Better matching slug
+  title: "Automatic Oil Spout Cap Assembly Machine",
   slug: "oil-spout-cap-assembly-machine",
-
-  category: "special-purpose-machine",
-  type: "Automatic Assembly Machine",
+ category: "cap-clip-assembly-machine",
+  type: "Automatic Cap Assembly Machine,",
 
   image: "/shubhamimages/products/oil_cap_spout.png",
   bannerImage: "/shubhamimages/banner/product_banner/17.png",
   video: "/shubhamimages/video/oil.mp4",
-
-  // Match the new slug
   link: "/engineering-products/oil-spout-cap-assembly-machine",
 
   description:
