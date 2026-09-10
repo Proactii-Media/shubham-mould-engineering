@@ -1,18 +1,18 @@
 <style>
-@media (max-width: 500px) {
+  @media (max-width: 500px) {
     .filters2 ul.filters {
-        display: flex !important;
-        flex-wrap: wrap !important;
+      display: flex !important;
+      flex-wrap: wrap !important;
     }
 
-    .filters2 ul.filters > li {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: 0 0 100% !important;
-        float: none !important;
-        display: block !important;
+    .filters2 ul.filters>li {
+      width: 100% !important;
+      max-width: 100% !important;
+      flex: 0 0 100% !important;
+      float: none !important;
+      display: block !important;
     }
-}
+  }
 </style>
 
 
@@ -48,37 +48,36 @@
                 </div>
 
               </div>
-           <div class="row">
-    <div class="site-filters m-b20 filters2">
-        <ul class="filters row" data-bs-toggle="buttons">
+              <div class="row">
+                <div class="site-filters m-b20 filters2">
+                  <ul class="filters row" data-bs-toggle="buttons">
 
-            <li data-filter="" class="btn active col-12 col-md-4 col-lg-3">
-                <input type="radio">
-                <a href="javascript:void(0)">
-                    <span>All</span>
-                </a>
-            </li>
+                    <li data-filter="" class="btn active col-12 col-md-4 col-lg-3">
+                      <input type="radio">
+                      <a href="javascript:void(0)">
+                        <span>All</span>
+                      </a>
+                    </li>
 
-            <% applications.forEach(application => { %>
+                    <% applications.forEach(application=> { %>
 
-                <li data-filter="<%= application.slug %>"
-                    class="btn col-12 col-md-4 col-lg-3">
+                      <li data-filter="<%= application.slug %>" class="btn col-12 col-md-4 col-lg-3">
 
-                    <input type="radio">
+                        <input type="radio">
 
-                    <a href="javascript:void(0)">
-                        <span>
+                        <a href="javascript:void(0)">
+                          <span>
                             <%= application.shortTitle || application.title %>
-                        </span>
-                    </a>
+                          </span>
+                        </a>
 
-                </li>
+                      </li>
 
-            <% }) %>
+                      <% }) %>
 
-        </ul>
-    </div>
-</div>
+                  </ul>
+                </div>
+              </div>
 
 
 
@@ -142,6 +141,54 @@
       </div>
     </div>
     <%- include('include/footer') %>
+
+      <div class="mouse-circle"></div>
+
+      <style>
+        .mouse-circle {
+          position: fixed;
+          width: 20px;
+          height: 20px;
+          border: 0.25px solid #E80028;
+          border-radius: 50%;
+          background: transparent;
+          pointer-events: none;
+          z-index: 999999;
+          transform: translate(-50%, -50%);
+        }
+
+        @media (max-width: 991px) {
+          .mouse-circle {
+            display: none;
+          }
+        }
+      </style>
+
+      <script>
+        const mouseCircle = document.querySelector('.mouse-circle');
+
+        let mouseX = 0;
+        let mouseY = 0;
+        let circleX = 0;
+        let circleY = 0;
+
+        document.addEventListener('mousemove', function (e) {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+        });
+
+        function animateCircle() {
+          circleX += (mouseX - circleX) * 0.12;
+          circleY += (mouseY - circleY) * 0.12;
+
+          mouseCircle.style.left = circleX + 'px';
+          mouseCircle.style.top = circleY + 'px';
+
+          requestAnimationFrame(animateCircle);
+        }
+
+        animateCircle();
+      </script>
       <script>
         document.addEventListener("DOMContentLoaded", function () { function equalImageHeight() { let images = document.querySelectorAll(".portbox3 img"); let maxHeight = 0; images.forEach(img => { img.style.height = "auto" }); images.forEach(img => { if (img.clientHeight > maxHeight) maxHeight = img.clientHeight }); images.forEach(img => { img.style.height = maxHeight + "px"; img.style.objectFit = "cover"; img.style.width = "100%" }) } window.addEventListener("load", equalImageHeight); window.addEventListener("resize", equalImageHeight) });
       </script>
@@ -185,6 +232,8 @@
         $(document).ready(function () { $('.filters li[data-filter=""]').on('click', function () { $('#masonry').show(); $('#application-detail').hide(); $('.application-detail').hide() }); $('.filters li[data-filter!=""]').on('click', function () { let slug = $(this).attr('data-filter'); $('#masonry').hide(); $('#application-detail').show(); $('.application-detail').hide(); $('#detail-' + slug).fadeIn() }); $('.application-select').on('click', function () { let slug = $(this).data('slug'); $('#masonry').hide(); $('#application-detail').show(); $('.application-detail').hide(); $('#detail-' + slug).fadeIn(); $('html, body').animate({ scrollTop: $('#application-detail').offset().top - 100 }, 500) }) });
       </script>
       <script>$(document).ready(function () { new WOW().init() });</script>
+
+
       </body>
 
-</html>
+      </html>

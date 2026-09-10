@@ -74,10 +74,10 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                               <div class="section-head style2 text-center">
-                                <h2 class="title m-b10">Our Awesome Clients</h2>
-                               
-                            </div>
+                                <div class="section-head style2 text-center">
+                                    <h2 class="title m-b10">Our Awesome Clients</h2>
+
+                                </div>
                                 <!-- Images overlay on hover -->
                                 <div class="section-content box-sort-in button-example p-b0">
                                     <div class="row">
@@ -87,11 +87,11 @@
                                             <div class="col-lg-3 col-md-6 col-sm-6 m-b15">
                                                 <div class="dlab-box client-logo-box">
 
-                                          
-                                                        <div class="dlab-media dlab-img-overlay9 client-logo-media">
-                                                            <img src="<%= logo.image %>" alt="Client Logo">
-                                                        </div>
-                                                
+
+                                                    <div class="dlab-media dlab-img-overlay9 client-logo-media">
+                                                        <img src="<%= logo.image %>" alt="Client Logo">
+                                                    </div>
+
 
                                                 </div>
                                             </div>
@@ -112,8 +112,56 @@
         <!-- Footer -->
         <%- include('include/footer') %>
             <!-- Footer End -->
-        
+
             </div>
+
+            <div class="mouse-circle"></div>
+
+            <style>
+                .mouse-circle {
+                    position: fixed;
+                    width: 20px;
+                    height: 20px;
+                    border: 0.25px solid #E80028;
+                    border-radius: 50%;
+                    background: transparent;
+                    pointer-events: none;
+                    z-index: 999999;
+                    transform: translate(-50%, -50%);
+                }
+
+                @media (max-width: 991px) {
+                    .mouse-circle {
+                        display: none;
+                    }
+                }
+            </style>
+
+            <script>
+                const mouseCircle = document.querySelector('.mouse-circle');
+
+                let mouseX = 0;
+                let mouseY = 0;
+                let circleX = 0;
+                let circleY = 0;
+
+                document.addEventListener('mousemove', function (e) {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                });
+
+                function animateCircle() {
+                    circleX += (mouseX - circleX) * 0.12;
+                    circleY += (mouseY - circleY) * 0.12;
+
+                    mouseCircle.style.left = circleX + 'px';
+                    mouseCircle.style.top = circleY + 'px';
+
+                    requestAnimationFrame(animateCircle);
+                }
+
+                animateCircle();
+            </script>
             <!-- JAVASCRIPT FILES ========================================= -->
             <!-- <script data-cfasync="false"
                 src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
