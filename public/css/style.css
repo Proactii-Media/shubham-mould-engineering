@@ -15670,6 +15670,180 @@ input[type="radio"] + label:hover:before{
             .fly-box .dlab-info p {
                 flex: 1;
             }
+            .custom-about-banner {
+                position: relative;
+                /* min-height: 500px; */
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                align-items: center;
+            }
+
+            /* Main content */
+            .about-banner-content {
+                position: relative;
+                /* min-height: 500px; */
+                width: 85%;
+                display: flex;
+                align-items: center;
+            }
+
+            /* Banner text */
+            .about-banner-text {
+                width: 70%;
+                text-align: left;
+                color: #ffffff;
+                padding: 40px 20px;
+            }
+
+            .about-banner-text .about-quote {
+                font-size: 22px;
+                line-height: 1.55;
+                margin-bottom: 35px;
+                font-weight: 400;
+            }
+
+            .about-banner-text h1 {
+                font-family: Georgia, "Times New Roman", serif;
+                font-size: 42px;
+                line-height: 1.2;
+                margin-bottom: 15px;
+                color: #ffffff;
+                font-weight: 500;
+            }
+
+            .about-banner-text .about-designation {
+                font-size: 21px;
+                line-height: 1.35;
+                margin-bottom: 0;
+                color: #CEAB72
+            }
+
+            /* Right side breadcrumb */
+            .about-breadcrumb {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 30%;
+                text-align: right;
+            }
+
+            .about-breadcrumb ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            .about-breadcrumb li {
+                display: inline-block;
+                color: #ffffff;
+                font-size: 16px;
+            }
+
+            .about-breadcrumb li+li:before {
+                content: "/";
+                margin: 0 10px;
+                color: #ffffff;
+            }
+
+            .about-breadcrumb a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+            .about-breadcrumb a:hover {
+                color: #ffffff;
+            }
+            @media (max-width: 991px) {
+                .aboutushide {
+                    display: none !important;
+                }
+
+
+            }
+            @media (max-width: 1025px) {
+                .about-banner-content {
+                    width: 76%;
+
+                }
+
+            }
+            @media (max-width: 769px) {
+
+                .about-banner-content {
+                    min-height: 469px;
+                    display: block;
+                    padding-top: 40px;
+                    width: 100%;
+                }
+
+            }
+
+            @media (max-width: 767px) {
+
+
+                .custom-about-banner {
+                    min-height: 550px;
+                    background-position: center;
+                }
+
+                .about-banner-content {
+                    min-height: 550px;
+                    display: block;
+                    padding-top: 40px;
+                    width: 100%;
+                }
+
+                .about-banner-text {
+                    width: 100%;
+                    padding: 20px 10px;
+                }
+
+                .about-banner-text .about-quote {
+                    font-size: 16px;
+                    line-height: 1.5;
+                    margin-bottom: 25px;
+                }
+
+                .about-banner-text h1 {
+                    font-size: 30px;
+                }
+
+                .about-banner-text .about-designation {
+                    font-size: 16px;
+                }
+
+                .about-breadcrumb {
+                    position: absolute;
+                    width: 100%;
+                    right: auto;
+                    left: 0;
+                    bottom: 25px;
+                    top: auto;
+                    transform: none;
+                    text-align: center;
+                }
+
+                .about-breadcrumb li {
+                    font-size: 14px;
+                }
+            }
+
+            @media (max-width: 500px) {
+                .custom-about-banner {
+                    min-height: 372px;
+                }
+
+                .about-banner-content {
+                    min-height: 352px;
+                }
+
+                .about-banner-text {
+                    text-align: center;
+                }
+
+            }
+            
 
 
 
