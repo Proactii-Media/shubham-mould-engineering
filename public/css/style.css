@@ -15776,6 +15776,17 @@ input[type="radio"] + label:hover:before{
                     padding-top: 40px;
                     width: 100%;
                 }
+                 .about-banner-text {
+                    width: 100%;
+                            padding: 30px 10px 15px 10px;
+                }
+                .about {
+                    text-align: left;
+                           
+                }
+                .aboutline {
+ padding: 3px 13px;
+                }
 
             }
 
