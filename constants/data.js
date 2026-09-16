@@ -82,7 +82,7 @@ const applications = [
   image: "/shubhamimages/application/pen2.png",
   shortTitle: "Pens & Stationery",
   description:
-     "At Shubham Mould & Engineering, we believe automation is the linchpin for creating exceptional stationery products. By integrating cutting-edge automated machinery into Your manufacturing lines, you can amplify efficiency, accuracy, and scalability like never before. This technological leap will translate to incredible value for you. You’ll experience consistent product quality that meets rigorous standards while enjoying quicker delivery times. Furthermore, automation significantly reduces waste, aligning with our commitment to sustainability. In essence, automation doesn’t just make your production faster—it makes your product better. Experience the elevated quality and value that only an automated, future-focused stationery manufacturing process can deliver."
+     "At Subham Mould & Engineering, we believe automation is the linchpin for creating exceptional stationery products. By integrating cutting-edge automated machinery into Your manufacturing lines, you can amplify efficiency, accuracy, and scalability like never before. This technological leap will translate to incredible value for you. You’ll experience consistent product quality that meets rigorous standards while enjoying quicker delivery times. Furthermore, automation significantly reduces waste, aligning with our commitment to sustainability. In essence, automation doesn’t just make your production faster—it makes your product better. Experience the elevated quality and value that only an automated, future-focused stationery manufacturing process can deliver."
 },
 
   {
