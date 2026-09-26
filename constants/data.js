@@ -2447,7 +2447,7 @@ const afterSalesServices = [
     subtitle: "JUST ON TIME",
     icon: "ti-package",
     description:
-      "Your spare part kits, tools, and documents according to GEREKE product design and warranty terms. Always delivered just on time, such is the GEREKE way.",
+      "Your spare part kits, tools, and documents according to SUBHAM product design and warranty terms. Always delivered just on time, such is the SUBHAM way.",
   },
   {
     id: 2,
@@ -2471,7 +2471,7 @@ const afterSalesServices = [
     subtitle: "SOLID PERFORMANCE",
 icon: "ti-reload",
     description:
-      "The best way to minimize downtime costs and maintain the performance of your GEREKE equipment and production is to plan preventive maintenance work. Just lean on us, we’ll be there for you.",
+      "The best way to minimize downtime costs and maintain the performance of your SUBHAM equipment and production is to plan preventive maintenance work. Just lean on us, we’ll be there for you.",
   },
 ];
 
