@@ -2,7 +2,7 @@
 
 
     <style>
-   
+
     </style>
     <%- include('include/header') %>
 
@@ -846,14 +846,53 @@
                                             <div class="input-group"> <input name="dzOther[Subject]" type="text"
                                                     required class="form-control" placeholder="Subject"> </div>
                                         </div>
-                                    </div> <!-- Message -->
+                                    </div>
+                                    <!-- Message -->
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <div class="input-group"> <textarea name="dzMessage" rows="4" required
                                                     class="form-control" placeholder="Your Message..."></textarea>
                                             </div>
                                         </div>
-                                    </div> <!-- Submit Button -->
+                                    </div>
+
+                                    <!-- CAPTCHA -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+
+                                           
+
+                                            <div
+                                                style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+
+                                                <div id="captchaQuestion" style="
+                                                        background: #f1f1f1;
+                                                        border: 1px solid #ddd;
+                                                        padding: 12px 18px;
+                                                        font-size: 18px;
+                                                        font-weight: 600;
+                                                        min-width: 120px;
+                                                        text-align: center;
+                                                        border-radius: 4px;
+                                                    ">
+                                                </div>
+
+                                                <input type="number" id="captchaInput" class="form-control"
+                                                    placeholder="Answer" required style="max-width: 150px;">
+
+                                          
+
+                                            </div>
+
+                                            <small id="captchaError"
+                                                style="display:none; color:#e80028; margin-top:5px;">
+                                                ❌ Incorrect answer. Please try again.
+                                            </small>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit Button -->
                                     <div class="col-md-12"> <button id="submitBtn" name="submit" type="submit"
                                             value="Submit" class="site-button"> <span class="button-text"> Submit
                                             </span> <span class="button-spinner"></span> </button> </div>
@@ -871,39 +910,6 @@
                 </div>
             </div>
         </div>
-
-
-        <!-- Client logo -->
-        <!-- <div class="section-full content-inner-2 bg-gray wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
-            <div class="container">
-                <div class="section-head text-black text-center">
-                    <h2 class="title text-capitalize">
-                        We work with our partners to provide project perfection,<br>
-                        <span class="text-primary">join with our parnership.</span>
-                    </h2>
-                </div>
-
-                <div
-                    class="client-logo-carousel owl-loaded owl-theme owl-carousel owl-dots-none owl-btn-center-lr owl-btn-3">
-
-                    <% clientLogos.forEach(function(client) { %>
-
-                        <div class="item">
-                            <div class="ow-client-logo">
-                                <div class="client-logo border">
-
-                                    <img src="<%= client.image %>" alt="Client Logo">
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <% }) %>
-
-                </div>
-            </div>
-        </div> -->
-        <!-- Client logo End -->
         </div>
         </div>
 
@@ -1113,6 +1119,141 @@
             </body>
 
 
-            <script> (function () { const form = document.getElementById("contactForm"); const submitBtn = document.getElementById("submitBtn"); const successMsg = document.getElementById("formSuccessMsg"); if (!form || !submitBtn || !successMsg) { console.error("Contact form elements not found."); return; } form.addEventListener("submit", async function (e) { e.preventDefault(); successMsg.classList.remove("show", "error"); successMsg.textContent = ""; submitBtn.classList.add("loading"); submitBtn.disabled = true; /* * Convert FormData to URLSearchParams. * * This is important because your Express app uses: * * express.urlencoded({ extended: true }) * * Therefore: * * dzOther[Subject] * * becomes: * * req.body.dzOther.Subject */ const formData = new URLSearchParams(new FormData(form)); try { const response = await fetch("/contact", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: formData }); const responseText = await response.text(); console.log("Server status:", response.status); console.log("Server response:", responseText); let result = null; try { result = JSON.parse(responseText); } catch (jsonError) { console.warn("Response is not JSON:", responseText); } /* * SUCCESS */ if (response.ok && result && result.success === true) { successMsg.classList.remove("error"); successMsg.classList.add("show"); successMsg.textContent = "✅ Your form is submitted successfully!"; form.reset(); } /* * ERROR */ else { let errorMessage = "Something went wrong. Please try again."; if (result && result.message) { errorMessage = result.message; } else if (result && result.error) { errorMessage = result.error; } showError(errorMessage); } } catch (error) { console.error("Fetch / Network error:", error); showError("Unable to connect to server. Please try again."); } submitBtn.classList.remove("loading"); submitBtn.disabled = false; clearTimeout(window._formMsgTimer); window._formMsgTimer = setTimeout(function () { successMsg.classList.remove("show", "error"); successMsg.textContent = ""; }, 10000); }); function showError(message) { successMsg.classList.remove("show"); successMsg.classList.add("show", "error"); successMsg.textContent = "❌ " + message; } })(); </script>
+            <script>
+  (function () {
+    // ===================== CAPTCHA LOGIC =====================
+    const captchaQuestion = document.getElementById("captchaQuestion");
+    const captchaInput    = document.getElementById("captchaInput");
+    const refreshCaptcha  = document.getElementById("refreshCaptcha");
+    const captchaError    = document.getElementById("captchaError");
+
+    let captchaAnswer = null;
+
+    function generateCaptcha() {
+      if (!captchaQuestion) return; // safeguard if CAPTCHA block missing
+
+      const a = Math.floor(Math.random() * 10) + 1; // 1-10
+      const b = Math.floor(Math.random() * 10) + 1; // 1-10
+      const ops = ["+", "-", "×"];
+      const op = ops[Math.floor(Math.random() * ops.length)];
+
+      let result;
+      if (op === "+")      result = a + b;
+      else if (op === "-") result = a - b;
+      else                 result = a * b;
+
+      captchaQuestion.textContent = a + " " + op + " " + b + " = ?";
+      captchaAnswer = result;
+
+      captchaInput.value = "";
+      captchaError.style.display = "none";
+    }
+
+    if (refreshCaptcha) {
+      refreshCaptcha.addEventListener("click", generateCaptcha);
+    }
+
+    generateCaptcha(); // initial challenge
+
+    // ===================== FORM SUBMIT LOGIC =====================
+    const form       = document.getElementById("contactForm");
+    const submitBtn  = document.getElementById("submitBtn");
+    const successMsg = document.getElementById("formSuccessMsg");
+
+    if (!form || !submitBtn || !successMsg) {
+      console.error("Contact form elements not found.");
+      return;
+    }
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      // ---- CAPTCHA VALIDATION FIRST ----
+      const userAnswer = parseInt(captchaInput.value, 10);
+      if (isNaN(userAnswer) || userAnswer !== captchaAnswer) {
+        captchaError.style.display = "block";
+        captchaInput.focus();
+        generateCaptcha();   // new challenge after failure
+        return;              // stop submission
+      }
+      captchaError.style.display = "none";
+
+      // ---- SUBMIT FORM ----
+      successMsg.classList.remove("show", "error");
+      successMsg.textContent = "";
+      submitBtn.classList.add("loading");
+      submitBtn.disabled = true;
+
+      /*
+       * Convert FormData to URLSearchParams.
+       *
+       * This is important because your Express app uses:
+       *
+       * express.urlencoded({ extended: true })
+       *
+       * Therefore:
+       *
+       * dzOther[Subject]
+       *
+       * becomes:
+       *
+       * req.body.dzOther.Subject
+       */
+      const formData = new URLSearchParams(new FormData(form));
+
+      try {
+        const response = await fetch("/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: formData
+        });
+
+        const responseText = await response.text();
+        console.log("Server status:", response.status);
+        console.log("Server response:", responseText);
+
+        let result = null;
+        try { result = JSON.parse(responseText); }
+        catch (jsonError) { console.warn("Response is not JSON:", responseText); }
+
+        // SUCCESS
+        if (response.ok && result && result.success === true) {
+          successMsg.classList.remove("error");
+          successMsg.classList.add("show");
+          successMsg.textContent = "✅ Your form is submitted successfully!";
+          form.reset();
+          generateCaptcha();
+        }
+        // ERROR
+        else {
+          let errorMessage = "Something went wrong. Please try again.";
+          if (result && result.message) errorMessage = result.message;
+          else if (result && result.error) errorMessage = result.error;
+          showError(errorMessage);
+          generateCaptcha();
+        }
+      } catch (error) {
+        console.error("Fetch / Network error:", error);
+        showError("Unable to connect to server. Please try again.");
+        generateCaptcha();
+      }
+
+      submitBtn.classList.remove("loading");
+      submitBtn.disabled = false;
+
+      clearTimeout(window._formMsgTimer);
+      window._formMsgTimer = setTimeout(function () {
+        successMsg.classList.remove("show", "error");
+        successMsg.textContent = "";
+      }, 10000);
+    });
+
+    function showError(message) {
+      successMsg.classList.remove("show");
+      successMsg.classList.add("show", "error");
+      successMsg.textContent = "❌ " + message;
+    }
+  })();
+</script>
 
             </html>

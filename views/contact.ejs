@@ -15,6 +15,7 @@
           </div>
         </div>
       </div>
+
       <div class="section-full content-inner bg-white contact-style-1">
         <div class="container">
           <div class="row dzseth">
@@ -55,6 +56,7 @@
               </div>
             </div>
           </div>
+
           <div class="row">
             <div class="col-lg-6 m-b30">
               <div class="p-a30 bg-gray clearfix radius-sm">
@@ -100,6 +102,48 @@
                         </div>
                       </div>
                     </div>
+
+                    <!-- CAPTCHA -->
+                    <div class="col-md-12">
+                      <div class="form-group">
+
+
+
+                        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+
+                          <div id="captchaQuestion" style="
+                              background: #f1f1f1;
+                              border: 1px solid #ddd;
+                              padding: 12px 18px;
+                              font-size: 18px;
+                              font-weight: 600;
+                              min-width: 120px;
+                              text-align: center;
+                              border-radius: 4px;
+                            ">
+                          </div>
+
+                          <input type="number" id="captchaInput" class="form-control" placeholder="Enter answer"
+                            required style="max-width: 180px;">
+
+                          <!-- <button
+                            type="button"
+                            id="refreshCaptcha"
+                            class="site-button"
+                            style="padding: 10px 15px;"
+                            title="Refresh CAPTCHA">
+                            ↻
+                          </button> -->
+
+                        </div>
+
+                        <small id="captchaError" style="display:none; color:#e80028; margin-top:5px;">
+                          ❌ Incorrect CAPTCHA. Please try again.
+                        </small>
+
+                      </div>
+                    </div>
+
                     <div class="col-md-12">
                       <button id="submitBtn" name="submit" type="submit" value="Submit" class="site-button">
                         <span class="button-text">Submit</span>
@@ -110,6 +154,7 @@
                 </form>
               </div>
             </div>
+
             <div class="col-lg-6 m-b30 d-flex">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3169.748364745238!2d72.87748337523976!3d20.40651698109164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDI0JzIzLjUiTiA3MsKwNTInNDguMiJF!5e1!3m2!1sen!2sin!4v1787547096783!5m2!1sen!2sin"
@@ -120,14 +165,14 @@
         </div>
       </div>
     </div>
+
     <%- include('include/footer') %>
 
-  
       <script src="/js/jquery.min.js"></script>
       <script src="/plugins/wow/wow.js"></script>
-      <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP.MIN JS -->
-      <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
-      <script src="plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS-->
+      <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
+      <script src="plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
       <script src="/plugins/magnific-popup/magnific-popup.js"></script>
       <script src="/plugins/counter/waypoints-min.js"></script>
       <script src="/plugins/counter/counterup.min.js"></script>
@@ -135,59 +180,120 @@
       <script src="/plugins/masonry/masonry-3.1.4.js"></script>
       <script src="/plugins/masonry/masonry.filter.js"></script>
       <script src="/plugins/owl-carousel/owl.carousel.js"></script>
-      <script src="/plugins/lightgallery/js/lightgallery-all.min.js"></script><!-- Lightgallery -->
+      <script src="/plugins/lightgallery/js/lightgallery-all.min.js"></script>
       <script src="/plugins/scroll/scrollbar.min.js"></script>
       <script src="/js/custom.js"></script>
       <script src="/js/dz.carousel.min.js"></script>
-      <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
       <script>
         (function () {
+          // ===================== CAPTCHA LOGIC =====================
+          const captchaQuestion = document.getElementById("captchaQuestion");
+          const captchaInput = document.getElementById("captchaInput");
+          const refreshCaptcha = document.getElementById("refreshCaptcha");
+          const captchaError = document.getElementById("captchaError");
+
+          let captchaAnswer = null;
+
+          function generateCaptcha() {
+            const a = Math.floor(Math.random() * 10) + 1; // 1-10
+            const b = Math.floor(Math.random() * 10) + 1; // 1-10
+            const ops = ["+", "-", "×"];
+            const op = ops[Math.floor(Math.random() * ops.length)];
+
+            let result;
+            if (op === "+") result = a + b;
+            else if (op === "-") result = a - b;
+            else result = a * b;
+
+            captchaQuestion.textContent = a + " " + op + " " + b + " = ?";
+            captchaAnswer = result;
+
+            captchaInput.value = "";
+            captchaError.style.display = "none";
+          }
+
+          if (refreshCaptcha) {
+            refreshCaptcha.addEventListener("click", generateCaptcha);
+          }
+
+          generateCaptcha(); // generate first challenge
+
+          // ===================== FORM SUBMIT LOGIC =====================
           const form = document.getElementById("contactForm");
           const submitBtn = document.getElementById("submitBtn");
           const successMsg = document.getElementById("formSuccessMsg");
-          if (!form || !submitBtn || !successMsg) { console.error("Contact form elements not found."); return; }
+
+          if (!form || !submitBtn || !successMsg) {
+            console.error("Contact form elements not found.");
+            return;
+          }
+
           form.addEventListener("submit", async function (e) {
             e.preventDefault();
+
+            // ---- CAPTCHA VALIDATION FIRST ----
+            const userAnswer = parseInt(captchaInput.value, 10);
+            if (isNaN(userAnswer) || userAnswer !== captchaAnswer) {
+              captchaError.style.display = "block";
+              captchaInput.focus();
+              generateCaptcha();   // new challenge after failure
+              return;              // stop submission
+            }
+            captchaError.style.display = "none";
+
+            // ---- SUBMIT FORM ----
             successMsg.classList.remove("show", "error");
             successMsg.textContent = "";
             submitBtn.classList.add("loading");
             submitBtn.disabled = true;
+
             const formData = new URLSearchParams(new FormData(form));
+
             try {
               const response = await fetch("/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: formData
               });
+
               const responseText = await response.text();
               console.log("Server status:", response.status);
               console.log("Server response:", responseText);
+
               let result = null;
-              try { result = JSON.parse(responseText); } catch (jsonError) { console.warn("Response is not JSON:", responseText); }
+              try { result = JSON.parse(responseText); }
+              catch (jsonError) { console.warn("Response is not JSON:", responseText); }
+
               if (response.ok && result && result.success === true) {
                 successMsg.classList.remove("error");
                 successMsg.classList.add("show");
                 successMsg.textContent = "✅ Your form is submitted successfully!";
                 form.reset();
+                generateCaptcha();
               } else {
                 let errorMessage = "Something went wrong. Please try again.";
                 if (result && result.message) errorMessage = result.message;
                 else if (result && result.error) errorMessage = result.error;
                 showError(errorMessage);
+                generateCaptcha();
               }
             } catch (error) {
               console.error("Fetch / Network error:", error);
               showError("Unable to connect to server. Please try again.");
+              generateCaptcha();
             }
+
             submitBtn.classList.remove("loading");
             submitBtn.disabled = false;
+
             clearTimeout(window._formMsgTimer);
             window._formMsgTimer = setTimeout(function () {
               successMsg.classList.remove("show", "error");
               successMsg.textContent = "";
             }, 10000);
           });
+
           function showError(message) {
             successMsg.classList.remove("show");
             successMsg.classList.add("show", "error");
