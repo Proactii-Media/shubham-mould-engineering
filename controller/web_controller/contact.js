@@ -4,11 +4,28 @@ const { applications } = require("../../constants/data");
 // ===============================
 // GET CONTACT PAGE
 // ===============================
+// const getAllContact = async (req, res) => {
+//     try {
+//         res.render("contact", {
+//             applications,
+//             success: req.query.success === "1"
+//         });
+//     } catch (error) {
+//         console.error("GET CONTACT ERROR:", error);
+
+//         res.status(500).json({
+//             success: false,
+//             error: error.message
+//         });
+//     }
+// };
+
 const getAllContact = async (req, res) => {
     try {
         res.render("contact", {
             applications,
-            success: req.query.success === "1"
+            success: req.query.success === "1",
+            recaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY
         });
     } catch (error) {
         console.error("GET CONTACT ERROR:", error);
@@ -63,12 +80,12 @@ const sendContactMail = async (req, res) => {
         // PHONE VALIDATION
         // ===============================
 
-        if (!/^\d{10}$/.test(phone)) {
-            return res.status(400).json({
-                success: false,
-                message: "Please enter a valid 10-digit phone number."
-            });
-        }
+       if (!/^[6-9]\d{9}$/.test(phone)) {
+    return res.status(400).json({
+        success: false,
+        message: "Please enter a valid mobile number."
+    });
+}
         const captchaToken = req.body["g-recaptcha-response"];
 
         if (!captchaToken) {
@@ -77,7 +94,7 @@ const sendContactMail = async (req, res) => {
                 message: "Please fill in all fields correctly."
             });
         }
-        
+
         const googleResponse = await fetch(
             "https://www.google.com/recaptcha/api/siteverify",
             {
