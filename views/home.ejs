@@ -856,13 +856,13 @@
                                         </div>
                                     </div>
 
-                               <!-- Google CAPTCHA -->
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <div class="g-recaptcha" data-sitekey="<%= recaptchaSiteKey %>">
-                        </div>
-                      </div>
-                    </div>
+                                    <!-- Google CAPTCHA -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="g-recaptcha" data-sitekey="<%= recaptchaSiteKey %>">
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <!-- Submit Button -->
                                     <div class="col-md-12"> <button id="submitBtn" name="submit" type="submit"
@@ -911,7 +911,7 @@
             <script src="/js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
             <script src="/js/dz.carousel.min.js"></script><!-- SORTCODE FUCTIONS  -->
             <script src="/plugins/countdown/jquery.countdown.js"></script><!-- COUNTDOWN FUCTIONS  -->
-            <script src="/js/dz.ajax.js"></script><!-- CONTACT JS  -->
+            <!-- <script src="/js/dz.ajax.js"></script> -->
             <script src="/plugins/rangeslider/rangeslider.js"></script><!-- Rangeslider -->
             <script src="/plugins/switcher/switcher.js"></script><!-- Switcher -->
             <script src="js/jquery.lazy.min.js"></script>
@@ -931,243 +931,128 @@
             <script src="/js/rev.slider.js"></script>
 
             <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-                       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
 
-          const form = document.getElementById("contactForm");
-          const submitBtn = document.getElementById("submitBtn");
-          const successMsg = document.getElementById("formSuccessMsg");
+                    const form = document.getElementById("contactForm");
+                    const submitBtn = document.getElementById("submitBtn");
+                    const successMsg = document.getElementById("formSuccessMsg");
 
-          if (!form) return;
+                    if (!form) return;
 
-          form.addEventListener("submit", async function (e) {
+                    form.addEventListener("submit", async function (e) {
 
-            e.preventDefault();
+                        e.preventDefault();
 
-            // Check Google CAPTCHA
-            const captchaResponse = grecaptcha.getResponse();
+                        // Check Google CAPTCHA
+                        const captchaResponse = grecaptcha.getResponse();
 
-            console.log("CAPTCHA RESPONSE:", captchaResponse);
+                        console.log("CAPTCHA RESPONSE:", captchaResponse);
 
-            if (!captchaResponse) {
-              successMsg.className = "form-success-message show error";
-              successMsg.textContent = "❌ Please complete the CAPTCHA.";
-              return;
-            }
+                        if (!captchaResponse) {
+                            successMsg.className = "form-success-message show error";
+                            successMsg.textContent = "❌ Please complete the CAPTCHA.";
+                            return;
+                        }
 
-            submitBtn.disabled = true;
-            submitBtn.classList.add("loading");
+                        submitBtn.disabled = true;
+                        submitBtn.classList.add("loading");
 
-            successMsg.className = "form-success-message";
-            successMsg.textContent = "";
+                        successMsg.className = "form-success-message";
+                        successMsg.textContent = "";
 
-            try {
+                        try {
 
-              const formData = new URLSearchParams();
+                            const formData = new URLSearchParams();
 
-              formData.append("dzToDo", "Contact");
+                            formData.append("dzToDo", "Contact");
 
-              formData.append(
-                "dzName",
-                document.querySelector('[name="dzName"]').value
-              );
+                            formData.append(
+                                "dzName",
+                                document.querySelector('[name="dzName"]').value
+                            );
 
-              formData.append(
-                "dzEmail",
-                document.querySelector('[name="dzEmail"]').value
-              );
+                            formData.append(
+                                "dzEmail",
+                                document.querySelector('[name="dzEmail"]').value
+                            );
 
-              formData.append(
-                "dzOther[Phone]",
-                document.querySelector('[name="dzOther[Phone]"]').value
-              );
+                            formData.append(
+                                "dzOther[Phone]",
+                                document.querySelector('[name="dzOther[Phone]"]').value
+                            );
 
-              formData.append(
-                "dzOther[Subject]",
-                document.querySelector('[name="dzOther[Subject]"]').value
-              );
+                            formData.append(
+                                "dzOther[Subject]",
+                                document.querySelector('[name="dzOther[Subject]"]').value
+                            );
 
-              formData.append(
-                "dzMessage",
-                document.querySelector('[name="dzMessage"]').value
-              );
+                            formData.append(
+                                "dzMessage",
+                                document.querySelector('[name="dzMessage"]').value
+                            );
 
-              formData.append(
-                "g-recaptcha-response",
-                captchaResponse
-              );
+                            formData.append(
+                                "g-recaptcha-response",
+                                captchaResponse
+                            );
 
-              const response = await fetch("/contact", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/x-www-form-urlencoded"
-                },
-                body: formData.toString()
-              });
+                            const response = await fetch("/contact", {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/x-www-form-urlencoded"
+                                },
+                                body: formData.toString()
+                            });
 
-              const result = await response.json();
+                            const result = await response.json();
 
-              console.log("SERVER RESPONSE:", result);
+                            console.log("SERVER RESPONSE:", result);
 
-              if (response.ok && result.success) {
+                            if (response.ok && result.success) {
 
-                successMsg.className = "form-success-message show";
-                successMsg.textContent = "✅ " + result.message;
+                                successMsg.className = "form-success-message show";
+                                successMsg.textContent = "✅ " + result.message;
 
-                form.reset();
-                grecaptcha.reset();
+                                form.reset();
+                                grecaptcha.reset();
 
-              } else {
+                            } else {
 
-                successMsg.className = "form-success-message show error";
-                successMsg.textContent =
-                  "❌ " + (result.message || "Something went wrong.");
+                                successMsg.className = "form-success-message show error";
+                                successMsg.textContent =
+                                    "❌ " + (result.message || "Something went wrong.");
 
-                grecaptcha.reset();
-              }
+                                grecaptcha.reset();
+                            }
 
-            } catch (error) {
+                        } catch (error) {
 
-              console.error("CONTACT FORM ERROR:", error);
+                            console.error("CONTACT FORM ERROR:", error);
 
-              successMsg.className = "form-success-message show error";
-              successMsg.textContent =
-                "❌ Unable to submit the form. Please try again.";
+                            successMsg.className = "form-success-message show error";
+                            successMsg.textContent =
+                                "❌ Unable to submit the form. Please try again.";
 
-              grecaptcha.reset();
+                            grecaptcha.reset();
 
-            } finally {
+                        } finally {
 
-              submitBtn.disabled = false;
-              submitBtn.classList.remove("loading");
+                            submitBtn.disabled = false;
+                            submitBtn.classList.remove("loading");
 
-            }
+                        }
 
-          });
+                    });
 
-        });
-      </script>
+                });
+            </script>
 
 
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
 
-          const form = document.getElementById("contactForm");
-          const submitBtn = document.getElementById("submitBtn");
-          const successMsg = document.getElementById("formSuccessMsg");
-
-          if (!form) return;
-
-          form.addEventListener("submit", async function (e) {
-
-            e.preventDefault();
-
-            // Check Google CAPTCHA
-            const captchaResponse = grecaptcha.getResponse();
-
-            console.log("CAPTCHA RESPONSE:", captchaResponse);
-
-            if (!captchaResponse) {
-              successMsg.className = "form-success-message show error";
-              successMsg.textContent = "❌ Please complete the CAPTCHA.";
-              return;
-            }
-
-            submitBtn.disabled = true;
-            submitBtn.classList.add("loading");
-
-            successMsg.className = "form-success-message";
-            successMsg.textContent = "";
-
-            try {
-
-              const formData = new URLSearchParams();
-
-              formData.append("dzToDo", "Contact");
-
-              formData.append(
-                "dzName",
-                document.querySelector('[name="dzName"]').value
-              );
-
-              formData.append(
-                "dzEmail",
-                document.querySelector('[name="dzEmail"]').value
-              );
-
-              formData.append(
-                "dzOther[Phone]",
-                document.querySelector('[name="dzOther[Phone]"]').value
-              );
-
-              formData.append(
-                "dzOther[Subject]",
-                document.querySelector('[name="dzOther[Subject]"]').value
-              );
-
-              formData.append(
-                "dzMessage",
-                document.querySelector('[name="dzMessage"]').value
-              );
-
-              formData.append(
-                "g-recaptcha-response",
-                captchaResponse
-              );
-
-              const response = await fetch("/contact", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/x-www-form-urlencoded"
-                },
-                body: formData.toString()
-              });
-
-              const result = await response.json();
-
-              console.log("SERVER RESPONSE:", result);
-
-              if (response.ok && result.success) {
-
-                successMsg.className = "form-success-message show";
-                successMsg.textContent = "✅ " + result.message;
-
-                form.reset();
-                grecaptcha.reset();
-
-              } else {
-
-                successMsg.className = "form-success-message show error";
-                successMsg.textContent =
-                  "❌ " + (result.message || "Something went wrong.");
-
-                grecaptcha.reset();
-              }
-
-            } catch (error) {
-
-              console.error("CONTACT FORM ERROR:", error);
-
-              successMsg.className = "form-success-message show error";
-              successMsg.textContent =
-                "❌ Unable to submit the form. Please try again.";
-
-              grecaptcha.reset();
-
-            } finally {
-
-              submitBtn.disabled = false;
-              submitBtn.classList.remove("loading");
-
-            }
-
-          });
-
-        });
-      </script>
 
 
 
@@ -1328,6 +1213,6 @@
             </body>
 
 
-   
+
 
             </html>

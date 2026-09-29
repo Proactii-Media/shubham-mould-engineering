@@ -69,14 +69,7 @@ const sendContactMail = async (req, res) => {
                 message: "Please enter a valid 10-digit phone number."
             });
         }
-
-        // ===============================
-        // GOOGLE RECAPTCHA
-        // ===============================
-
         const captchaToken = req.body["g-recaptcha-response"];
-
-
 
         if (!captchaToken) {
             return res.status(400).json({
@@ -84,7 +77,7 @@ const sendContactMail = async (req, res) => {
                 message: "Please fill in all fields correctly."
             });
         }
-
+        
         const googleResponse = await fetch(
             "https://www.google.com/recaptcha/api/siteverify",
             {
@@ -101,20 +94,17 @@ const sendContactMail = async (req, res) => {
             }
         );
 
-        const captchaResult = await googleResponse.json();
+        // const captchaResult = await googleResponse.json();
 
        
 
-        if (!captchaResult.success) {
-            return res.status(400).json({
-                success: false,
-                message: "Please fill in all fields correctly."
-            });
-        }
+        // if (!captchaResult.success) {
+        //     return res.status(400).json({
+        //         success: false,
+        //         message: "Please fill in all fields correctly."
+        //     });
+        // }
 
-        // ===============================
-        // GMAIL TRANSPORTER
-        // ===============================
 
         const transporter = nodemailer.createTransport({
             service: "gmail",
@@ -125,9 +115,6 @@ const sendContactMail = async (req, res) => {
             }
         });
 
-        // ===============================
-        // SEND EMAIL
-        // ===============================
 
         await transporter.sendMail({
             from: process.env.GMAIL_USER,
@@ -258,11 +245,6 @@ const sendContactMail = async (req, res) => {
         });
     }
 };
-
-
-// ===============================
-// EXPORT
-// ===============================
 
 module.exports = {
     getAllContact,
