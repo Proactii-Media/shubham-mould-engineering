@@ -2475,4 +2475,35 @@ icon: "ti-reload",
   },
 ];
 
-module.exports = { clientLogos, products, services, applications,plasticproduct, deliveryServices, afterSalesServices };
+const homeSliders = [
+    {
+        image: "/shubhamimages/banner/slider/2.png",
+        transition: "slideoververtical",
+        title: "Oil Spout Cap Automatic<br> Assembly Machine",
+        description:
+            "Automatic spout cap assembly with precision feeding, orientation and reliable production performance."
+    },
+    {
+        image: "/shubhamimages/banner/slider/1.png",
+        transition: "fadethroughdark",
+        title: "Automatic Cap Clip <br> Assembly Machine",
+        description:
+            "Advanced automated assembly solution with precision feeding, pneumatic control and reliable high-speed production."
+    },
+    {
+        image: "/shubhamimages/banner/slider/slider2.png",
+        transition: "slideoververtical",
+        title: "Advanced Automatic <br> Assembly Machines",
+        description:
+            "We manufacture and export advanced automation solutions designed for precision, productivity, and reliable performance across industries."
+    },
+    {
+        image: "/shubhamimages/banner/slider/slider1.png",
+        transition: "slideoververtical",
+        title: "Automatic Heat <br> Transfer Machine",
+        description:
+            "High-precision automation for cutting, joining and stitching elastic rings with consistent production quality."
+    }
+];
+
+module.exports = { clientLogos, products, services, applications,plasticproduct, deliveryServices, afterSalesServices, homeSliders };
