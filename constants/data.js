@@ -967,7 +967,7 @@ applications: [
 
   category: "cap-clip-assembly-machine",
 
-  type: "Automatic Cap Assembly Machine",
+  type: "Automatic Cap Clip Assembly Machine",
 
   image: "/shubhamimages/products/clip1.png",
 
@@ -1173,7 +1173,7 @@ applications: [
   title: "Automatic Oil Spout Cap Assembly Machine",
   slug: "oil-spout-cap-assembly-machine",
  category: "cap-clip-assembly-machine",
-  type: "Automatic Cap Assembly Machine,",
+  type: "Automatic Cap Clip Assembly Machine",
 
   image: "/shubhamimages/products/oil_cap_spout.png",
   bannerImage: "/shubhamimages/banner/product_banner/17.png",
